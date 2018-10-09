@@ -34,6 +34,9 @@
                 <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn primary" OnClick="btnSalvar_Click" Text="Salvar" />
                 <br />
                 <br />
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Listar.aspx">Listar Clientes</asp:HyperLink>
+                <br />
+                <br />
                 <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             </div>
         </div>

@@ -18,6 +18,10 @@
                     <asp:BoundField DataField="cli_codigo" HeaderText="Código" />
                     <asp:BoundField DataField="cli_nome" HeaderText="Nome" />
                     <asp:BoundField DataField="cli_endereco" HeaderText="Endereço" />
+                    <asp:BoundField DataField="cli_telefone" HeaderText="Telefone" />
+                    <asp:BoundField DataField="cli_email" HeaderText="E-mail" />
+                    <asp:BoundField DataField="cli_cpf" HeaderText="CPF" />
+                    <asp:BoundField DataField="cli_entrega" HeaderText="Endereço de Entrega" />
                 </Columns>
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -31,6 +35,11 @@
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
         </div>
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Cadastrar.aspx">Cadastar Clientes</asp:HyperLink>
+        </p>
     </form>
 </body>
 </html>
