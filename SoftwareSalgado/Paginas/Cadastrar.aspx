@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div style="height: 363px; width: 908px">
+            <div style="height: 419px; width: 908px">
                 Cadastro de Clientes<br />
                 <br />
                 <asp:TextBox ID="txtNome" runat="server" Width="150px">Nome</asp:TextBox>
@@ -31,10 +31,12 @@
                 <asp:TextBox ID="txtEntrega" runat="server" Width="150px">Endereço de Entrega</asp:TextBox>
                 <br />
                 <br />
-                <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn primary" OnClick="btnSalvar_Click" Text="Salvar" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
                 <br />
                 <br />
                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Listar.aspx">Listar Clientes</asp:HyperLink>
+                <br />
                 <br />
                 <br />
                 <asp:Label ID="lblMensagem" runat="server"></asp:Label>
