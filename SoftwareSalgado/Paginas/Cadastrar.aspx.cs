@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using SoftwareSalgado.App_Code.Classes;
+
 using SoftwareSalgado.App_Code.Persistencia;
 
 namespace SoftwareSalgado.Paginas
@@ -29,6 +30,9 @@ namespace SoftwareSalgado.Paginas
             ClienteBD bd = new ClienteBD();
             bd.Insert(cliente) ;
                 Response.Write("Cliente cadastrado com sucesso!");
+
+
+            bd.SelectByNome(txtNome.Text);
         }
     }
 }

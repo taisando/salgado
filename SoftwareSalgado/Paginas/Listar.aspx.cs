@@ -23,7 +23,8 @@ namespace SoftwareSalgado.Paginas
         protected void Page_Load(object sender, EventArgs e)
         {
             Carrega();
-        }
+        }
+
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {

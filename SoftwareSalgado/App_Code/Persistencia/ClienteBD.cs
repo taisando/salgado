@@ -47,6 +47,23 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objConexao.Dispose();
             return ds;
         }
+
+        public DataSet SelectByNome(String nome)
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_cliente where cli_nome like %?nome%", objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?nome", nome));
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
         //select
         //update
         //delete
