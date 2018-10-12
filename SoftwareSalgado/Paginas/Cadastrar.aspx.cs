@@ -25,14 +25,15 @@ namespace SoftwareSalgado.Paginas
             cliente.Telefone = txtTelefone.Text;
             cliente.Email = txtEmail.Text;
             cliente.CPF = txtCPF.Text;
-            cliente.Entrega = txtEndereco.Text;
+            cliente.Entrega = txtEntrega
+                .Text;
 
             ClienteBD bd = new ClienteBD();
             bd.Insert(cliente) ;
                 Response.Write("Cliente cadastrado com sucesso!");
 
 
-            bd.SelectByNome(txtNome.Text);
+           // bd.SelectByNome(txtNome.Text);
         }
     }
 }

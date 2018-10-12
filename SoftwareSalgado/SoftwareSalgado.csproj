@@ -83,6 +83,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Paginas\Alterar.aspx" />
     <Content Include="Paginas\Cadastrar.aspx" />
     <Content Include="Paginas\Listar.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -139,6 +140,13 @@
     <Compile Include="App_Code\Mapped.cs" />
     <Compile Include="App_Code\Classes\Cliente.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
+    <Compile Include="Paginas\Alterar.aspx.cs">
+      <DependentUpon>Alterar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Alterar.aspx.designer.cs">
+      <DependentUpon>Alterar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\Cadastrar.aspx.cs">
       <DependentUpon>Cadastrar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

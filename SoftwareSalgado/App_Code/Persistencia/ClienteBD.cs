@@ -47,7 +47,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objConexao.Dispose();
             return ds;
         }
-
+        /*
         public DataSet SelectByNome(String nome)
         {
             DataSet ds = new DataSet();
@@ -63,18 +63,71 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objCommand.Dispose();
             objConexao.Dispose();
             return ds;
-        }
+        }*/
+
         //select
-        //update
-        //delete
-        //construtor
-        public ClienteBD()
+        public Cliente Select(int id)
         {
-            //
-            // TODO: Add constructor logic here
-            //
+            Cliente obj = null;
+
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataReader objDataReader;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_cliente WHERE cli_codigo = ?codigo", objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", id));
+
+            objDataReader = objCommand.ExecuteReader();
+            while (objDataReader.Read())
+            {
+                obj = new Cliente();
+                obj.Codigo = Convert.ToInt32(objDataReader["cli_codigo"]);
+                obj.Nome = Convert.ToString(objDataReader["cli_nome"]);
+                obj.Endereco = Convert.ToString(objDataReader["cli_endereco"]);
+                obj.Telefone = Convert.ToString(objDataReader["cli_telefone"]);
+                obj.Email = Convert.ToString(objDataReader["cli_email"]);
+                obj.CPF = Convert.ToString(objDataReader["cli_cpf"]);
+                obj.Entrega = Convert.ToString(objDataReader["cli_entrega"]);
+            }
+            objDataReader.Close();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            objDataReader.Dispose();
+            return obj;
         }
 
+        //update
+        public bool Update(Cliente cliente)
+        {
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            string sql = "UPDATE tbl_cliente SET cli_nome=?nome, cli_endereco=?endereco, cli_telefone=?telefone, cli_email=?email, cli_cpf=?cpf, cli_entrega=?entrega WHERE cli_codigo =?codigo";
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConexao);
+
+            objCommand.Parameters.Add(Mapped.Parameter("?nome", cliente.Nome));
+            objCommand.Parameters.Add(Mapped.Parameter("?endereco", cliente.Endereco));
+            objCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
+            objCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
+            objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.CPF));
+            objCommand.Parameters.Add(Mapped.Parameter("?entrega", cliente.Entrega));
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", cliente.Codigo));
+
+            objCommand.ExecuteNonQuery();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return true;
+        }
 
     }
+    
+    //delete
+    //construtor
+    
+
+
 }

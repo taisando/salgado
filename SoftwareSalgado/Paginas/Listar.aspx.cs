@@ -26,15 +26,24 @@ namespace SoftwareSalgado.Paginas
         }
 
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            int codigo = 0;
+            switch (e.CommandName)
+            {
+                case "Alterar":
+                    codigo = Convert.ToInt32(e.CommandArgument);
+                    Session["ID"] = codigo;
+                    Response.Redirect("Alterar.aspx");
+                    break;                
+            }
 
         }
 
         protected void linkCadastrar_Click(object sender, EventArgs e)
         {
-            
+
         }
-        
+
     }
 }
