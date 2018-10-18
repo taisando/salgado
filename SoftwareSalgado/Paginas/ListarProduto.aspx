@@ -1,30 +1,27 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listar.aspx.cs" Inherits="SoftwareSalgado.Paginas.Listar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListarProduto.aspx.cs" Inherits="SoftwareSalgado.Paginas.ListarProduto" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server" class="form-control">
+    <form id="form1" runat="server">
         <div>
             Lista de Clientes<br />
             <br />
             <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" >
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
-                    <asp:BoundField DataField="cli_codigo" HeaderText="Código" />
-                    <asp:BoundField DataField="cli_nome" HeaderText="Nome" />
-                    <asp:BoundField DataField="cli_endereco" HeaderText="Endereço" />
-                    <asp:BoundField DataField="cli_telefone" HeaderText="Telefone" />
-                    <asp:BoundField DataField="cli_email" HeaderText="E-mail" />
-                    <asp:BoundField DataField="cli_cpf" HeaderText="CPF" />
-                    <asp:BoundField DataField="cli_entrega" HeaderText="Endereço de Entrega" />
+                    <asp:BoundField DataField="pro_codigo" HeaderText="Código" />
+                    <asp:BoundField DataField="pro_nome" HeaderText="Nome" />
+                    <asp:BoundField DataField="pro_tipo" HeaderText="Tipo" />
+                    <asp:BoundField DataField="pro_preco" HeaderText="Preço" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("cli_codigo")%>'>Alterar</asp:LinkButton>
+                            <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("pro_codigo")%>'>Alterar</asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -40,9 +37,9 @@
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
         </div>
+        <br />
         <p style="width: 1114px">
-            &nbsp;
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Cadastrar.aspx">Cadastar Clientes</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="CadastroProduto.aspx">Cadastrar Produtos</asp:HyperLink>
         </p>
     </form>
 </body>

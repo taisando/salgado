@@ -83,9 +83,12 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Paginas\Alterar.aspx" />
-    <Content Include="Paginas\Cadastrar.aspx" />
-    <Content Include="Paginas\Listar.aspx" />
+    <Content Include="Paginas\AlterarCliente.aspx" />
+    <Content Include="Paginas\AlterarProduto.aspx" />
+    <Content Include="Paginas\CadastrarCliente.aspx" />
+    <Content Include="Paginas\CadastroProduto.aspx" />
+    <Content Include="Paginas\ListarCliente.aspx" />
+    <Content Include="Paginas\ListarProduto.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Content\CSS\Estilo.css" />
@@ -137,29 +140,54 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Classes\Produto.cs" />
+    <Compile Include="App_Code\Classes\Fornecedor.cs" />
     <Compile Include="App_Code\Mapped.cs" />
     <Compile Include="App_Code\Classes\Cliente.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
-    <Compile Include="Paginas\Alterar.aspx.cs">
-      <DependentUpon>Alterar.aspx</DependentUpon>
+    <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
+    <Compile Include="App_Code\Persistencia\FornecedorBD.cs" />
+    <Compile Include="Paginas\AlterarCliente.aspx.cs">
+      <DependentUpon>AlterarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Alterar.aspx.designer.cs">
-      <DependentUpon>Alterar.aspx</DependentUpon>
+    <Compile Include="Paginas\AlterarCliente.aspx.designer.cs">
+      <DependentUpon>AlterarCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Cadastrar.aspx.cs">
-      <DependentUpon>Cadastrar.aspx</DependentUpon>
+    <Compile Include="Paginas\AlterarProduto.aspx.cs">
+      <DependentUpon>AlterarProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Cadastrar.aspx.designer.cs">
-      <DependentUpon>Cadastrar.aspx</DependentUpon>
+    <Compile Include="Paginas\AlterarProduto.aspx.designer.cs">
+      <DependentUpon>AlterarProduto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Listar.aspx.cs">
-      <DependentUpon>Listar.aspx</DependentUpon>
+    <Compile Include="Paginas\CadastrarCliente.aspx.cs">
+      <DependentUpon>CadastrarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Listar.aspx.designer.cs">
-      <DependentUpon>Listar.aspx</DependentUpon>
+    <Compile Include="Paginas\CadastrarCliente.aspx.designer.cs">
+      <DependentUpon>CadastrarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\CadastroProduto.aspx.cs">
+      <DependentUpon>CadastroProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\CadastroProduto.aspx.designer.cs">
+      <DependentUpon>CadastroProduto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\ListarCliente.aspx.cs">
+      <DependentUpon>ListarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ListarCliente.aspx.designer.cs">
+      <DependentUpon>ListarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\ListarProduto.aspx.cs">
+      <DependentUpon>ListarProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ListarProduto.aspx.designer.cs">
+      <DependentUpon>ListarProduto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
