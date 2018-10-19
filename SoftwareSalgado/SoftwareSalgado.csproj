@@ -83,6 +83,24 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CSS\animate.css" />
+    <Content Include="Content\CSS\animsition.css" />
+    <Content Include="Content\CSS\animsition.min.css" />
+    <Content Include="Content\CSS\daterangepicker.css" />
+    <Content Include="Content\CSS\hamburgers.css" />
+    <Content Include="Content\CSS\hamburgers.min.css" />
+    <Content Include="Content\CSS\main.css" />
+    <Content Include="Content\CSS\perfect-scrollbar.css" />
+    <Content Include="Content\CSS\select2.css" />
+    <Content Include="Content\CSS\select2.min.css" />
+    <Content Include="Content\CSS\util.css" />
+    <Content Include="Content\fonts\font-awesome.css" />
+    <Content Include="Content\fonts\font-awesome.min.css" />
+    <Content Include="Content\Iconic\material-design-iconic-font.css" />
+    <Content Include="Content\Iconic\material-design-iconic-font.min.css" />
+    <Content Include="Content\images\icons\favicon.ico" />
+    <Content Include="Content\images\icons\icon-font.min.css" />
+    <Content Include="Content\images\perfil.jpg" />
     <Content Include="Paginas\Adm\Index.aspx" />
     <Content Include="Paginas\AlterarCliente.aspx" />
     <Content Include="Paginas\AlterarProduto.aspx" />
@@ -96,6 +114,7 @@
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Content\CSS\Estilo.css" />
+    <Content Include="Scripts\countdowntime.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -119,8 +138,12 @@
     <Content Include="Scripts\jquery-3.0.0.min.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\JS\animsition.js" />
+    <Content Include="Scripts\JS\animsition.min.js" />
     <Content Include="Scripts\JS\JavaScript.js" />
+    <Content Include="Scripts\JS\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -135,10 +158,17 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\tooltip.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\vendor\daterangepicker.js" />
+    <Content Include="Scripts\vendor\moment.js" />
+    <Content Include="Scripts\vendor\moment.min.js" />
+    <Content Include="Scripts\vendor\perfect-scrollbar.min.js" />
+    <Content Include="Scripts\vendor\select2.js" />
+    <Content Include="Scripts\vendor\select2.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

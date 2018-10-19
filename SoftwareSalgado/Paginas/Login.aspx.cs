@@ -6,14 +6,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Windows.Input;
 
 
 namespace SoftwareSalgado.Paginas
 {
     public partial class Login : System.Web.UI.Page
     {
-       
 
         private bool IsPreenchido(string str)
         {
@@ -42,12 +41,12 @@ namespace SoftwareSalgado.Paginas
 
         protected void btnEntrar_Click(object sender, EventArgs e)
         {
-            string email = txtEmail.Text.Trim();
+            string nome = txtNome.Text.Trim();
             string senha = txtSenha.Text.Trim();
-            if (!IsPreenchido(email))
+            if (!IsPreenchido(nome))
             {
-                lblMensagem.Text = "Preencha o email";
-                txtEmail.Focus();
+                lblMensagem.Text = "Preencha o nome do usuário";
+                txtNome.Focus();
                 return;
             }
             if (!IsPreenchido(senha))
@@ -60,12 +59,12 @@ namespace SoftwareSalgado.Paginas
 
             PessoaBD bd = new PessoaBD();
             Pessoa pessoa = new Pessoa();
-            pessoa = bd.Autentica(email, senha);
+            pessoa = bd.Autentica(nome, senha);
             if (!UsuarioEncontrado(pessoa))
             {
 
                 lblMensagem.Text = "Usuário não encontrado";
-                txtEmail.Focus();
+                txtNome.Focus();
                 return;
             }
 
@@ -76,9 +75,8 @@ namespace SoftwareSalgado.Paginas
                     Response.Redirect("ADM/Index.aspx");
                     break;
 
-
             }
         }
     }
 
-  }
+}

@@ -35,16 +35,9 @@ namespace SoftwareSalgado.Paginas.ADM
         {
             int codigo = Convert.ToInt32(Session["ID"]);
             PessoaBD bd = new PessoaBD();
-            Pessoa pessoa = bd.Select(codigo);
-            if (!IsAdministrador(pessoa.Tipo))
-            {
+            Pessoa pessoa = bd.Select(codigo);            
+            Response.Write("Bem vindo! : " + pessoa.Nome);
 
-            }
-
-            else
-            {
-                lblTitulo.Text = "Bem vindo (Administrador) : " + pessoa.Nome;
-            }
         }
     }
 

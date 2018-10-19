@@ -9,7 +9,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
     public class PessoaBD
     {        
 
-        public Pessoa Autentica (string email, string senha)
+        public Pessoa Autentica (string nome, string senha)
         {
             Pessoa obj = null;
 
@@ -18,9 +18,9 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataReader objDataReader;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa WHERE pes_email = ?email and pes_senha = ?senha", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa WHERE pes_nome = ?nome and pes_senha = ?senha", objConexao);
 
-            objCommand.Parameters.Add(Mapped.Parameter("?email", email));
+            objCommand.Parameters.Add(Mapped.Parameter("?nome", nome));
             objCommand.Parameters.Add(Mapped.Parameter("?senha", senha));
 
             objDataReader = objCommand.ExecuteReader();
@@ -29,10 +29,10 @@ namespace SoftwareSalgado.App_Code.Persistencia
             {
                 obj = new Pessoa();
                 obj.Codigo = Convert.ToInt32(objDataReader["pes_codigo"]);
-                obj.Nome = Convert.ToString(objDataReader["pes_nome"]);
-                obj.Email = Convert.ToString(objDataReader["pes_email"]);
+                obj.Nome = Convert.ToString(objDataReader["pes_nome"]);                
                 obj.Tipo = Convert.ToInt32(objDataReader["pes_tipo"]);
             }
+
             objDataReader.Close();
             objConexao.Close();
             objCommand.Dispose();
@@ -59,10 +59,10 @@ namespace SoftwareSalgado.App_Code.Persistencia
             {
                 obj = new Pessoa();
                 obj.Codigo = Convert.ToInt32(objDataReader["pes_codigo"]);
-                obj.Nome = Convert.ToString(objDataReader["pes_nome"]);
-                obj.Email = Convert.ToString(objDataReader["pes_email"]);
+                obj.Nome = Convert.ToString(objDataReader["pes_nome"]);               
                 obj.Tipo = Convert.ToInt32(objDataReader["pes_tipo"]);
             }
+
             objDataReader.Close();
             objConexao.Close();
             objCommand.Dispose();
