@@ -83,12 +83,16 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Paginas\Adm\Index.aspx" />
     <Content Include="Paginas\AlterarCliente.aspx" />
     <Content Include="Paginas\AlterarProduto.aspx" />
     <Content Include="Paginas\CadastrarCliente.aspx" />
+    <Content Include="Paginas\CadastroFornecedor.aspx" />
     <Content Include="Paginas\CadastroProduto.aspx" />
     <Content Include="Paginas\ListarCliente.aspx" />
+    <Content Include="Paginas\ListarFornecedor.aspx" />
     <Content Include="Paginas\ListarProduto.aspx" />
+    <Content Include="Paginas\Login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Content\CSS\Estilo.css" />
@@ -140,13 +144,22 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Classes\Pessoa.cs" />
     <Compile Include="App_Code\Classes\Produto.cs" />
     <Compile Include="App_Code\Classes\Fornecedor.cs" />
     <Compile Include="App_Code\Mapped.cs" />
     <Compile Include="App_Code\Classes\Cliente.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
+    <Compile Include="App_Code\Persistencia\PessoaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\FornecedorBD.cs" />
+    <Compile Include="Paginas\Adm\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Adm\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\AlterarCliente.aspx.cs">
       <DependentUpon>AlterarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +181,13 @@
     <Compile Include="Paginas\CadastrarCliente.aspx.designer.cs">
       <DependentUpon>CadastrarCliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\CadastroFornecedor.aspx.cs">
+      <DependentUpon>CadastroFornecedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\CadastroFornecedor.aspx.designer.cs">
+      <DependentUpon>CadastroFornecedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\CadastroProduto.aspx.cs">
       <DependentUpon>CadastroProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,12 +202,26 @@
     <Compile Include="Paginas\ListarCliente.aspx.designer.cs">
       <DependentUpon>ListarCliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\ListarFornecedor.aspx.cs">
+      <DependentUpon>ListarFornecedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ListarFornecedor.aspx.designer.cs">
+      <DependentUpon>ListarFornecedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\ListarProduto.aspx.cs">
       <DependentUpon>ListarProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\ListarProduto.aspx.designer.cs">
       <DependentUpon>ListarProduto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,6 +249,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\SQL\" />
+    <Folder Include="Paginas\Erro\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
