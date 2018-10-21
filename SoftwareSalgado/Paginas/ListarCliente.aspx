@@ -1,14 +1,22 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListarCliente.aspx.cs" Inherits="SoftwareSalgado.Paginas.Listar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListarCliente.aspx.cs" Inherits="SoftwareSalgado.Paginas.Listar" Title="" MasterPageFile="~/Content/Master/Principal.Master" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server" class="form-control">
+    <link href="../Iconic/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../Content/Iconic/materialdesignicons.css" rel="stylesheet" />
+    <link href="../../Content/Iconic/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="../CSS/vendor.bundle.base.css" rel="stylesheet" />
+    <link href="../CSS/style.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/jquery-3.3.1.min.js"></script>
+
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+
         <div>
             Lista de Clientes<br />
             <br />
@@ -44,6 +52,5 @@
             &nbsp;
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="CadastrarCliente.aspx">Cadastar Clientes</asp:HyperLink>
         </p>
-    </form>
-</body>
-</html>
+    
+</asp:Content>

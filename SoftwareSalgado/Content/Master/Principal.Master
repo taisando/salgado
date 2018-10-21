@@ -5,8 +5,8 @@
 <html>
 <head runat="server">
     <link href="../Iconic/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/materialdesignicons.css" rel="stylesheet" />
-    
+    <link href="../../Content/Iconic/materialdesignicons.css" rel="stylesheet" />  
+    <link href="../Iconic/material-design-iconic-font.min.css" rel="stylesheet" />
     <link href="../CSS/vendor.bundle.base.css" rel="stylesheet" />
     <link href="../CSS/style.css" rel="stylesheet" />    
 
@@ -25,7 +25,7 @@
             <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
                     <a class="navbar-brand brand-logo-mini" href="../../Paginas/Adm/Index.aspx">
-                        <asp:Image runat="server" ImageUrl="~/Content/images/logo.svg" />
+                        <asp:Image runat="server" ImageUrl="~/Content/images/pic-1.png" />
                     </a>
                 </div>
 
@@ -63,7 +63,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                                <span class="menu-title">Cadastro</span>
+                                <span class="menu-title">Cadastro</span>                                
                                 <i class="menu-arrow"></i>
                                 <i class="mdi mdi-crosshairs-gps menu-icon"></i>
                             </a>
@@ -125,6 +125,7 @@
 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     <div id="container">
+
                     </div>
                 </asp:ContentPlaceHolder>
 
