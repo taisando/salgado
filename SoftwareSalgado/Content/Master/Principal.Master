@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="SoftwareSalgado.Content.Master.Principal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="../Iconic/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../Content/Iconic/materialdesignicons.css" rel="stylesheet" />
+    
+    <link href="../CSS/vendor.bundle.base.css" rel="stylesheet" />
+    <link href="../CSS/style.css" rel="stylesheet" />    
+
+    <title></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body>
+
+    <form id="form1" runat="server">
+        <div class="container-scroller">
+
+            <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo-mini" href="../../Paginas/Adm/Index.aspx">
+                        <asp:Image runat="server" ImageUrl="~/Content/images/logo.svg" />
+                    </a>
+                </div>
+
+                <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                    <asp:Button runat="server" class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" />
+                    <span class="mdi mdi-menu"></span>
+                </div>
+            </nav>
+
+            <div class="container-fluid page-body-wrapper">
+                <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                    <ul class="nav">
+                        <li class="nav-item nav-profile">
+                            <a href="../../Paginas/Adm/Index.aspx" class="nav-link">
+                                <div class="nav-profile-image">
+                                    <asp:Image runat="server" ImageUrl="~/Content/images/perfil.jpg" />
+                                    <span class="login-status online"></span>
+                                </div>
+
+                                <div class="nav-profile-text d-flex flex-column">
+                                    <span class="font-weight-bold mb-2">Ana</span>
+                                    <span class="text-secondary text-small">Salgados</span>
+                                </div>
+                                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Paginas/Adm/Index.aspx">
+                                <span class="menu-title">Pagina Inicial</span>
+                                <i class="mdi mdi-home menu-icon"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                                <span class="menu-title">Cadastro</span>
+                                <i class="menu-arrow"></i>
+                                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                            </a>
+                            <div class="collapse" id="ui-basic">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../../Paginas/CadastrarCliente.aspx">Cadastro de Clientes
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../../Paginas/CadastroProduto.aspx">Cadastro de Produtos 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span class="menu-title">Vendas</span>
+                                <i class="mdi mdi-contacts menu-icon"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span class="menu-title">Forms</span>
+                                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span class="menu-title">Charts</span>
+                                <i class="mdi mdi-chart-bar menu-icon"></i>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <span class="menu-title">Tables</span>
+                                <i class="mdi mdi-table-large menu-icon"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="menu-title"></span>
+                                <asp:LinkButton ID="lbSair" runat="server" OnClick="lbSair_Click">Sair</asp:LinkButton>
+                                <i class="mdi mdi-cat menu-icon"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <div id="container">
+                    </div>
+                </asp:ContentPlaceHolder>
+
+            </div>
+        </div>
+    </form>
+
+    <script src="../../Scripts/vendor/vendor.bundle.base.js"></script>
+    <script src="../../Scripts/vendor/vendor.bundle.addons.js"></script>
+    <script src="../../Scripts/JS/off-canvas.js"></script>
+    <script src="../../Scripts/JS/misc.js"></script>
+    <script src="../../Scripts/JS/dashboard.js"></script>
+</body>
+</html>

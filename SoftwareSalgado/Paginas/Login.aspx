@@ -37,7 +37,11 @@
 
                     <div class="container-login100-form-btn m-t-32">
                         <asp:Button ID="btnEntrar" runat="server" OnClick="btnEntrar_Click" Text="Entrar" CssClass="login100-form-btn" />
+                        <br />
+                        <br />
+                        <br />
                         <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+
                     </div>
                 </form>
 

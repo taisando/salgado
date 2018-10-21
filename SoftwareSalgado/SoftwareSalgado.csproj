@@ -93,14 +93,22 @@
     <Content Include="Content\CSS\perfect-scrollbar.css" />
     <Content Include="Content\CSS\select2.css" />
     <Content Include="Content\CSS\select2.min.css" />
+    <Content Include="Content\CSS\style.css" />
     <Content Include="Content\CSS\util.css" />
+    <Content Include="Content\CSS\vendor.bundle.base.css" />
     <Content Include="Content\fonts\font-awesome.css" />
     <Content Include="Content\fonts\font-awesome.min.css" />
     <Content Include="Content\Iconic\material-design-iconic-font.css" />
     <Content Include="Content\Iconic\material-design-iconic-font.min.css" />
+    <Content Include="Content\Iconic\materialdesignicons.css" />
+    <Content Include="Content\Iconic\materialdesignicons.min.css" />
     <Content Include="Content\images\icons\favicon.ico" />
     <Content Include="Content\images\icons\icon-font.min.css" />
+    <Content Include="Content\images\logo-mini.svg" />
+    <Content Include="Content\images\logo.svg" />
     <Content Include="Content\images\perfil.jpg" />
+    <Content Include="Content\images\pic-1.png" />
+    <Content Include="Content\images\pic-2.png" />
     <Content Include="Paginas\Adm\Index.aspx" />
     <Content Include="Paginas\AlterarCliente.aspx" />
     <Content Include="Paginas\AlterarProduto.aspx" />
@@ -133,6 +141,53 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\Master\Principal.Master" />
+    <Content Include="Scripts\bower.json" />
+    <Content Include="Content\CSS\style.css.map" />
+    <Content Include="Scripts\.DS_Store" />
+    <Content Include="Content\scss\.DS_Store" />
+    <Content Include="Content\scss\_background.scss" />
+    <Content Include="Content\scss\_demo.scss" />
+    <Content Include="Content\scss\_fonts.scss" />
+    <Content Include="Content\scss\_footer.scss" />
+    <Content Include="Content\scss\_functions.scss" />
+    <Content Include="Content\scss\_misc.scss" />
+    <Content Include="Content\scss\_navbar.scss" />
+    <Content Include="Content\scss\_reset.scss" />
+    <Content Include="Content\scss\_sidebar.scss" />
+    <Content Include="Content\scss\_typography.scss" />
+    <Content Include="Content\scss\_utilities.scss" />
+    <Content Include="Content\scss\_variables.scss" />
+    <Content Include="Content\scss\style.scss" />
+    <Content Include="Content\scss\components\.DS_Store" />
+    <Content Include="Content\scss\components\_badges.scss" />
+    <Content Include="Content\scss\components\_bootstrap-progress.scss" />
+    <Content Include="Content\scss\components\_buttons.scss" />
+    <Content Include="Content\scss\components\_cards.scss" />
+    <Content Include="Content\scss\components\_checkbox-radio.scss" />
+    <Content Include="Content\scss\components\_dropdown.scss" />
+    <Content Include="Content\scss\components\_forms.scss" />
+    <Content Include="Content\scss\components\_icons.scss" />
+    <Content Include="Content\scss\components\_lists.scss" />
+    <Content Include="Content\scss\components\_preview.scss" />
+    <Content Include="Content\scss\components\_tables.scss" />
+    <Content Include="Content\scss\landing-screens\_auth.scss" />
+    <Content Include="Content\scss\mixins\.DS_Store" />
+    <Content Include="Content\scss\mixins\_animation.scss" />
+    <Content Include="Content\scss\mixins\_background.scss" />
+    <Content Include="Content\scss\mixins\_badges.scss" />
+    <Content Include="Content\scss\mixins\_blockqoute.scss" />
+    <Content Include="Content\scss\mixins\_buttons.scss" />
+    <Content Include="Content\scss\mixins\_cards.scss" />
+    <Content Include="Content\scss\mixins\_misc.scss" />
+    <Content Include="Content\scss\mdi\materialdesignicons.scss" />
+    <Content Include="Content\scss\mdi\_animated.scss" />
+    <Content Include="Content\scss\mdi\_core.scss" />
+    <Content Include="Content\scss\mdi\_extras.scss" />
+    <Content Include="Content\scss\mdi\_functions.scss" />
+    <Content Include="Content\scss\mdi\_icons.scss" />
+    <Content Include="Content\scss\mdi\_path.scss" />
+    <Content Include="Content\scss\mdi\_variables.scss" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -142,8 +197,14 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\JS\animsition.js" />
     <Content Include="Scripts\JS\animsition.min.js" />
+    <Content Include="Scripts\JS\chart.js" />
+    <Content Include="Scripts\JS\dashboard.js" />
+    <Content Include="Scripts\JS\file-upload.js" />
+    <Content Include="Scripts\JS\gulpfile.js" />
     <Content Include="Scripts\JS\JavaScript.js" />
     <Content Include="Scripts\JS\main.js" />
+    <Content Include="Scripts\JS\misc.js" />
+    <Content Include="Scripts\JS\off-canvas.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -169,6 +230,8 @@
     <Content Include="Scripts\vendor\perfect-scrollbar.min.js" />
     <Content Include="Scripts\vendor\select2.js" />
     <Content Include="Scripts\vendor\select2.min.js" />
+    <Content Include="Scripts\vendor\vendor.bundle.addons.js" />
+    <Content Include="Scripts\vendor\vendor.bundle.base.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -183,6 +246,13 @@
     <Compile Include="App_Code\Persistencia\PessoaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\FornecedorBD.cs" />
+    <Compile Include="Content\Master\Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Master\Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\Adm\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,6 +337,8 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Scripts\package.json" />
+    <Content Include="Scripts\package-lock.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
