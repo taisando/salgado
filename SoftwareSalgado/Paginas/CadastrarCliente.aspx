@@ -12,13 +12,7 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/jquery-3.3.1.min.js"></script>
-    <style type="text/css">
-        .auto-style1 {
-            height: 535px;
-            width: 664px;
-            margin-left: 40px;
-        }
-    </style>
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -38,43 +32,43 @@
                             <div class="form-group row">
 
                                 <asp:Label runat="server" Text="Nome" CssClass="col-sm-3 col-form-label"></asp:Label>
-                                
-                                    <asp:TextBox ID="txtNome" runat="server" placeholder="Nome" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
 
-                                    <asp:Label runat="server" Text="Endereço" CssClass="col-sm-3 col-form-label"></asp:Label>
-                                    
-                                        <asp:TextBox ID="txtEndereco" runat="server" placeholder="Endereço" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtNome" runat="server" placeholder="Nome" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
 
+                                <asp:Label runat="server" Text="Endereço" CssClass="col-sm-3 col-form-label"></asp:Label>
 
-                                        <asp:Label runat="server" Text="Telefone" CssClass="col-sm-3 col-form-label"></asp:Label>
-                                        <asp:TextBox ID="txtTelefone" runat="server" placeholder="Telefone (00)0 0000-0000" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
-
-                                        <asp:Label runat="server" Text="E-Mail" CssClass="col-sm-3 col-form-label"></asp:Label>
-                                        <asp:TextBox ID="txtEmail" runat="server" placeholder="E-mail" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
-
-                                        <asp:Label runat="server" Text="CPF" CssClass="col-sm-3 col-form-label"></asp:Label>
-                                        <asp:TextBox ID="txtCPF" runat="server" placeholder="CPF 000.000.000-00" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
-
-                                        <asp:Label runat="server" Text="Entrega" CssClass="col-sm-3 col-form-label"></asp:Label>
-                                        <asp:TextBox ID="txtEntrega" runat="server" placeholder="Endereço de entrega" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtEndereco" runat="server" placeholder="Endereço" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
 
 
+                                <asp:Label runat="server" Text="Telefone" CssClass="col-sm-3 col-form-label"></asp:Label>
+                                <asp:TextBox ID="txtTelefone" runat="server" placeholder="Telefone (00)0 0000-0000" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
 
-                                        <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" CssClass="btn btn-gradient-light" />
+                                <asp:Label runat="server" Text="E-Mail" CssClass="col-sm-3 col-form-label"></asp:Label>
+                                <asp:TextBox ID="txtEmail" runat="server" placeholder="E-mail" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
+
+                                <asp:Label runat="server" Text="CPF" CssClass="col-sm-3 col-form-label"></asp:Label>
+                                <asp:TextBox ID="txtCPF" runat="server" placeholder="CPF 000.000.000-00" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
+
+                                <asp:Label runat="server" Text="Entrega" CssClass="col-sm-3 col-form-label"></asp:Label>
+                                <asp:TextBox ID="txtEntrega" runat="server" placeholder="Endereço de entrega" CssClass="col-sm-9 col-form-label form-control"></asp:TextBox>
 
 
-                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ListarCliente.aspx">Listar Clientes</asp:HyperLink>
+
+                                <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" CssClass="btn btn-gradient-light" />
+                                <p></p>
+
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ListarCliente.aspx">Listar Clientes</asp:HyperLink>
 
 
-                                        <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-                                    </div>
-                                </div>
+                                <asp:Label ID="lblMensagem" runat="server"></asp:Label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
 </asp:Content>

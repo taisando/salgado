@@ -4,19 +4,22 @@
 
 <html>
 <head runat="server">
+    <link href="../bootstrap.min.css" rel="stylesheet" />
+    <link href="../Iconic/materialdesignicons.css" rel="stylesheet" />
     <link href="../Iconic/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/materialdesignicons.css" rel="stylesheet" />  
     <link href="../Iconic/material-design-iconic-font.min.css" rel="stylesheet" />
     <link href="../CSS/vendor.bundle.base.css" rel="stylesheet" />
-    <link href="../CSS/style.css" rel="stylesheet" />    
+    <link href="../CSS/style.css" rel="stylesheet" />
+    <link href="../fonts/font-awesome.min.css" rel="stylesheet" />
+    <link href="../images/icons/icon-font.min.css" rel="stylesheet" />
+    <link href="../CSS/hamburgers.min.css" rel="stylesheet" />
+    <link href="../CSS/animsition.css" rel="stylesheet" />
 
-    <title></title>
+    <title>Master Page</title>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-
-
 <body>
 
     <form id="form1" runat="server">
@@ -39,7 +42,7 @@
                 <nav class="sidebar sidebar-offcanvas" id="sidebar">
                     <ul class="nav">
                         <li class="nav-item nav-profile">
-                            <a href="../../Paginas/Adm/Index.aspx" class="nav-link">
+                            <a href="../../Paginas/Adm/Index.aspx" class="nav-link ">
                                 <div class="nav-profile-image">
                                     <asp:Image runat="server" ImageUrl="~/Content/images/perfil.jpg" />
                                     <span class="login-status online"></span>
@@ -63,7 +66,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                                <span class="menu-title">Cadastro</span>                                
+                                <span class="menu-title">Cadastro</span>
                                 <i class="menu-arrow"></i>
                                 <i class="mdi mdi-crosshairs-gps menu-icon"></i>
                             </a>
@@ -84,36 +87,27 @@
                         <li class="nav-item">
                             <a class="nav-link" href="">
                                 <span class="menu-title">Vendas</span>
-                                <i class="mdi mdi-contacts menu-icon"></i>
+                                <i class="fa fa-home menu-icon"></i>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="">
-                                <span class="menu-title">Forms</span>
+                                <span class="menu-title">Despesas</span>
                                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="">
-                                <span class="menu-title">Charts</span>
+                                <span class="menu-title">Listar Clientes</span>
                                 <i class="mdi mdi-chart-bar menu-icon"></i>
-                            </a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="">
-                                <span class="menu-title">Tables</span>
-                                <i class="mdi mdi-table-large menu-icon"></i>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link">
-                                <span class="menu-title"></span>
-                                <asp:LinkButton ID="lbSair" runat="server" OnClick="lbSair_Click">Sair</asp:LinkButton>
+                                <asp:LinkButton ID="lbSair" runat="server" OnClick="lbSair_Click" CssClass="btn btn-rounded">Sair</asp:LinkButton>
                                 <i class="mdi mdi-cat menu-icon"></i>
                             </a>
                         </li>
@@ -125,18 +119,26 @@
 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     <div id="container">
-
                     </div>
                 </asp:ContentPlaceHolder>
 
             </div>
         </div>
     </form>
-
+    <script src="../Scripts/jquery-3.2.1.min.js"></script>
+    <script src="../Scripts/JS/animsition.min.js"></script>
+    <script src="../Scripts/popper.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/vendor/select2.min.js"></script>
+    <script src="../Scripts/vendor/moment.min.js"></script>
+    <script src="../Scripts/vendor/daterangepicker.js"></script>
+    <script src="../Scripts/countdowntime.js"></script>
+    <script src="../Scripts/JS/main.js"></script>   
     <script src="../../Scripts/vendor/vendor.bundle.base.js"></script>
     <script src="../../Scripts/vendor/vendor.bundle.addons.js"></script>
     <script src="../../Scripts/JS/off-canvas.js"></script>
     <script src="../../Scripts/JS/misc.js"></script>
-    <script src="../../Scripts/JS/dashboard.js"></script>
+    <script src="../../Scripts/JS/dashboard.js"></script> 
+    
 </body>
 </html>
