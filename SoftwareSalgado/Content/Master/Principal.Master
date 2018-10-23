@@ -4,16 +4,11 @@
 
 <html>
 <head runat="server">
-    <link href="../bootstrap.min.css" rel="stylesheet" />
-    <link href="../Iconic/materialdesignicons.css" rel="stylesheet" />
-    <link href="../Iconic/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="../Iconic/material-design-iconic-font.min.css" rel="stylesheet" />
-    <link href="../CSS/vendor.bundle.base.css" rel="stylesheet" />
+    <link href="../vendorsMP/iconfonts/mdi/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../vendorsMP/css/vendor.bundle.base.css" rel="stylesheet" />
     <link href="../CSS/style.css" rel="stylesheet" />
-    <link href="../fonts/font-awesome.min.css" rel="stylesheet" />
-    <link href="../images/icons/icon-font.min.css" rel="stylesheet" />
-    <link href="../CSS/hamburgers.min.css" rel="stylesheet" />
-    <link href="../CSS/animsition.css" rel="stylesheet" />
+
+
 
     <title>Master Page</title>
 
@@ -68,8 +63,9 @@
                             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                                 <span class="menu-title">Cadastro</span>
                                 <i class="menu-arrow"></i>
-                                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                                <i class="mdi mdi-animation menu-icon"></i>
                             </a>
+
                             <div class="collapse" id="ui-basic">
                                 <ul class="nav flex-column sub-menu">
                                     <li class="nav-item">
@@ -87,28 +83,28 @@
                         <li class="nav-item">
                             <a class="nav-link" href="">
                                 <span class="menu-title">Vendas</span>
-                                <i class="fa fa-home menu-icon"></i>
+                                <i class="mdi mdi-barcode-scan menu-icon"></i>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="">
                                 <span class="menu-title">Despesas</span>
-                                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+                                <i class="mdi mdi-coin menu-icon"></i>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="">
                                 <span class="menu-title">Listar Clientes</span>
-                                <i class="mdi mdi-chart-bar menu-icon"></i>
+                                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link">
-                                <asp:LinkButton ID="lbSair" runat="server" OnClick="lbSair_Click" CssClass="btn btn-rounded">Sair</asp:LinkButton>
-                                <i class="mdi mdi-cat menu-icon"></i>
+                                <asp:LinkButton ID="lbSair" runat="server" OnClick="lbSair_Click" CssClass="menu-title" Text="Sair"></asp:LinkButton>
+                                <i class="mdi mdi-power menu-icon"></i>
                             </a>
                         </li>
 
@@ -125,20 +121,12 @@
             </div>
         </div>
     </form>
-    <script src="../Scripts/jquery-3.2.1.min.js"></script>
-    <script src="../Scripts/JS/animsition.min.js"></script>
-    <script src="../Scripts/popper.js"></script>
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/vendor/select2.min.js"></script>
-    <script src="../Scripts/vendor/moment.min.js"></script>
-    <script src="../Scripts/vendor/daterangepicker.js"></script>
-    <script src="../Scripts/countdowntime.js"></script>
-    <script src="../Scripts/JS/main.js"></script>   
-    <script src="../../Scripts/vendor/vendor.bundle.base.js"></script>
-    <script src="../../Scripts/vendor/vendor.bundle.addons.js"></script>
-    <script src="../../Scripts/JS/off-canvas.js"></script>
-    <script src="../../Scripts/JS/misc.js"></script>
-    <script src="../../Scripts/JS/dashboard.js"></script> 
-    
+
+    <script src="../vendorsMP/js/vendor.bundle.base.js"></script>
+    <script src="../vendorsMP/js/vendor.bundle.addons.js"></script>
+    <script src="../../Scripts/js/off-canvas.js"></script>
+    <script src="../../Scripts/js/misc.js"></script>
+    <script src="../../Scripts/js/dashboard.js"></script>
+
 </body>
 </html>

@@ -72,6 +72,11 @@
             </div>
         </div>
     </div>
+    <script src="../vendorsMP/js/vendor.bundle.base.js"></script>
+    <script src="../vendorsMP/js/vendor.bundle.addons.js"></script>
+    <script src="../../Scripts/js/off-canvas.js"></script>
+    <script src="../../Scripts/js/misc.js"></script>
+    <script src="../../Scripts/js/dashboard.js"></script>
 
 </asp:Content>
 
