@@ -34,7 +34,7 @@
                             <div class="card-body">
                                 <asp:Image runat="server" ImageUrl="~/Content/images/circle.svg" CssClass="card-img-absolute" />
                                 <h4 class="font-weight-normal mb-3">Despesas                    
-                                        <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                                        <i class="mdi mdi-calculator mdi-24px float-right"></i>
                                 </h4>
                                 <h2 class="mb-5">R$ 1.000,00</h2>
                                 <h6 class="card-text">Increased by 60%</h6>
@@ -47,7 +47,7 @@
                             <div class="card-body">
                                 <asp:Image runat="server" ImageUrl="~/Content/images/circle.svg" CssClass="card-img-absolute" />
                                 <h4 class="font-weight-normal mb-3">Receita                    
-                            <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                            <i class="mdi mdi-chart-line mdi-24px float-right"></i>
                                 </h4>
                                 <h2 class="mb-5">R$ 4.000,00</h2>
                                 <h6 class="card-text">Decreased by 10%</h6>
@@ -60,7 +60,7 @@
                             <div class="card-body">
                                 <asp:Image runat="server" ImageUrl="~/Content/images/circle.svg" CssClass="card-img-absolute mb-3" />
                                 <h4 class="font-weight-normal mb-3">Lucro                   
-                            <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                            <i class="mdi mdi-square-inc-cash mdi-22px float-right"></i>
                                 </h4>
                                 <h2 class="mb-5">R$</h2>
                                 <h6 class="card-text">Increased by 5%</h6>
@@ -72,8 +72,9 @@
             </div>
         </div>
     </div>
-    <script src="../vendorsMP/js/vendor.bundle.base.js"></script>
-    <script src="../vendorsMP/js/vendor.bundle.addons.js"></script>
+
+    <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <script src="../vendors/js/vendor.bundle.addons.js"></script>
     <script src="../../Scripts/js/off-canvas.js"></script>
     <script src="../../Scripts/js/misc.js"></script>
     <script src="../../Scripts/js/dashboard.js"></script>
