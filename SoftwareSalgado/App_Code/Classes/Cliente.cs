@@ -13,7 +13,7 @@ namespace SoftwareSalgado.App_Code.Classes
         public string Telefone { get; set; }
         public string Email { get; set; }
         public string CPF { get; set; }
-        public string Entrega { get; set; }
+       
 
         //construtor
         public Cliente()

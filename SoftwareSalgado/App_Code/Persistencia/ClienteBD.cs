@@ -14,8 +14,8 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_cliente(cli_codigo,cli_nome, cli_endereco, cli_telefone, cli_email, cli_cpf, cli_entrega) " +
-                "VALUES (?codigo,?nome, ?endereco, ?telefone, ?email, ?cpf, ?entrega)";
+            string sql = "INSERT INTO tbl_cliente(cli_codigo,cli_nome, cli_endereco, cli_telefone, cli_email, cli_cpf ) " +
+                "VALUES (?codigo,?nome, ?endereco, ?telefone, ?email, ?cpf )";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", cliente.Codigo));
@@ -24,7 +24,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
             objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.CPF));
-            objCommand.Parameters.Add(Mapped.Parameter("?entrega", cliente.Entrega));
+            
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
@@ -88,7 +88,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
                 obj.Telefone = Convert.ToString(objDataReader["cli_telefone"]);
                 obj.Email = Convert.ToString(objDataReader["cli_email"]);
                 obj.CPF = Convert.ToString(objDataReader["cli_cpf"]);
-                obj.Entrega = Convert.ToString(objDataReader["cli_entrega"]);
+                
             }
             objDataReader.Close();
             objConexao.Close();
@@ -103,7 +103,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE tbl_cliente SET cli_nome=?nome, cli_endereco=?endereco, cli_telefone=?telefone, cli_email=?email, cli_cpf=?cpf, cli_entrega=?entrega WHERE cli_codigo =?codigo";
+            string sql = "UPDATE tbl_cliente SET cli_nome=?nome, cli_endereco=?endereco, cli_telefone=?telefone, cli_email=?email, cli_cpf=?cpf WHERE cli_codigo =?codigo";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -112,8 +112,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?endereco", cliente.Endereco));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
-            objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.CPF));
-            objCommand.Parameters.Add(Mapped.Parameter("?entrega", cliente.Entrega));
+            objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.CPF));            
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", cliente.Codigo));
 
             objCommand.ExecuteNonQuery();

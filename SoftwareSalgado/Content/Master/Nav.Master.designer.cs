@@ -10,7 +10,7 @@
 namespace SoftwareSalgado.Content.Master {
     
     
-    public partial class Principal {
+    public partial class Nav {
         
         /// <summary>
         /// Controle head.
@@ -22,13 +22,13 @@ namespace SoftwareSalgado.Content.Master {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// Controle master.
+        /// Controle form1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm master;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// Controle ContentPlaceHolder1.

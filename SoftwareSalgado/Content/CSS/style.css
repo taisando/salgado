@@ -17443,10 +17443,11 @@ input:focus {
 }
 
 .sidebar .nav .nav-item.nav-profile .nav-link {
-  height: auto;
+  height: 45px;
   line-height: 1;
-  border-top: 0;
-  padding: 1.25rem 0;
+    border-top-style: none;
+    border-top-color: inherit;
+    border-top-width: 0;
 }
 
 .sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-image {
@@ -17729,6 +17730,8 @@ input:focus {
   -webkit-transition: background 0.25s ease;
   -moz-transition: background 0.25s ease;
   -ms-transition: background 0.25s ease;
+    top: -648px;
+    left: 262px;
 }
 
 .navbar.default-layout-navbar .navbar-brand-wrapper {

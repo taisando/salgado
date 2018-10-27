@@ -24,9 +24,7 @@ namespace SoftwareSalgado.Paginas
             cliente.Endereco = txtEndereco.Text;
             cliente.Telefone = txtTelefone.Text;
             cliente.Email = txtEmail.Text;
-            cliente.CPF = txtCPF.Text;
-            cliente.Entrega = txtEntrega
-                .Text;
+            cliente.CPF = txtCPF.Text;            
 
             ClienteBD bd = new ClienteBD();
             bd.Insert(cliente) ;

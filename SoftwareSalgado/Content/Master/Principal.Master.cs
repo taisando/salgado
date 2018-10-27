@@ -22,7 +22,6 @@ namespace SoftwareSalgado.Content.Master
             Response.Redirect("../Login.aspx");
         }
 
-
-
+        
     }
 }

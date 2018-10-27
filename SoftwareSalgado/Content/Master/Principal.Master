@@ -9,130 +9,31 @@
     <link href="../vendorsMP/css/vendor.bundle.base.css" rel="stylesheet" />
     <link href="../CSS/style.css" rel="stylesheet" />
 
-
-
     <title>Master Page</title>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
+
+
 <body>
+    <form runat="server" id="master">
+    <div class="container-scroller">
+        <!-- partial:../../partials/_navbar.html -->
 
-    <form id="form1" runat="server" class="container-scroller">
 
-        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-            
-             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
 
-                <a class="navbar-brand brand-logo" href="../../Paginas/Adm/Index.aspx">
-                    <asp:Image runat="server" ImageUrl="~/Content/images/ANASALGADOS.png" />
-                </a>
-                <a class="navbar-brand brand-logo-mini" href="../../Paginas/Adm/Index.aspx">
-                    <asp:Image runat="server" ImageUrl="~/Content/images/COXINHA_ana.png" />
-                </a>
-            </div>
-           
-
-            <div class="navbar-menu-wrapper d-flex align-items-stretch">
-
-                <ul class="navbar-nav navbar-nav-right">
-                    <li class="nav-item">
-                        <a class="nav-link" id="profileDropdown" href="" aria-expanded="false">
-                            <div class="nav-profile-text">
-                                <p class="mb-1 text-black">Bem Vindo!</p>
-                            </div>
-                        </a>                        
-
-                    <li class="nav-item">
-                        <a class="nav-link" id="messageDropdown" href="../../Paginas/Adm/Index.aspx">
-                            <i class="mdi mdi-home "></i>
-                            <span class="count-symbol bg-warning"></span>
-                        </a>
-                        
-                    <li class="nav-item">
-                        <a class="nav-link" id="notificationDropdown" href="../../Paginas/CadastrarCliente.aspx" data-toggle="dropdown">
-                            <i class="mdi mdi-coin"></i>
-                            <span class="count-symbol bg-danger"></span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                            <h6 class="p-3 mb-0">Notifications</h6>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item preview-item">
-
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-success">
-                                        <i class="mdi mdi-calendar"></i>
-                                    </div>
-                                </div>
-
-                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                                    <h6 class="preview-subject font-weight-normal mb-1">Event today                                    </h6>
-
-                                    <p class="text-gray ellipsis mb-0">Just a reminder that you have an event today       </p>
-                                </div>
-                            </a>
-
-                            <div class="dropdown-divider">
-                            </div>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-warning">
-                                        <i class="mdi mdi-settings"></i>
-                                    </div>
-                                </div>
-
-                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                                    <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
-                                    <p class="text-gray ellipsis mb-0">Update dashboard </p>
-                                </div>
-                            </a>
-
-                            <div class="dropdown-divider">
-                            </div>
-
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-info">
-                                        <i class="mdi mdi-link-variant"></i>
-                                    </div>
-                                </div>
-
-                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                                    <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
-                                    <p class="text-gray ellipsis mb-0">New admin wow!     </p>
-                                </div>
-                            </a>
-
-                            <div class="dropdown-divider"></div>
-                            <h6 class="p-3 mb-0 text-center">See all notifications</h6>
-                        </div>
-                    </li>
-
-                    <li class="nav-item nav-logout d-none d-lg-block">
-                        <a class="nav-link" href="#">
-                            <i class="mdi mdi-power"></i>
-                        </a>
-                    </li>
-
-                    <li class="nav-item nav-settings d-none d-lg-block">
-                        <a class="nav-link" href="#">
-                            <i class="mdi mdi-format-line-spacing"></i>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-        </nav>
-
+        <!-- partial -->
         <div class="container-fluid page-body-wrapper">
+            <!-- partial:../../partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item nav-profile">
-                        <a href="../../Paginas/Adm/Index.aspx" class="nav-link ">
+                        <a href="#" class="nav-link">
                             <div class="nav-profile-image">
                                 <asp:Image runat="server" ImageUrl="~/Content/images/perfil.jpg" />
                                 <span class="login-status online"></span>
+                                <!--change to offline or busy as needed-->
                             </div>
 
                             <div class="nav-profile-text d-flex flex-column">
@@ -143,77 +44,106 @@
                         </a>
                     </li>
 
-
                     <li class="nav-item">
-                        <a class="nav-link" href="../../Paginas/Adm/Index.aspx">
-                            <span class="menu-title">Pagina Inicial</span>
+                        <a class="nav-link" href="../../index.html">
+                            <span class="menu-title">Página Inicial</span>
                             <i class="mdi mdi-home menu-icon"></i>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                        <a data-toggle="collapse" class="nav-link" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                             <span class="menu-title">Cadastro</span>
                             <i class="menu-arrow"></i>
-                            <i class="mdi mdi-animation menu-icon"></i>
+                            <i class="mdi  mdi-folder-account menu-icon"></i>
                         </a>
-
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../../Paginas/CadastrarCliente.aspx">Cadastro de Clientes
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../../Paginas/CadastroProduto.aspx">Cadastro de Produtos 
-                                    </a>
-                                </li>
+                                <li class="nav-item"><a class="nav-link" href="../../Paginas/CadastrarCliente.aspx">Cadastro de clientes</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Cadastro de Produtos</a></li>
                             </ul>
                         </div>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="">
-                            <span class="menu-title">Vendas</span>
-                            <i class="mdi mdi-barcode-scan menu-icon"></i>
+                        <a class="nav-link" href="../../Paginas/NovaVenda.aspx">
+                            <span class="menu-title">Venda</span>
+                            <i class="mdi mdi-cash-usd menu-icon"></i>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="../../pages/forms/basic_elements.html">
                             <span class="menu-title">Despesas</span>
                             <i class="mdi mdi-coin menu-icon"></i>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="../../Paginas/ListarCliente.aspx">
-                            <span class="menu-title">Listar Clientes</span>
+                        <a class="nav-link" href="../../pages/charts/chartjs.html">
+                            <span class="menu-title">Lista de Clientes</span>
                             <i class="mdi mdi-format-list-bulleted menu-icon"></i>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link">
-                            <asp:LinkButton ID="lbSair" runat="server" OnClick="lbSair_Click" CssClass="menu-title" Text="Sair"></asp:LinkButton>
-                            <i class="mdi mdi-power menu-icon"></i>
+                        <a class="nav-link" href="../../pages/tables/basic-table.html">
+                            <span class="menu-title">Tables</span>
+                            <i class="mdi mdi-table-large menu-icon"></i>
                         </a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
+                            <span class="menu-title">Sample Pages</span>
+                            <i class="menu-arrow"></i>
+                            <i class="mdi mdi-medical-bag menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="general-pages">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="../../pages/samples/blank-page.html">Blank Page </a></li>
+                                <li class="nav-item"><a class="nav-link" href="../../pages/samples/login.html">Login </a></li>
+                                <li class="nav-item"><a class="nav-link" href="../../pages/samples/register.html">Register </a></li>
+                                <li class="nav-item"><a class="nav-link" href="../../pages/samples/error-404.html">404 </a></li>
+                                <li class="nav-item"><a class="nav-link" href="../../pages/samples/error-500.html">500 </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item sidebar-actions">
+                        <span class="nav-link">
+                            <span class="border-bottom">
+                            </span>
+                           
+                            <button class="btn btn-block btn-rounded btn-inverse-warning mt-4" ><a href="../../Paginas/Login.aspx">Sair</a></button>
+                            <span class="border-bottom">
+                            </span>
+                        </span>
+                    </li>
                 </ul>
             </nav>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
 
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <div id="container">
+                        </div>
+                    </asp:ContentPlaceHolder>
 
-
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <div id="container">
                 </div>
-            </asp:ContentPlaceHolder>
-
+                <!-- content-wrapper ends -->
+                <!-- partial:../../partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Projeto Interdisciplinar <a href="http://fatecguaratingueta.edu.br/" target="_blank">Fatec Guaratinguetá</a>.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Segundo Semestre 2018<i class="mdi mdi-heart text-danger"></i><i class="mdi mdi mdi-bible"></i></span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
         </div>
+        <!-- page-body-wrapper ends -->
+    </div>
 
     </form>
 
+    <script src="../../Scripts/jquery-3.2.1.min.js"></script>
     <script src="../vendors/js/vendor.bundle.base.js"></script>
     <script src="../vendors/js/vendor.bundle.addons.js"></script>
     <script src="../../Scripts/js/off-canvas.js"></script>
