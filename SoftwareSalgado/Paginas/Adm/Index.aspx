@@ -32,6 +32,7 @@
                                 <h2 class="mb-5">R$ 1.000,00</h2>
                                 <h6 class="card-text">Nova Despesa
                                     </h6> 
+                               
                                 <a href="../NovaVenda.aspx">
                                     <button class="btn btn-rounded btn-sm menu-icon"><i class="mdi mdi-plus"></i></button></a>
                             </div>

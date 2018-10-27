@@ -112,6 +112,7 @@
     <Content Include="Content\images\perfil.jpg" />
     <Content Include="Content\images\pic-1.png" />
     <Content Include="Content\images\pic-2.png" />
+    <Content Include="Content\SQL\ana.sql" />
     <Content Include="Content\vendors\css\vendor.bundle.base.css" />
     <Content Include="Content\vendors\iconfonts\mdi\css\materialdesignicons.css" />
     <Content Include="Content\vendors\iconfonts\mdi\css\materialdesignicons.min.css" />

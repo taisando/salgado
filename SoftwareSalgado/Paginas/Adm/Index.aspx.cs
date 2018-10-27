@@ -39,6 +39,10 @@ namespace SoftwareSalgado.Paginas.ADM
             Response.Write("Bem vindo! : " + pessoa.Nome);
 
         }
+        protected void Plus_Click(object sender, EventArgs e)
+        {
+             Response.Redirect("../NovaVenda.aspx");
+        }
     }
 
 }
