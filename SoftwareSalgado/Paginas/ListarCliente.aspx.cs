@@ -11,7 +11,7 @@ namespace SoftwareSalgado.Paginas
 {
     public partial class Listar : System.Web.UI.Page
     {
-        private int ahref;
+        //private int ahref; 
 
         private void Carrega()
         {

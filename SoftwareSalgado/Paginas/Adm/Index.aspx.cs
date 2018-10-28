@@ -35,14 +35,16 @@ namespace SoftwareSalgado.Paginas.ADM
         {
             int codigo = Convert.ToInt32(Session["ID"]);
             PessoaBD bd = new PessoaBD();
-            Pessoa pessoa = bd.Select(codigo);            
+            Pessoa pessoa = bd.Select(codigo);
             Response.Write("Bem vindo! : " + pessoa.Nome);
 
         }
-        protected void Plus_Click(object sender, EventArgs e)
+
+        protected void Plus(object sender, EventArgs e)
         {
-             Response.Redirect("../NovaVenda.aspx");
+            Response.Redirect("../NovaVenda.aspx");
         }
+        
     }
 
 }

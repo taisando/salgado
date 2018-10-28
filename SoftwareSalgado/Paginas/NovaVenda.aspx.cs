@@ -14,7 +14,7 @@ namespace SoftwareSalgado.Paginas
 
         }
 
-        protected void btnSalvar_Click(object sender, EventArgs e)
+       /*protected void btnSalvar_Click(object sender, EventArgs e)
         {
             Pedido pedido = new Pedido();
             pedido.Nome = txtNome.Text;
@@ -23,6 +23,6 @@ namespace SoftwareSalgado.Paginas
             ClienteBD bd = new ClienteBD();
             bd.Insert(cliente);
             Response.Write("Cliente cadastrado com sucesso!");
-        }
+        }*/
     }
 }

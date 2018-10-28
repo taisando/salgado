@@ -22,7 +22,7 @@ namespace SoftwareSalgado.Paginas
                 txtTelefone.Text = cliente.Telefone.ToString();
                 txtEmail.Text = cliente.Email.ToString();
                 txtCPF.Text = cliente.CPF.ToString();
-                txtEntrega.Text = cliente.Entrega.ToString();
+                
             }
         }
 
@@ -35,7 +35,7 @@ namespace SoftwareSalgado.Paginas
             cliente.Telefone = txtTelefone.Text;
             cliente.Email = txtEmail.Text;
             cliente.CPF = txtCPF.Text;
-            cliente.Entrega = txtEndereco.Text;
+            
 
 
             if (bd.Update(cliente))

@@ -43,8 +43,7 @@
             <asp:TextBox ID="txtCPF" runat="server" placeholder="CPF 000.000.000-00"></asp:TextBox>
             <p></p>
 
-
-            <asp:TextBox ID="txtEntrega" runat="server" placeholder="Endereço de entrega"></asp:TextBox>
+           
             <p></p>
             <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" class="btn btn primary" />
             <p></p>
