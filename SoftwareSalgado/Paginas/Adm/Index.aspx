@@ -20,25 +20,21 @@
 
                 <br />
                 <br />
-                <div class="row">
+                <div runat="server" class="row">
                     <div class="col-md-4 stretch-card grid-margin">
                         <div class="card bg-gradient-success card-img-holder text-white">
-                            <div class="card-body">
+                            <div runat="server" class="card-body">
                                 <asp:Image runat="server" ImageUrl="~/Content/images/circle.svg" CssClass="card-img-absolute" />
                                 <h4 class="font-weight-normal mb-3">Vendas                  
-                            <i class="mdi mdi-square-inc-cash mdi-22px float-right"></i>
+                                    <i class="mdi mdi-square-inc-cash mdi-22px float-right"></i>
                                 </h4>
                                 <h2 class="mb-5">R$ 4.000,00</h2>
-                                <h6 class="card-text">
-                                    <a href="../NovaVenda.aspx">Nova Venda</a></h6>
-                                <button type="button" class="btn btn-gradient btn-rounded btn-icon">
-                                    <a href="../NovaVenda.aspx"><i class="mdi mdi-home-outline"></i></a>
-                                </button>
-
+                                <h6 class="card-text"></h6>
+                                   <asp:Button runat="server" OnClick="Unnamed3_Click" Text="+" CssClass="btn btn-rounded"/>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="col-md-4 stretch-card grid-margin">
                         <div class="card bg-gradient-danger card-img-holder text-white">
                             <div class="card-body">

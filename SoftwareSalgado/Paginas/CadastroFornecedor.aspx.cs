@@ -24,8 +24,6 @@ namespace SoftwareSalgado.Paginas
             fornecedor.Email = txtEmail.Text;
             fornecedor.Telefone = txtTelefone.Text;
             fornecedor.CNPJ = txtCNPJ.Text;
-            fornecedor.Endereco = txtEndereco.Text;
-            fornecedor.Mercadoria = txtMercadoria.Text;
 
             FornecedorBD bd = new FornecedorBD();
             bd.Insert(fornecedor);

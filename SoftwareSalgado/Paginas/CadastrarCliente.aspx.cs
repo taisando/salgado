@@ -20,9 +20,12 @@ namespace SoftwareSalgado.Paginas
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
             Cliente cliente = new Cliente();
-            cliente.Nome = txtNome.Text;
-            cliente.Endereco = txtEndereco.Text;
+            cliente.Nome = txtNome.Text;            
             cliente.Telefone = txtTelefone.Text;
+            cliente.Logradouro = txtLogradouro.Text;
+            cliente.Numero = Convert.ToInt16(txtNumero.Text);
+            cliente.Complemento = txtComplemento.Text;
+            cliente.Cidade = txtCidade.Text;
             cliente.Email = txtEmail.Text;
             cliente.CPF = txtCPF.Text;            
 

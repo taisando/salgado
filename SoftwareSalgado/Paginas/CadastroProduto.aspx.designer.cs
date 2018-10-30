@@ -22,15 +22,6 @@ namespace SoftwareSalgado.Paginas {
         protected global::System.Web.UI.WebControls.TextBox txtNome;
         
         /// <summary>
-        /// Controle txtTipo.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipo;
-        
-        /// <summary>
         /// Controle txtPreco.
         /// </summary>
         /// <remarks>

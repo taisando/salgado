@@ -13,7 +13,6 @@
 
                 <asp:Label runat="server" CssClass="card-body h4" Text="Cadastro de Clientes"></asp:Label>
 
-
                 <div class="row">
 
                     <div class="col-md-6">
@@ -34,7 +33,7 @@
                         <div class="form-group row">
                             <asp:Label runat="server" Text="Logradouro" CssClass="col-sm-9 col-form-label"></asp:Label>
                             <asp:Label runat="server" Text="Número" CssClass="col-sm-3 col-form-label"></asp:Label>
-                            <asp:TextBox ID="txtEndereco" runat="server" placeholder="Logradouro" CssClass="col-sm-9 col-form-label form-control form-control-sm"></asp:TextBox>
+                            <asp:TextBox ID="txtLogradouro" runat="server" placeholder="Logradouro" CssClass="col-sm-9 col-form-label form-control form-control-sm"></asp:TextBox>
                             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;                      
                             <asp:TextBox ID="txtNumero" runat="server" placeholder="N°" CssClass="col-sm-1 col-form-label form-control form-control-sm"></asp:TextBox>
                         </div>
@@ -43,14 +42,14 @@
                     <div class="col-md-6">
                         <div class="form-group row">
                             <asp:Label runat="server" Text="Complemento" CssClass="col-sm-6 col-form-label"></asp:Label>
-                            <asp:TextBox ID="TextBox2" runat="server" placeholder="Completmento" CssClass="col-sm-10 col-form-label form-control form-control-sm"></asp:TextBox>
+                            <asp:TextBox ID="txtComplemento" runat="server" placeholder="Completmento" CssClass="col-sm-10 col-form-label form-control form-control-sm"></asp:TextBox>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group row">
                             <asp:Label runat="server" Text="Cidade" CssClass="col-sm-6 col-form-label"></asp:Label>
-                            <asp:TextBox ID="TextBox1" runat="server" placeholder="Cidade" CssClass="col-sm-9 col-form-label form-control form-control-sm"></asp:TextBox>
+                            <asp:TextBox ID="txtCidade" runat="server" placeholder="Cidade" CssClass="col-sm-9 col-form-label form-control form-control-sm"></asp:TextBox>
                         </div>
                     </div>
 

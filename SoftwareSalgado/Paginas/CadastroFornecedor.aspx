@@ -1,61 +1,53 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastroFornecedor.aspx.cs" Inherits="SoftwareSalgado.Paginas.CadastroFornecedor" Title="" MasterPageFile="~/Content/Master/Principal.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-
-    <link href="../Iconic/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/materialdesignicons.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/material-design-iconic-font.min.css" rel="stylesheet" />
-    <link href="../CSS/vendor.bundle.base.css" rel="stylesheet" />
-    <link href="../CSS/style.css" rel="stylesheet" />
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/jquery-3.3.1.min.js"></script>
-    <style type="text/css">
-        .auto-style1 {
-            height: 535px;
-            width: 664px;
-            margin-left: 40px;
-        }
-    </style>
 </asp:Content>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
-        <div class="form-row">
-            <div class="form-group">
-            <br class="auto-style1" />
-                <p class="auto-style1">Cadastro de Fornecedor<br class="auto-style1" />
-                <br class="auto-style1" />
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <asp:Label runat="server" CssClass="card-body h4" Text="Cadastro de Fornecedores"></asp:Label>
 
-            <asp:TextBox ID="txtNome" runat="server" placeholder="Nome"></asp:TextBox>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
+                <div class="row">
 
-            <asp:TextBox ID="txtCNPJ" runat="server" placeholder="CNPJ"></asp:TextBox>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <asp:Label runat="server" Text="Nome" CssClass="col-sm-4 col-form-label"></asp:Label>
+                            <asp:TextBox runat="server" ID="txtNome" placeholder="Nome" CssClass="col-sm-10 col-form-label form-control form-control-sm "></asp:TextBox>
+                        </div>
+                    </div>
 
-            <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
+                 <div class="col-md-6">
+                        <div class="form-group row">
+                            <asp:Label runat="server" Text="Telefone" CssClass="col-sm-4 col-form-label"></asp:Label>
+                            <asp:TextBox runat="server" ID="txtTelefone" placeholder="Telefone (00)0 0000-0000" CssClass="col-sm-10 col-form-label form-control form-control-sm "></asp:TextBox>
+                        </div>
+                    </div>
 
-            <asp:TextBox ID="txtTelefone" runat="server" placeholder="Telefone (00)0 0000-0000"></asp:TextBox>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
+                    
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <asp:Label runat="server" Text="E-Mail" CssClass="col-sm-6 col-form-label"></asp:Label>
+                            <asp:TextBox ID="txtEmail" runat="server" placeholder="E-mail" CssClass="col-sm-10 col-form-label form-control form-control-sm"></asp:TextBox>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <asp:Label runat="server" Text="CNPJ" CssClass="col-sm-6 col-form-label"></asp:Label>
+                            <asp:TextBox ID="txtCNPJ" runat="server" placeholder="E-mail" CssClass="col-sm-10 col-form-label form-control form-control-sm"></asp:TextBox>
+                        </div>
+                    </div>                
 
-            <asp:TextBox ID="txtEndereco" runat="server" placeholder="Endereço"></asp:TextBox>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
 
-            <asp:TextBox ID="txtMercadoria" runat="server" placeholder="Mercadoria"></asp:TextBox>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
-
-            <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" class="btn btn primary"/>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
-            <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                    <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" class="btn btn-info btn-rounded" />
+                    
+                    <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                </div>
             </div>
         </div>
-  </asp:Content>
+    </div>
+</asp:Content>

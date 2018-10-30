@@ -22,6 +22,15 @@ namespace SoftwareSalgado.Paginas {
         protected global::System.Web.UI.WebControls.TextBox txtNome;
         
         /// <summary>
+        /// Controle txtTelefone.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTelefone;
+        
+        /// <summary>
         /// Controle txtEndereco.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,31 @@ namespace SoftwareSalgado.Paginas {
         protected global::System.Web.UI.WebControls.TextBox txtEndereco;
         
         /// <summary>
-        /// Controle txtTelefone.
+        /// Controle txtNumero.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTelefone;
+        protected global::System.Web.UI.WebControls.TextBox txtNumero;
+        
+        /// <summary>
+        /// Controle TextBox2.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        
+        /// <summary>
+        /// Controle TextBox1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
         /// Controle txtEmail.
@@ -67,13 +94,13 @@ namespace SoftwareSalgado.Paginas {
         protected global::System.Web.UI.WebControls.Button btnSalvar;
         
         /// <summary>
-        /// Controle HyperLink1.
+        /// Controle HyperLink3.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
         
         /// <summary>
         /// Controle HyperLink2.

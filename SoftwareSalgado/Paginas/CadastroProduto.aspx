@@ -1,56 +1,57 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastroProduto.aspx.cs" Inherits="SoftwareSalgado.Paginas.CadastroProduto" Title="" MasterPageFile="~/Content/Master/Principal.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-
-    <link href="../Iconic/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/materialdesignicons.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/material-design-iconic-font.min.css" rel="stylesheet" />
-    <link href="../CSS/vendor.bundle.base.css" rel="stylesheet" />
-    <link href="../CSS/style.css" rel="stylesheet" />
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/jquery-3.3.1.min.js"></script>
-    <style type="text/css">
-        .auto-style1 {
-            height: 535px;
-            width: 664px;
-            margin-left: 40px;
-        }
-    </style>
 </asp:Content>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
-        <div class="form-row">
-            <div class="form-group">
-                <br class="auto-style1" />
-                <p class="auto-style1">
-                Cadastro de Produtos<br class="auto-style1" />
-                <br class="auto-style1" />
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <asp:Label runat="server" CssClass="card-body h4" Text="Cadastro de Produtos"></asp:Label>
 
-                <asp:TextBox ID="txtNome" runat="server" placeholder="Nome"></asp:TextBox>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <asp:Label runat="server" Text="Nome do Produto" CssClass="col-sm-6 col-form-label"></asp:Label>
+                            <asp:TextBox runat="server" ID="txtNome" placeholder="Nome do Produto" CssClass="col-sm-10 col-form-label form-control form-control-sm "></asp:TextBox>
+                        </div>
+                    </div>
 
-                <asp:TextBox ID="txtTipo" runat="server" placeholder="Tipo"></asp:TextBox>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
-                
-                <asp:TextBox ID="txtPreco" runat="server" placeholder="Preço 0,00"></asp:TextBox>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
-                
-                <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" class="btn btn primary"/>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <asp:Label runat="server" Text="Categoria" CssClass="col-sm-4 col-form-label"></asp:Label>
+                            <div class="col-sm-9">
+                                <select class="form-control">
+                                    <option>Salgado</option>
+                                    <option>Doce</option>
+                                    <option>Cento</option>                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
 
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ListarProduto.aspx">Listar Produtos</asp:HyperLink>
-                <br class="auto-style1" />
-                <br class="auto-style1" />
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <asp:Label runat="server" Text="Preço" CssClass="col-sm-4 col-form-label"></asp:Label>
+                            <asp:TextBox runat="server" ID="txtPreco" placeholder="R$ 00,00" CssClass="col-sm-10 col-form-label form-control form-control-sm "></asp:TextBox>
+                        </div>
+                    </div>
 
-                <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-                </p>
+
+                    <div class="col-md-12">
+                        <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" class="btn btn-info btn-rounded" />
+                        <p></p>
+                        
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ListarProduto.aspx">Listar Produtos</asp:HyperLink>
+                            
+                        <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                        
+                    </div>
+                </div>
             </div>
         </div>
-  </asp:Content>
+    </div>
+</asp:Content>

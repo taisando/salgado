@@ -17,8 +17,7 @@ namespace SoftwareSalgado.Paginas
             {
                 ClienteBD bd = new ClienteBD();
                 Cliente cliente = bd.Select(Convert.ToInt32(Session["ID"]));
-                txtNome.Text = cliente.Nome;
-                txtEndereco.Text = cliente.Endereco.ToString();
+                txtNome.Text = cliente.Nome;                
                 txtTelefone.Text = cliente.Telefone.ToString();
                 txtEmail.Text = cliente.Email.ToString();
                 txtCPF.Text = cliente.CPF.ToString();
@@ -30,8 +29,7 @@ namespace SoftwareSalgado.Paginas
         {
             ClienteBD bd = new ClienteBD();
             Cliente cliente = bd.Select(Convert.ToInt32(Session["ID"]));
-            cliente.Nome = txtNome.Text;
-            cliente.Endereco = txtEndereco.Text;
+            cliente.Nome = txtNome.Text;            
             cliente.Telefone = txtTelefone.Text;
             cliente.Email = txtEmail.Text;
             cliente.CPF = txtCPF.Text;

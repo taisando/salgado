@@ -14,22 +14,23 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_cliente(cli_codigo,cli_nome, cli_endereco, cli_telefone, cli_email, cli_cpf ) " +
-                "VALUES (?codigo,?nome, ?endereco, ?telefone, ?email, ?cpf )";
+            string sql = "INSERT INTO tbl_pessoa(pes_codigo, pes_nome, pes_telefone, pes_email, pes_cpf )" +
+                         "VALUES (?codigo, ?nome, ?telefone, ?email, ?cpf)";            
+
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", cliente.Codigo));
             objCommand.Parameters.Add(Mapped.Parameter("?nome", cliente.Nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?endereco", cliente.Endereco));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
             objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.CPF));
-            
+
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
             return true;
+            
         }
         //selectall
         public DataSet SelectAll()
@@ -39,7 +40,8 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDbCommand objCommand;
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_cliente", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa" +
+                "", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
             objConexao.Close();
@@ -75,20 +77,19 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataReader objDataReader;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_cliente WHERE cli_codigo = ?codigo", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa WHERE pes_codigo = ?codigo", objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", id));
 
             objDataReader = objCommand.ExecuteReader();
             while (objDataReader.Read())
             {
                 obj = new Cliente();
-                obj.Codigo = Convert.ToInt32(objDataReader["cli_codigo"]);
-                obj.Nome = Convert.ToString(objDataReader["cli_nome"]);
-                obj.Endereco = Convert.ToString(objDataReader["cli_endereco"]);
-                obj.Telefone = Convert.ToString(objDataReader["cli_telefone"]);
-                obj.Email = Convert.ToString(objDataReader["cli_email"]);
-                obj.CPF = Convert.ToString(objDataReader["cli_cpf"]);
-                
+                obj.Codigo = Convert.ToInt32(objDataReader["pes_codigo"]);
+                obj.Nome = Convert.ToString(objDataReader["pes_nome"]);
+                obj.Telefone = Convert.ToString(objDataReader["pes_telefone"]);
+                obj.Email = Convert.ToString(objDataReader["pes_email"]);
+                obj.CPF = Convert.ToString(objDataReader["pes_cpf"]);
+
             }
             objDataReader.Close();
             objConexao.Close();
@@ -103,16 +104,15 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE tbl_cliente SET cli_nome=?nome, cli_endereco=?endereco, cli_telefone=?telefone, cli_email=?email, cli_cpf=?cpf WHERE cli_codigo =?codigo";
+            string sql = "UPDATE tbl_pessoa SET pes_nome=?nome, pes_telefone=?telefone, pes_email=?email, pes_cpf=?cpf WHERE cli_codigo =?codigo";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
 
             objCommand.Parameters.Add(Mapped.Parameter("?nome", cliente.Nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?endereco", cliente.Endereco));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
-            objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.CPF));            
+            objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.CPF));
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", cliente.Codigo));
 
             objCommand.ExecuteNonQuery();
@@ -123,10 +123,10 @@ namespace SoftwareSalgado.App_Code.Persistencia
         }
 
     }
-    
+
     //delete
     //construtor
-    
+
 
 
 }
