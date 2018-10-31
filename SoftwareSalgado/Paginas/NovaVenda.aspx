@@ -37,7 +37,9 @@
                                 <h4 class="font-weight-normal mb-3">Quantidade                  
                             <i class="mdi mdi-counter mdi-24px float-right"></i>
                                 </h4>
-                                <h2 class="mb-5">+</h2>
+                                <asp:TextBox runat="server" CssClass="col-md-6"> </asp:TextBox>
+                                <h2 class="mb-5"></h2>
+
                                 <h6 class="card-text"></h6>
                             </div>
                         </div>
@@ -57,8 +59,6 @@
                     </div>
 
                     <div>
-
-                        
                     </div>
 
                 </div>

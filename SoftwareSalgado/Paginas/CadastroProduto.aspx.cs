@@ -18,14 +18,14 @@ namespace SoftwareSalgado.Paginas
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            Produto produto = new Produto();
-            produto.Nome = txtNome.Text;
-            produto.Tipo = txtTipo.Text;
-            produto.Preco = txtPreco.Text;
+            //Produto produto = new Produto();
+            //produto.Nome = txtNome.Text;
+            //produto.Tipo = txtTipo.Text;
+            //produto.Preco = txtPreco.Text;
 
-            ProdutoBD bd = new ProdutoBD();
-            bd.Insert(produto);
-            Response.Write("Produto cadastrado com sucesso!");
+            //ProdutoBD bd = new ProdutoBD();
+            //bd.Insert(produto);
+            //Response.Write("Produto cadastrado com sucesso!");
         }
     }
 }

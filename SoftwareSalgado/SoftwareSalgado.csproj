@@ -118,8 +118,8 @@
     <Content Include="Content\vendors\iconfonts\mdi\css\materialdesignicons.min.css" />
     <Content Include="Content\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Content\vendors\iconfonts\mdi\preview.html" />
-    <Content Include="Content\vendors\js\vendor.bundle.addons.js" />
-    <Content Include="Content\vendors\js\vendor.bundle.base.js" />
+    <Content Include="Scripts\js\vendor.bundle.addons.js" />
+    <Content Include="Scripts\js\vendor.bundle.base.js" />
     <Content Include="Content\vendor\animate\animate.css" />
     <Content Include="Content\vendor\animsition\css\animsition.css" />
     <Content Include="Content\vendor\animsition\css\animsition.min.css" />
@@ -354,6 +354,7 @@
     <Compile Include="App_Code\Mapped.cs" />
     <Compile Include="App_Code\Classes\Cliente.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
+    <Content Include="App_Code\Persistencia\PedidosBD.cs" />
     <Compile Include="App_Code\Persistencia\PessoaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\FornecedorBD.cs" />
@@ -467,6 +468,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\vendors\js\" />
     <Folder Include="Paginas\Erro\" />
   </ItemGroup>
   <ItemGroup>

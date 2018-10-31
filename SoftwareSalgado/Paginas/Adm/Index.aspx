@@ -20,7 +20,7 @@
 
                 <br />
                 <br />
-                <div runat="server" class="row">
+                <div class="row">
                     <div class="col-md-4 stretch-card grid-margin">
                         <div class="card bg-gradient-success card-img-holder text-white">
                             <div runat="server" class="card-body">
@@ -30,7 +30,8 @@
                                 </h4>
                                 <h2 class="mb-5">R$ 4.000,00</h2>
                                 <h6 class="card-text"></h6>
-                                   <asp:Button runat="server" OnClick="Unnamed3_Click" Text="+" CssClass="btn btn-rounded"/>
+                                   <asp:Button runat="server" OnClick="Unnamed3_Click" Text="+" CssClass="btn btn-rounded btn-icon "/>
+                                
                             </div>
                         </div>
                     </div>

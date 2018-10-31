@@ -1,29 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AlterarProduto.aspx.cs" Inherits="SoftwareSalgado.Paginas.AlterarProduto" Title="" MasterPageFile="~/Content/Master/Principal.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/jquery-3.3.1.min.js"></script>
-    <link href="../Iconic/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/materialdesignicons.css" rel="stylesheet" />  
-    <link href="../Iconic/material-design-iconic-font.min.css" rel="stylesheet" />
-    <link href="../CSS/vendor.bundle.base.css" rel="stylesheet" />
-    <link href="../CSS/style.css" rel="stylesheet" />    
-
-    <style type="text/css">
-        .auto-style1 {
-            height: 364px;
-            margin-left: 240px;
-            margin-right: 415px;
-        }
-    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
     <div class="container-fluid">
-        
+
         <div class="form-group">
             <asp:Label runat="server" Text="Alterar Produto"></asp:Label>
             <br />
@@ -56,5 +39,5 @@
             <br class="auto-style1" />
         </div>
     </div>
-    </asp:Content>
+</asp:Content>
 

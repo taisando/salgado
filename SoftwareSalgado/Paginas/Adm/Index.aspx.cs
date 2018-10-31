@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using SoftwareSalgado.App_Code.Persistencia;
 using SoftwareSalgado.App_Code.Classes;
+using System.Configuration;
 
 namespace SoftwareSalgado.Paginas.ADM
 {
@@ -42,7 +43,7 @@ namespace SoftwareSalgado.Paginas.ADM
 
         protected void Unnamed3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../NovaVenda.aspx");
+            Response.Redirect(ConfigurationManager.AppSettings["URL"] +  "Paginas/NovaVenda.aspx");
         }
     }
 

@@ -2,16 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
-    <link href="../Iconic/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/materialdesignicons.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/material-design-iconic-font.min.css" rel="stylesheet" />
-    <link href="../CSS/vendor.bundle.base.css" rel="stylesheet" />
-    <link href="../CSS/style.css" rel="stylesheet" />
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/jquery-3.3.1.min.js"></script>
-
-
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -22,16 +12,15 @@
         <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:BoundField DataField="cli_codigo" HeaderText="Código" />
-                <asp:BoundField DataField="cli_nome" HeaderText="Nome" />
-                <asp:BoundField DataField="cli_endereco" HeaderText="Endereço" />
-                <asp:BoundField DataField="cli_telefone" HeaderText="Telefone" />
-                <asp:BoundField DataField="cli_email" HeaderText="E-mail" />
-                <asp:BoundField DataField="cli_cpf" HeaderText="CPF" />
-                <asp:BoundField DataField="cli_entrega" HeaderText="Endereço de Entrega" />
+                <asp:BoundField DataField="pes_codigo" HeaderText="Código" />
+                <asp:BoundField DataField="pes_nome" HeaderText="Nome" />
+                <asp:BoundField DataField="pes_endereco" HeaderText="Endereço" />
+                <asp:BoundField DataField="pes_telefone" HeaderText="Telefone" />
+                <asp:BoundField DataField="pes_email" HeaderText="E-mail" />
+                <asp:BoundField DataField="pes_cpf" HeaderText="CPF" />               
                 <asp:TemplateField>
                     <ItemTemplate>
-                        <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("cli_codigo")%>'>Alterar</asp:LinkButton>
+                        <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("pes_codigo")%>'>Alterar</asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

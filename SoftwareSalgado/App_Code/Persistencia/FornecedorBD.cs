@@ -13,16 +13,17 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_fornecedor(for_codigo, for_nome, for_email, for_telefone, for_cnpj, for_endereco, for_mercadoria) VALUES (?codigo, ?nome, ?email, ?telefone, ?cnpj, ?endereco, ?mercadoria)";
+
+            string sql = "INSERT INTO tbl_pessoa(pes_codigo, pes_nome, pes_email, pes_telefone, pes_cnpj ) VALUES (?codigo, ?nome, ?email, ?telefone, ?cnpj)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
+
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", fornecedor.Codigo));
             objCommand.Parameters.Add(Mapped.Parameter("?nome", fornecedor.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?email", fornecedor.Email));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", fornecedor.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?cnpj", fornecedor.CNPJ));
-            objCommand.Parameters.Add(Mapped.Parameter("?endereco", fornecedor.Endereco));
-            objCommand.Parameters.Add(Mapped.Parameter("?mercadoria", fornecedor.Mercadoria));
+
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();

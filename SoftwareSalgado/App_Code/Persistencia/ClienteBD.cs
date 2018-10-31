@@ -19,6 +19,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
+
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", cliente.Codigo));
             objCommand.Parameters.Add(Mapped.Parameter("?nome", cliente.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
