@@ -2,16 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
-    <link href="../Iconic/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/materialdesignicons.css" rel="stylesheet" />
-    <link href="../../Content/Iconic/material-design-iconic-font.min.css" rel="stylesheet" />
-    <link href="../CSS/vendor.bundle.base.css" rel="stylesheet" />
-    <link href="../CSS/style.css" rel="stylesheet" />
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/jquery-3.3.1.min.js"></script>
-
-
 </asp:Content>
 
 
@@ -49,5 +39,5 @@
     <br />
     <p style="width: 1114px">
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="CadastroProduto.aspx">Cadastrar Produtos</asp:HyperLink>
-    </p>
+    &nbsp;</p>
 </asp:Content>

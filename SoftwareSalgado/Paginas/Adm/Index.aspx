@@ -24,28 +24,27 @@
                     <div class="col-md-4 stretch-card grid-margin">
                         <div class="card bg-gradient-success card-img-holder text-white">
                             <div runat="server" class="card-body">
-                                <asp:Image runat="server" ImageUrl="~/Content/images/circle.svg" CssClass="card-img-absolute" />
+
                                 <h4 class="font-weight-normal mb-3">Vendas                  
                                     <i class="mdi mdi-square-inc-cash mdi-22px float-right"></i>
                                 </h4>
                                 <h2 class="mb-5">R$ 4.000,00</h2>
-                                <h6 class="card-text"></h6>
-                                   <asp:Button runat="server" OnClick="Unnamed3_Click" Text="+" CssClass="btn btn-rounded btn-icon "/>
-                                
+                                <h6 class="card-text">Adicionar Nova Venda </h6>
+                                <asp:Button runat="server" OnClick="Unnamed3_Click" Text="+" CssClass="btn btn-primary btn-sm" />
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 stretch-card grid-margin">
                         <div class="card bg-gradient-danger card-img-holder text-white">
                             <div class="card-body">
-                                <asp:Image runat="server" ImageUrl="~/Content/images/circle.svg" CssClass="card-img-absolute" />
+
                                 <h4 class="font-weight-normal mb-3">Despesas                    
                                         <i class="mdi mdi-contrast-circle mdi-24px float-right"></i>
                                 </h4>
                                 <h2 class="mb-5">R$ 1.000,00</h2>
                                 <h6 class="card-text">Nova Despesa</h6>
-                                
+                                <asp:Button runat="server"  Text="+" CssClass="btn btn-primary btn-sm" />
                             </div>
                         </div>
                     </div>
@@ -60,7 +59,7 @@
                             <i class="mdi mdi-calculator mdi-24px float-right"></i>
                                 </h4>
                                 <h2 class="mb-5">R$</h2>
-                                <h6 class="card-text">Increased by 5%</h6>
+                                <h6 class="card-text"></h6>
                             </div>
                         </div>
                     </div>

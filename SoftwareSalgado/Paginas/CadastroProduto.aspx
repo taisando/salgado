@@ -18,7 +18,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                   <!-- <div class="col-md-6">
                         <div class="form-group row">
                             <asp:Label runat="server" Text="Categoria" CssClass="col-sm-4 col-form-label"></asp:Label>
                             <div class="col-sm-9">
@@ -29,7 +29,7 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     
 
                     <div class="col-md-6">

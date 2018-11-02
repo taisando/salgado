@@ -18,14 +18,22 @@ namespace SoftwareSalgado.Paginas
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            //Produto produto = new Produto();
-            //produto.Nome = txtNome.Text;
+            Produto produto = new Produto();
+            produto.Nome = txtNome.Text;
             //produto.Tipo = txtTipo.Text;
-            //produto.Preco = txtPreco.Text;
+            produto.Preco = txtPreco.Text;
 
-            //ProdutoBD bd = new ProdutoBD();
-            //bd.Insert(produto);
-            //Response.Write("Produto cadastrado com sucesso!");
+            ProdutoBD bd = new ProdutoBD();
+            if (bd.Insert(produto))
+            {
+                lblMensagem.Text = "Produto cadastrado com sucesso!";
+                txtNome.Text = "";
+                txtPreco.Text = "";
+            }
+            else
+            {
+                lblMensagem.Text = "Erro ao salvar.";
+            }
         }
     }
 }

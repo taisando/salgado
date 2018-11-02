@@ -118,6 +118,7 @@
     <Content Include="Content\vendors\iconfonts\mdi\css\materialdesignicons.min.css" />
     <Content Include="Content\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Content\vendors\iconfonts\mdi\preview.html" />
+    <Content Include="Paginas\Quantidade.aspx" />
     <Content Include="Scripts\js\vendor.bundle.addons.js" />
     <Content Include="Scripts\js\vendor.bundle.base.js" />
     <Content Include="Content\vendor\animate\animate.css" />
@@ -348,6 +349,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\Classes\Pedido.cs" />
+    <Content Include="App_Code\Classes\Endereco.cs" />
     <Compile Include="App_Code\Classes\Pessoa.cs" />
     <Compile Include="App_Code\Classes\Produto.cs" />
     <Compile Include="App_Code\Classes\Fornecedor.cs" />
@@ -355,6 +357,7 @@
     <Compile Include="App_Code\Classes\Cliente.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
     <Content Include="App_Code\Persistencia\PedidosBD.cs" />
+    <Content Include="App_Code\Persistencia\EnderecoBD.cs" />
     <Compile Include="App_Code\Persistencia\PessoaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\FornecedorBD.cs" />
@@ -441,6 +444,13 @@
     </Compile>
     <Compile Include="Paginas\NovaVenda.aspx.designer.cs">
       <DependentUpon>NovaVenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Quantidade.aspx.cs">
+      <DependentUpon>Quantidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Quantidade.aspx.designer.cs">
+      <DependentUpon>Quantidade.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

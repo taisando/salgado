@@ -1,44 +1,46 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListarCliente.aspx.cs" Inherits="SoftwareSalgado.Paginas.Listar" Title="" MasterPageFile="~/Content/Master/Principal.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
-    <div>
-        Lista de Clientes<br />
-        <br />
-        <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False">
-            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-            <Columns>
-                <asp:BoundField DataField="pes_codigo" HeaderText="Código" />
-                <asp:BoundField DataField="pes_nome" HeaderText="Nome" />
-                <asp:BoundField DataField="pes_endereco" HeaderText="Endereço" />
-                <asp:BoundField DataField="pes_telefone" HeaderText="Telefone" />
-                <asp:BoundField DataField="pes_email" HeaderText="E-mail" />
-                <asp:BoundField DataField="pes_cpf" HeaderText="CPF" />               
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("pes_codigo")%>'>Alterar</asp:LinkButton>
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-            <EditRowStyle BackColor="#999999" />
-            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-            <SortedAscendingCellStyle BackColor="#E9E7E2" />
-            <SortedAscendingHeaderStyle BackColor="#506C8C" />
-            <SortedDescendingCellStyle BackColor="#FFFDF8" />
-            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-        </asp:GridView>
-    </div>
-    <p style="width: 1114px">
-        &nbsp;
+    <div class="card">
+        <div class="card-body">
+            <asp:Label runat="server" CssClass="card-body h4" Text="Lista de Clientes"></asp:Label>
+
+            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal">
+                <AlternatingRowStyle BackColor="#F7F7F7" />
+                <Columns>
+                    <asp:BoundField DataField="pes_codigo" HeaderText="Código" />
+                    <asp:BoundField DataField="pes_nome" HeaderText="Nome" />
+                    <asp:BoundField DataField="pes_telefone" HeaderText="Telefone" />
+                    <asp:BoundField DataField="pes_email" HeaderText="E-mail" />
+                    <asp:TemplateField>
+                        <ItemTemplate>&nbsp;&nbsp;
+                            <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("pes_codigo")%>'>Alterar <span class="mdi mdi-border-color"></span></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+                <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                <SortedDescendingHeaderStyle BackColor="#3E3277" />
+            </asp:GridView>
+        </div>
+
+        <div>&nbsp;&nbsp;&nbsp;
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="CadastrarCliente.aspx">Cadastar Clientes</asp:HyperLink>
-    </p>
+        <p>&nbsp;&nbsp;&nbsp;
+            <asp:HyperLink ID="Link2" runat="server" NavigateUrl="~/Paginas/AlterarCliente.aspx">Alterar Cadastro de Clientes</asp:HyperLink>
+        </p>
+        </div>
+
+    </div>
 
 </asp:Content>
