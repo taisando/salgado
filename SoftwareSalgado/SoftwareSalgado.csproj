@@ -119,6 +119,7 @@
     <Content Include="Content\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Content\vendors\iconfonts\mdi\preview.html" />
     <Content Include="Paginas\Quantidade.aspx" />
+    <Content Include="Paginas\Venda.aspx" />
     <Content Include="Scripts\js\vendor.bundle.addons.js" />
     <Content Include="Scripts\js\vendor.bundle.base.js" />
     <Content Include="Content\vendor\animate\animate.css" />
@@ -350,17 +351,23 @@
   <ItemGroup>
     <Content Include="App_Code\Classes\Pedido.cs" />
     <Content Include="App_Code\Classes\Endereco.cs" />
+    <Content Include="App_Code\Classes\Categoria.cs" />
     <Compile Include="App_Code\Classes\Pessoa.cs" />
     <Compile Include="App_Code\Classes\Produto.cs" />
     <Compile Include="App_Code\Classes\Fornecedor.cs" />
+    <Content Include="App_Code\Classes\Venda.cs" />
+    <Content Include="App_Code\Classes\VendaItem.cs" />
     <Compile Include="App_Code\Mapped.cs" />
     <Compile Include="App_Code\Classes\Cliente.cs" />
+    <Content Include="App_Code\Persistencia\CategoriaBD.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
     <Content Include="App_Code\Persistencia\PedidosBD.cs" />
     <Content Include="App_Code\Persistencia\EnderecoBD.cs" />
     <Compile Include="App_Code\Persistencia\PessoaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\FornecedorBD.cs" />
+    <Content Include="App_Code\Persistencia\VendaBD.cs" />
+    <Content Include="App_Code\Persistencia\VendaItemBD.cs" />
     <Compile Include="Content\Master\Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -451,6 +458,13 @@
     </Compile>
     <Compile Include="Paginas\Quantidade.aspx.designer.cs">
       <DependentUpon>Quantidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Venda.aspx.cs">
+      <DependentUpon>Venda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Venda.aspx.designer.cs">
+      <DependentUpon>Venda.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

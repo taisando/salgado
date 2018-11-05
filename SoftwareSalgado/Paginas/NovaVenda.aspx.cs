@@ -16,7 +16,10 @@ namespace SoftwareSalgado.Paginas
 
         protected void Coxinha_Click(object sender, EventArgs e)
         {
-
+            int codigo = Convert.ToInt32(Session["01"]);
+           
+                Response.Redirect("../Paginas/Quantidade.aspx");
+            
         }
     }
 }

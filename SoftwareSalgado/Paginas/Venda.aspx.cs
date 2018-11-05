@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace SoftwareSalgado.Paginas
 {
-    public partial class Quantidade : System.Web.UI.Page
+    public partial class Venda : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Unnamed2_Click(object sender, EventArgs e)
         {
 
         }

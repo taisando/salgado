@@ -13,33 +13,64 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_produto(pro_nome, pro_tipo, pro_preco) VALUES (?nome, ?tipo, ?preco)";
+
+            string sql = "INSERT INTO tbl_produto(pro_nome, pro_preco) VALUES (?nome, ?preco)";
+
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
-            objCommand.Parameters.Add(Mapped.Parameter("?nome", produto.Nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?tipo", produto.Tipo));
+
+            objCommand.Parameters.Add(Mapped.Parameter("?nome", produto.Nome));            
             objCommand.Parameters.Add(Mapped.Parameter("?preco", produto.Preco));
+
             objCommand.ExecuteNonQuery();
+
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
             return true;
-        }  
-        public DataSet SelectAll()
+        }
+        public DataSet SelectAllByCategoria(int categoria)
         {
             DataSet ds = new DataSet();
+
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
             System.Data.IDataAdapter objDataAdapter;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_produto WHERE cat_codigo = ?categoria ORDER BY pro_nome;", objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?categoria", categoria));
+
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+
+            objConexao.Close();
+
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return ds;
+        }
+        public DataSet SelectAll()
+        {
+            DataSet ds = new DataSet();
+
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command("SELECT * FROM tbl_produto", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
+
             objDataAdapter.Fill(ds);
+
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
             return ds;
         }
+
         public Produto Select(int id)
         {
             Produto obj = null;
@@ -54,15 +85,17 @@ namespace SoftwareSalgado.App_Code.Persistencia
             {
                 obj = new Produto();
                 obj.Codigo = Convert.ToInt32(objDataReader["pro_codigo"]);
-                obj.Nome = Convert.ToString(objDataReader["pro_nome"]);
-                obj.Tipo = Convert.ToString(objDataReader["pro_tipo"]);
-                obj.Preco = Convert.ToString(objDataReader["pro_preco"]);
+                obj.Nome = Convert.ToString(objDataReader["pro_nome"]);               
+                obj.Preco = Convert.ToDecimal(objDataReader["pro_preco"]);
+                obj.Categoria = Convert.ToInt32(objDataReader["cat_codigo"]);
             }
             objDataReader.Close();
             objConexao.Close();
+
             objCommand.Dispose();
             objConexao.Dispose();
             objDataReader.Dispose();
+
             return obj;
         }
 
@@ -76,7 +109,6 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?nome", produto.Nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?tipo", produto.Tipo));
             objCommand.Parameters.Add(Mapped.Parameter("?preco", produto.Preco));
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", produto.Codigo));
 

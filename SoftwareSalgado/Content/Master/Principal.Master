@@ -5,8 +5,8 @@
 <html>
 <head runat="server">
 
-    <link href="../vendorsMP/iconfonts/mdi/css/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="../vendorsMP/css/vendor.bundle.base.css" rel="stylesheet" />
+    <link href="../vendors/iconfonts/mdi/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../vendors/css/vendor.bundle.base.css" rel="stylesheet" />
     <link href="../CSS/style.css" rel="stylesheet" />
 
     <title>Master Page</title>

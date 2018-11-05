@@ -15,7 +15,7 @@
                 <p></p>
 
                 <div class="template-demo">
-                    <asp:Button runat="server" Text="01" CssClass="btn btn-info btn-icon" />
+                    <asp:Button runat="server" Text="01" CssClass="btn btn-info btn-icon" OnClick="Unnamed2_Click" />
                     <asp:Button runat="server" Text="02" CssClass="btn btn-info btn-icon " />
                     <asp:Button runat="server" Text="03" CssClass="btn btn-info btn-icon " />
                     <asp:Button runat="server" Text="04" CssClass="btn btn-info btn-icon " />
@@ -31,7 +31,12 @@
                     <asp:Button runat="server" Text="50" CssClass="btn btn-danger btn-icon btn-fw" />
 
                     <div class="card-body">
-                        <asp:Label runat="server" Text="Quantidade:__"></asp:Label>
+                        <p><asp:Label runat="server" Text="Quantidade: "></asp:Label></p>
+                        <p>
+                        <asp:Button runat="server" Text="Adicionar mais Produtos" CssClass="btn btn-fw" /></p>
+
+                        <p>
+                        <asp:Button runat="server" Text="Finalizar Venda" CssClass="btn btn-danger btn-fw" /></p>
                     </div>
                     
                 </div>
