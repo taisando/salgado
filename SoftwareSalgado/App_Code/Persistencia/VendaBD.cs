@@ -13,7 +13,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_venda(pes_codigo, ven_data, ven_valortotal) VALUES (?cliente, ?data, ?total)";
+            string sql = "INSERT INTO tbl_venda(cli_codigo, ven_data, ven_valortotal) VALUES (?cliente, ?data, ?total)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -60,7 +60,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataReader objDataReader;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_venda WHERE pes_codigo= ?cliente AND ven_data = ?data ORDER BY ven_codigo DESC;", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_venda WHERE cli_codigo= ?cliente AND ven_data = ?data ORDER BY ven_codigo DESC;", objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?cliente", cliente));
             objCommand.Parameters.Add(Mapped.Parameter("?data", data));
 

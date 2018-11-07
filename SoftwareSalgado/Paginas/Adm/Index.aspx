@@ -11,7 +11,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
     <div>
-        <asp:Label ID="lblTitulo" runat="server" Text="Tela Pricipal do Administrador" CssClass="h4"></asp:Label>
+        <asp:Label ID="lblTitulo" runat="server" Text="Tela Principal do Administrador" CssClass="h4"></asp:Label>
         <br />
         <br />
         <div class="card">

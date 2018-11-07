@@ -349,25 +349,25 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Classes\Pedido.cs" />
-    <Content Include="App_Code\Classes\Endereco.cs" />
-    <Content Include="App_Code\Classes\Categoria.cs" />
+    <Compile Include="App_Code\Classes\Pedido.cs" />
+    <Compile Include="App_Code\Classes\Endereco.cs" />
+    <Compile Include="App_Code\Classes\Categoria.cs" />
     <Compile Include="App_Code\Classes\Pessoa.cs" />
     <Compile Include="App_Code\Classes\Produto.cs" />
     <Compile Include="App_Code\Classes\Fornecedor.cs" />
-    <Content Include="App_Code\Classes\Venda.cs" />
-    <Content Include="App_Code\Classes\VendaItem.cs" />
+    <Compile Include="App_Code\Classes\Venda.cs" />
+    <Compile Include="App_Code\Classes\VendaItem.cs" />
     <Compile Include="App_Code\Mapped.cs" />
     <Compile Include="App_Code\Classes\Cliente.cs" />
-    <Content Include="App_Code\Persistencia\CategoriaBD.cs" />
+    <Compile Include="App_Code\Persistencia\CategoriaBD.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
-    <Content Include="App_Code\Persistencia\PedidosBD.cs" />
+    <Compile Include="App_Code\Persistencia\PedidosBD.cs" />
     <Content Include="App_Code\Persistencia\EnderecoBD.cs" />
     <Compile Include="App_Code\Persistencia\PessoaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\FornecedorBD.cs" />
-    <Content Include="App_Code\Persistencia\VendaBD.cs" />
-    <Content Include="App_Code\Persistencia\VendaItemBD.cs" />
+    <Compile Include="App_Code\Persistencia\VendaBD.cs" />
+    <Compile Include="App_Code\Persistencia\VendaItemBD.cs" />
     <Compile Include="Content\Master\Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -21,7 +21,7 @@ namespace SoftwareSalgado.Paginas
             Produto produto = new Produto();
             produto.Nome = txtNome.Text;
             //produto.Tipo = txtTipo.Text;
-            produto.Preco = txtPreco.Text;
+            produto.Preco = Convert.ToDecimal(txtPreco.Text);
 
             ProdutoBD bd = new ProdutoBD();
             if (bd.Insert(produto))

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using SoftwareSalgado.App_Code.Classes;
 using SoftwareSalgado.App_Code.Persistencia;
 
@@ -26,12 +27,12 @@ namespace SoftwareSalgado.Paginas
             cliente.Email = txtEmail.Text;
             cliente.CPF = txtCPF.Text;
 
-            /*Endereco endereco = new Endereco();
-            cliente.Logradouro = txtLogradouro.Text;
-            cliente.Numero = Convert.ToInt16(txtNumero.Text);
-            cliente.Complemento = txtComplemento.Text;
-            cliente.Cidade = txtCidade.Text; 
-            */
+            Endereco endereco = new Endereco();
+            endereco.Logradouro = txtLogradouro.Text;
+            endereco.Numero = Convert.ToInt32(txtNumero.Text);
+            endereco.Complemento = txtComplemento.Text;
+            endereco.Cidade = txtCidade.Text; 
+            
 
             ClienteBD bd = new ClienteBD();
             bd.Insert(cliente) ;

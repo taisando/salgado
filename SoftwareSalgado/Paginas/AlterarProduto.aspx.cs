@@ -18,7 +18,7 @@ namespace SoftwareSalgado.Paginas
                 ProdutoBD bd = new ProdutoBD();
                 Produto produto = bd.Select(Convert.ToInt32(Session["ID"]));
                 txtNome.Text = produto.Nome;
-                txtTipo.Text = produto.Tipo.ToString();
+                //txtTipo.Text = produto.Tipo.ToString();
                 txtPreco.Text = produto.Preco.ToString();
             }
                 
@@ -28,8 +28,8 @@ namespace SoftwareSalgado.Paginas
             ProdutoBD bd = new ProdutoBD();
             Produto produto = bd.Select(Convert.ToInt32(Session["ID"]));
             produto.Nome = txtNome.Text;
-            produto.Tipo = txtTipo.Text;
-            produto.Preco = txtPreco.Text;
+            //produto.Tipo = txtTipo.Text;
+            produto.Preco = Convert.ToDecimal(txtPreco.Text);
             
 
             if (bd.Update(produto))

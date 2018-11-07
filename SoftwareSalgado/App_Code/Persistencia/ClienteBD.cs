@@ -14,7 +14,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_pessoa (pes_codigo, pes_nome, pes_telefone, pes_email, pes_cpf) " +                
+            string sql = "INSERT INTO tbl_pessoa(pes_codigo, pes_nome, pes_telefone, pes_email, pes_cpf) " +                
                          "VALUES (?codigo, ?nome, ?telefone, ?email, ?cpf)";            
 
             objConexao = Mapped.Connection();
@@ -24,10 +24,11 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?nome", cliente.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
-            objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.CPF));            
+            objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.CPF));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();
+
             objCommand.Dispose();
             objConexao.Dispose();
             return true;
@@ -40,14 +41,17 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
             System.Data.IDataAdapter objDataAdapter;
+
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa" +
-                "", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa" + "", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
+
             objDataAdapter.Fill(ds);
             objConexao.Close();
+
             objCommand.Dispose();
             objConexao.Dispose();
+
             return ds;
         }
         /*
@@ -105,7 +109,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE tbl_pessoa SET pes_nome=?nome, pes_telefone=?telefone, pes_email=?email, pes_cpf=?cpf WHERE cli_codigo =?codigo";
+            string sql = "UPDATE tbl_pessoa SET pes_nome=?nome, pes_telefone=?telefone, pes_email=?email, pes_cpf=?cpf WHERE pes_codigo =?codigo";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
