@@ -5,29 +5,30 @@ using System.Linq;
 using System.Web;
 using SoftwareSalgado.App_Code.Classes;
 
+
 namespace SoftwareSalgado.App_Code.Persistencia
 {
     public class VendaBD
     {
-        public int Insert(Venda venda)
+        public int Insert(Pedido pedido)
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_venda(cli_codigo, ven_data, ven_valortotal) VALUES (?cliente, ?data, ?total)";
+            string sql = "INSERT INTO tbl_venda( ven_data, ven_valortotal,pes_codigo) VALUES (?data, ?valortotal, ?cliente)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
 
-            objCommand.Parameters.Add(Mapped.Parameter("?cliente", venda.Cliente));
-            objCommand.Parameters.Add(Mapped.Parameter("?data", venda.Data));
-            objCommand.Parameters.Add(Mapped.Parameter("?total", venda.ValorTotal));
+            objCommand.Parameters.Add(Mapped.Parameter("?data", pedido.Data));
+            objCommand.Parameters.Add(Mapped.Parameter("?valortotal", pedido.ValorTotal));
+            objCommand.Parameters.Add(Mapped.Parameter("?cliente", pedido.Cliente));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
 
-            return GetID(venda.Cliente, venda.Data);
+            return GetID(pedido.Cliente, pedido.Data);
         }
 
         public bool UpdateTotal(int venda, decimal subtotal)
@@ -49,7 +50,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objConexao.Dispose();
 
             return true;
-        }
+        }       
 
         public int GetID(int cliente, DateTime data)
         {
@@ -60,7 +61,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataReader objDataReader;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_venda WHERE cli_codigo= ?cliente AND ven_data = ?data ORDER BY ven_codigo DESC;", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_venda WHERE pes_codigo= ?cliente AND ven_data = ?data ORDER BY ven_codigo DESC;", objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?cliente", cliente));
             objCommand.Parameters.Add(Mapped.Parameter("?data", data));
 

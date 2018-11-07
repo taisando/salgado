@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Principal.Master" AutoEventWireup="true" CodeBehind="Quantidade.aspx.cs" Inherits="SoftwareSalgado.Paginas.Quantidade" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Principal.Master" AutoEventWireup="true" CodeBehind="SelecionarQuantidade.aspx.cs" Inherits="SoftwareSalgado.Paginas.Quantidade" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

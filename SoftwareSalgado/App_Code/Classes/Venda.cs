@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using SoftwareSalgado.App_Code.Persistencia;
 
 namespace SoftwareSalgado.App_Code.Classes
 {
-    public class Venda
+    public class Pedido
     {
         public int Codigo { get; set; }
         public int Cliente { get; set; }

@@ -14,10 +14,11 @@
                 <asp:Label runat="server" Text="Escolha um Cliente"></asp:Label>
                 <p></p>
 
-                <div class="template-demo">
-                    <asp:DropDownList ID="ddlCliente" runat="server">
+                <div class="template-demo form-group">
+                    
+                    <asp:DropDownList ID="ddlCliente" runat="server" CssClass="form-control col-md-5">
                     </asp:DropDownList>
-                    <asp:Button ID="btnNovaVenda" runat="server" Text="Iniciar Venda" OnClick="btnNovaVenda_Click" />
+                    <asp:Button ID="btnNovaVenda" runat="server" Text="Iniciar Venda" OnClick="btnNovaVenda_Click" CssClass="btn btn-outline-info"/>
                 </div>
             </div>
         </div>

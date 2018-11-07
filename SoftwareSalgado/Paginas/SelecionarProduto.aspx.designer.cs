@@ -10,7 +10,7 @@
 namespace SoftwareSalgado.Paginas {
     
     
-    public partial class Venda {
+    public partial class SelecionarProduto {
         
         /// <summary>
         /// Controle lblTitulo.
@@ -22,21 +22,12 @@ namespace SoftwareSalgado.Paginas {
         protected global::System.Web.UI.WebControls.Label lblTitulo;
         
         /// <summary>
-        /// Controle CheckBox1.
+        /// Controle rptProdutos.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
-        
-        /// <summary>
-        /// Controle TextBox1.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.Repeater rptProdutos;
     }
 }

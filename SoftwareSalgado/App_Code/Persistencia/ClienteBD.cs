@@ -43,7 +43,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa" + "", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa ORDER BY pes_nome;", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
 
             objDataAdapter.Fill(ds);

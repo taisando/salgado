@@ -14,22 +14,18 @@
                     <div class="col-md-6">
                         <div class="form-group row">
                             <asp:Label runat="server" Text="Nome do Produto" CssClass="col-sm-6 col-form-label"></asp:Label>
-                            <asp:TextBox runat="server" ID="txtNome" placeholder="Nome do Produto" CssClass="col-sm-10 col-form-label form-control form-control-sm "></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtNome" placeholder="Nome do Produto" CssClass="col-sm-10 col-form-label form-control form-control-sm"></asp:TextBox>
                         </div>
                     </div>
 
-                   <!-- <div class="col-md-6">
+                   <div class="col-md-6">
                         <div class="form-group row">
                             <asp:Label runat="server" Text="Categoria" CssClass="col-sm-4 col-form-label"></asp:Label>
                             <div class="col-sm-9">
-                                <select class="form-control">
-                                    <option>Salgado</option>
-                                    <option>Doce</option>
-                                    <option>Cento</option>                                    
-                                </select>
+                                <asp:DropDownList ID="ddlCategoria" runat="server" CssClass="col-sm-10 col-form-label form-control form-control-sm"></asp:DropDownList>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     
 
                     <div class="col-md-6">

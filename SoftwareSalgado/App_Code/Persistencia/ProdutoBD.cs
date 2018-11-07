@@ -14,13 +14,14 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
 
-            string sql = "INSERT INTO tbl_produto(pro_nome, pro_preco) VALUES (?nome, ?preco)";
+            string sql = "INSERT INTO tbl_produto(pro_nome, pro_preco, cat_codigo) VALUES (?nome, ?preco, ?categoria)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
 
             objCommand.Parameters.Add(Mapped.Parameter("?nome", produto.Nome));            
             objCommand.Parameters.Add(Mapped.Parameter("?preco", produto.Preco));
+            objCommand.Parameters.Add(Mapped.Parameter("?categoria", produto.Categoria));
 
             objCommand.ExecuteNonQuery();
 

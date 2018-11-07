@@ -118,8 +118,9 @@
     <Content Include="Content\vendors\iconfonts\mdi\css\materialdesignicons.min.css" />
     <Content Include="Content\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Content\vendors\iconfonts\mdi\preview.html" />
-    <Content Include="Paginas\Quantidade.aspx" />
-    <Content Include="Paginas\Venda.aspx" />
+    <Content Include="Paginas\SelecionarProduto.aspx" />
+    <Content Include="Paginas\SelecionarQuantidade.aspx" />
+    <Content Include="Paginas\SelecionarCategoria.aspx" />
     <Content Include="Scripts\js\vendor.bundle.addons.js" />
     <Content Include="Scripts\js\vendor.bundle.base.js" />
     <Content Include="Content\vendor\animate\animate.css" />
@@ -349,7 +350,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\Classes\Pedido.cs" />
     <Compile Include="App_Code\Classes\Endereco.cs" />
     <Compile Include="App_Code\Classes\Categoria.cs" />
     <Compile Include="App_Code\Classes\Pessoa.cs" />
@@ -361,7 +361,6 @@
     <Compile Include="App_Code\Classes\Cliente.cs" />
     <Compile Include="App_Code\Persistencia\CategoriaBD.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
-    <Compile Include="App_Code\Persistencia\PedidosBD.cs" />
     <Content Include="App_Code\Persistencia\EnderecoBD.cs" />
     <Compile Include="App_Code\Persistencia\PessoaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
@@ -452,19 +451,26 @@
     <Compile Include="Paginas\NovaVenda.aspx.designer.cs">
       <DependentUpon>NovaVenda.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Quantidade.aspx.cs">
-      <DependentUpon>Quantidade.aspx</DependentUpon>
+    <Compile Include="Paginas\SelecionarProduto.aspx.cs">
+      <DependentUpon>SelecionarProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Quantidade.aspx.designer.cs">
-      <DependentUpon>Quantidade.aspx</DependentUpon>
+    <Compile Include="Paginas\SelecionarProduto.aspx.designer.cs">
+      <DependentUpon>SelecionarProduto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Venda.aspx.cs">
-      <DependentUpon>Venda.aspx</DependentUpon>
+    <Compile Include="Paginas\SelecionarQuantidade.aspx.cs">
+      <DependentUpon>SelecionarQuantidade.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Venda.aspx.designer.cs">
-      <DependentUpon>Venda.aspx</DependentUpon>
+    <Compile Include="Paginas\SelecionarQuantidade.aspx.designer.cs">
+      <DependentUpon>SelecionarQuantidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\SelecionarCategoria.aspx.cs">
+      <DependentUpon>SelecionarCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\SelecionarCategoria.aspx.designer.cs">
+      <DependentUpon>SelecionarCategoria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

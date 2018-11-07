@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using SoftwareSalgado.App_Code.Classes;
 using SoftwareSalgado.App_Code.Persistencia;
+using System.Data;
 
 namespace SoftwareSalgado.Paginas
 {
@@ -13,14 +14,27 @@ namespace SoftwareSalgado.Paginas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {                
+                Carrega();
+            }
+        }
+        private void Carrega()
+        {
+            CategoriaBD bd = new CategoriaBD();
+            DataSet ds = bd.SelectAll();
+            ddlCategoria.DataSource = ds.Tables[0].DefaultView;
+            ddlCategoria.DataTextField = "cat_nome";
+            ddlCategoria.DataValueField = "cat_codigo";
+            ddlCategoria.DataBind();
+            ddlCategoria.Items.Insert(0, "Selecione um Produto");
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
             Produto produto = new Produto();
             produto.Nome = txtNome.Text;
-            //produto.Tipo = txtTipo.Text;
+            produto.Categoria = Convert.ToInt32(ddlCategoria.Text);
             produto.Preco = Convert.ToDecimal(txtPreco.Text);
 
             ProdutoBD bd = new ProdutoBD();
