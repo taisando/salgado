@@ -40,7 +40,7 @@ namespace SoftwareSalgado.Paginas
             ProdutoBD bd = new ProdutoBD();
             if (bd.Insert(produto))
             {
-                lblMensagem.Text = "Produto cadastrado com sucesso!";
+                Response.Write("<script>alert('Produto cadastrado com sucesso!')</script>");                
                 txtNome.Text = "";
                 txtPreco.Text = "";
             }

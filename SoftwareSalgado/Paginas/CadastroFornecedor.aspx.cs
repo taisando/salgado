@@ -27,7 +27,7 @@ namespace SoftwareSalgado.Paginas
 
             FornecedorBD bd = new FornecedorBD();
             bd.Insert(fornecedor);
-            Response.Write("Fornecedor cadastrado com sucesso!");
+            Response.Write("<script>alert('Fornecedor cadastrado com sucesso!')</script>");
         }
     }
 }

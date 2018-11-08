@@ -30,7 +30,7 @@
                                 </h4>
                                 <h2 class="mb-5">R$ 4.000,00</h2>
                                 <h6 class="card-text">Adicionar Nova Venda </h6>
-                                <asp:Button runat="server" OnClick="Unnamed3_Click" Text="+" CssClass="btn btn-primary btn-sm" />
+                                <asp:Button runat="server" OnClick="Unnamed3_Click" Text="+" CssClass="btn btn-gradient-primary btn-sm font-weight-bold" />
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                                 </h4>
                                 <h2 class="mb-5">R$ 1.000,00</h2>
                                 <h6 class="card-text">Nova Despesa</h6>
-                                <asp:Button runat="server"  Text="+" CssClass="btn btn-primary btn-sm" />
+                                <asp:Button runat="server"  Text="+" CssClass="btn btn-gradient-primary btn-sm font-weight-bold" />
                             </div>
                         </div>
                     </div>
