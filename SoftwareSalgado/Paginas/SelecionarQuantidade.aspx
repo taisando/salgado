@@ -49,7 +49,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <asp:Label runat="server" Text="Quantidade: "></asp:Label>
+                                    <asp:Label runat="server" >Quantidade:</asp:Label>
                                     <asp:Label runat="server" ID="lblQuantidade">0</asp:Label>
                                 </div>
                                 <div class="col-md-6">
@@ -64,7 +64,7 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <asp:Button runat="server" Text="Finalizar Venda" CssClass="btn btn-gradient-danger btn-fw" />
+                                    <asp:Button runat="server" ID="FinalizarVenda" Text="Finalizar Venda" CssClass="btn btn-gradient-danger btn-fw" />
                                 </div>
                             </div>
                         </div>

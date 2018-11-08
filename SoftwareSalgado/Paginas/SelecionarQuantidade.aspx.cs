@@ -24,10 +24,12 @@ namespace SoftwareSalgado.Paginas
                 lblPreco.Text = produto.Preco.ToString();
             }
         }
+
         protected void btnUm_Click(object sender, EventArgs e)
         {
             AtualizaValor(1);
         }
+
         private void AtualizaValor(int quantidade)
         {
             double total = Convert.ToDouble(lblSubtotal.Text);
@@ -62,7 +64,7 @@ namespace SoftwareSalgado.Paginas
             VendaBD vendaBD = new VendaBD();
             vendaBD.UpdateTotal(venda, subtotal);
 
-            Response.Redirect("ProdutoAdicionado.aspx");
+            Response.Redirect("NovaVenda.aspx");
         }
 
         protected void btnDois_Click(object sender, EventArgs e)
