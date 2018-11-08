@@ -14,6 +14,7 @@ namespace SoftwareSalgado.App_Code.Classes
         public int Numero { get; set; }
         public string Complemento { get; set; }       
         public string Cidade { get; set; }      
+        public int Cliente { get; set; }
 
 
         //construtor

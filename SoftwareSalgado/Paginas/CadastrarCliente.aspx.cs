@@ -31,7 +31,8 @@ namespace SoftwareSalgado.Paginas
             endereco.Logradouro = txtLogradouro.Text;
             endereco.Numero = Convert.ToInt32(txtNumero.Text);
             endereco.Complemento = txtComplemento.Text;
-            endereco.Cidade = txtCidade.Text; 
+            endereco.Cidade = txtCidade.Text;
+            endereco.Cliente = cliente.Codigo;
             
 
             ClienteBD bd = new ClienteBD();

@@ -13,6 +13,7 @@ namespace SoftwareSalgado.App_Code.Classes
         public string Email { get; set; }
         public string CPF { get; set; }
         public int Endereco { get; set; }
+        public int Tipo { get; set; }
 
 
         //construtor
