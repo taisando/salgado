@@ -5,12 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using SoftwareSalgado.App_Code.Persistencia;
-using SoftwareSalgado.App_Code.Classes;
 using System.Data;
+using SoftwareSalgado.App_Code.Classes;
 
 namespace SoftwareSalgado.Paginas
 {
-    public partial class Quantidade : System.Web.UI.Page
+    public partial class SelecionarQuantidade : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -45,6 +45,7 @@ namespace SoftwareSalgado.Paginas
             quantidadeatual = quantidadeatual + quantidade;
             lblQuantidade.Text = quantidadeatual.ToString();
         }
+
         protected void btnAdicionar_Click(object sender, EventArgs e)
         {
 
@@ -64,7 +65,8 @@ namespace SoftwareSalgado.Paginas
             VendaBD vendaBD = new VendaBD();
             vendaBD.UpdateTotal(venda, subtotal);
 
-            Response.Redirect("NovaVenda.aspx");
+
+            Response.Redirect("ProdutoAdicionado.aspx");
         }
 
         protected void btnDois_Click(object sender, EventArgs e)
@@ -82,7 +84,7 @@ namespace SoftwareSalgado.Paginas
             AtualizaValor(4);
         }
 
-        protected void btnCInco_Click(object sender, EventArgs e)
+        protected void btnCinco_Click(object sender, EventArgs e)
         {
             AtualizaValor(5);
         }
@@ -121,7 +123,7 @@ namespace SoftwareSalgado.Paginas
         {
             AtualizaValor(20);
         }
-        protected void btnCinquenta_Click(object sender, EventArgs e)
+        protected void btnCinquenta_Click (object sender, EventArgs e)
         {
             AtualizaValor(50);
         }

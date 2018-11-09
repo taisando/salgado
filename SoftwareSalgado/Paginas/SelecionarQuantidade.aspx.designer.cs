@@ -10,7 +10,7 @@
 namespace SoftwareSalgado.Paginas {
     
     
-    public partial class Quantidade {
+    public partial class SelecionarQuantidade {
         
         /// <summary>
         /// Controle lblTitulo.

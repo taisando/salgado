@@ -119,8 +119,8 @@
     <Content Include="Content\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Content\vendors\iconfonts\mdi\preview.html" />
     <Content Include="Paginas\SelecionarProduto.aspx" />
-    <Content Include="Paginas\SelecionarQuantidade.aspx" />
     <Content Include="Paginas\SelecionarCategoria.aspx" />
+    <Content Include="Paginas\SelecionarQuantidade.aspx" />
     <Content Include="Scripts\js\vendor.bundle.addons.js" />
     <Content Include="Scripts\js\vendor.bundle.base.js" />
     <Content Include="Content\vendor\animate\animate.css" />
@@ -458,19 +458,19 @@
     <Compile Include="Paginas\SelecionarProduto.aspx.designer.cs">
       <DependentUpon>SelecionarProduto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\SelecionarQuantidade.aspx.cs">
-      <DependentUpon>SelecionarQuantidade.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Paginas\SelecionarQuantidade.aspx.designer.cs">
-      <DependentUpon>SelecionarQuantidade.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Paginas\SelecionarCategoria.aspx.cs">
       <DependentUpon>SelecionarCategoria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\SelecionarCategoria.aspx.designer.cs">
       <DependentUpon>SelecionarCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\SelecionarQuantidade.aspx.cs">
+      <DependentUpon>SelecionarQuantidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\SelecionarQuantidade.aspx.designer.cs">
+      <DependentUpon>SelecionarQuantidade.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
