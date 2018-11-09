@@ -120,6 +120,7 @@
     <Content Include="Content\vendors\iconfonts\mdi\preview.html" />
     <Content Include="Paginas\Erro\Erro.aspx" />
     <Content Include="Paginas\Erro\Erro404.aspx" />
+    <Content Include="Paginas\ListarVenda.aspx" />
     <Content Include="Paginas\SelecionarProduto.aspx" />
     <Content Include="Paginas\SelecionarCategoria.aspx" />
     <Content Include="Paginas\SelecionarQuantidade.aspx" />
@@ -452,6 +453,13 @@
     </Compile>
     <Compile Include="Paginas\ListarProduto.aspx.designer.cs">
       <DependentUpon>ListarProduto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\ListarVenda.aspx.cs">
+      <DependentUpon>ListarVenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ListarVenda.aspx.designer.cs">
+      <DependentUpon>ListarVenda.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

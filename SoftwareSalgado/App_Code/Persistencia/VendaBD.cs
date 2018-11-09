@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using SoftwareSalgado.App_Code.Classes;
+using System.Data;
 
 
 namespace SoftwareSalgado.App_Code.Persistencia
@@ -80,6 +81,26 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objDataReader.Dispose();
 
             return codigo;
+        }
+
+        public DataSet SelectAll()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_venda ORDER BY ven_data", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return ds;
         }
     }
 }

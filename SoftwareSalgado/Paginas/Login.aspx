@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Entre com a senha">
-                        <asp:TextBox ID="txtSenha" runat="server" class="input100" placeholder="Senha"></asp:TextBox>
+                        <asp:TextBox ID="txtSenha" runat="server" class="input100" placeholder="Senha" TextMode="Password"></asp:TextBox>
                         <span class="focus-input100" data-placeholder="&#xe80f;"></span>
                     </div>
 
