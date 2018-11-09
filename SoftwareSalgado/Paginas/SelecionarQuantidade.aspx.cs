@@ -66,7 +66,7 @@ namespace SoftwareSalgado.Paginas
             vendaBD.UpdateTotal(venda, subtotal);
 
             Session["CategoriaID"] = 0;
-            Session["ProdutoID"] = 0;
+            Session["ProdutoID"] = 0;           
             Response.Redirect("SelecionarCategoria.aspx");
         }
 
@@ -135,6 +135,6 @@ namespace SoftwareSalgado.Paginas
         protected void btnCinquenta_Click (object sender, EventArgs e)
         {
             AtualizaValor(50);
-        }
+        }       
     }
 }

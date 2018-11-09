@@ -118,6 +118,8 @@
     <Content Include="Content\vendors\iconfonts\mdi\css\materialdesignicons.min.css" />
     <Content Include="Content\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Content\vendors\iconfonts\mdi\preview.html" />
+    <Content Include="Paginas\Erro\Erro.aspx" />
+    <Content Include="Paginas\Erro\Erro404.aspx" />
     <Content Include="Paginas\SelecionarProduto.aspx" />
     <Content Include="Paginas\SelecionarCategoria.aspx" />
     <Content Include="Paginas\SelecionarQuantidade.aspx" />
@@ -416,6 +418,20 @@
     <Compile Include="Paginas\CadastroProduto.aspx.designer.cs">
       <DependentUpon>CadastroProduto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\Erro\Erro.aspx.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Erro\Erro.aspx.designer.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Erro\Erro404.aspx.cs">
+      <DependentUpon>Erro404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Erro\Erro404.aspx.designer.cs">
+      <DependentUpon>Erro404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\ListarCliente.aspx.cs">
       <DependentUpon>ListarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -499,7 +515,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\vendors\js\" />
-    <Folder Include="Paginas\Erro\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

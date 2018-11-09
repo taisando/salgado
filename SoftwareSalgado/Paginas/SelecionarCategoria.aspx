@@ -12,6 +12,7 @@
                 <asp:Label runat="server" Text="Selecione uma Categoria de Produto"></asp:Label>
                 <div class="template-demo form-group">
                     <br />
+
                     <asp:Repeater ID="rptCategorias" runat="server" OnItemCommand="rptCategorias_ItemCommand">
                         <ItemTemplate>
                             <div>

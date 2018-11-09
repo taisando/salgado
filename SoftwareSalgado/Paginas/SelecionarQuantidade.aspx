@@ -59,11 +59,11 @@
                             <br />
                             <div class="row">
                                 <div class="col-md-6">
-                                    <asp:Button runat="server" ID="btnAdicionar" Text="Adicionar mais Produtos" CssClass="btn btn-inverse-primary btn-fw" />
+                                    <asp:Button runat="server" ID="btnAdicionar" Text="Adicionar mais Produtos" CssClass="btn btn-inverse-primary btn-fw" OnClick="btnAdicionar_Click" />
                                 </div>
 
                                 <div class="col-md-6">
-                                    <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" CssClass="btn btn-gradient-danger btn-fw" />
+                                    <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" CssClass="btn btn-gradient-danger btn-fw" OnClick="btnFinalizarVenda_Click" />
                                 </div>
                             </div>
                         </div>
