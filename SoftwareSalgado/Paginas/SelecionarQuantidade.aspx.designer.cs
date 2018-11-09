@@ -202,12 +202,12 @@ namespace SoftwareSalgado.Paginas {
         protected global::System.Web.UI.WebControls.Button btnAdicionar;
         
         /// <summary>
-        /// Controle FinalizarVenda.
+        /// Controle btnFinalizarVenda.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button FinalizarVenda;
+        protected global::System.Web.UI.WebControls.Button btnFinalizarVenda;
     }
 }

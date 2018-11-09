@@ -9,9 +9,9 @@
     <div class="card">
         <div class="card-body">
             <asp:Label runat="server" CssClass="card-body h4" Text="Lista de Produtos"></asp:Label>
-
-            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal">
-                <AlternatingRowStyle BackColor="#F7F7F7" />
+            <p></p>
+            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" CssClass="table table-bordered">
+                <AlternatingRowStyle CssClass="table-primary"/>
                 <Columns>
                     <asp:BoundField DataField="pro_codigo" HeaderText="Código" />
                     <asp:BoundField DataField="pro_nome" HeaderText="Nome" />
@@ -24,9 +24,9 @@
                 </Columns>
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle CssClass="table-light" />
                 <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <RowStyle CssClass="table-success" />
                 <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                 <SortedAscendingCellStyle BackColor="#E9E7E2" />
                 <SortedAscendingHeaderStyle BackColor="#506C8C" />

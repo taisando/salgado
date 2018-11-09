@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Principal.Master" AutoEventWireup="true" CodeBehind="SelecionarQuantidade.aspx.cs" Inherits="SoftwareSalgado.Paginas.SelecionarQuantidade" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -58,11 +59,11 @@
                             <br />
                             <div class="row">
                                 <div class="col-md-6">
-                                    <asp:Button runat="server" ID="btnAdicionar" Text="Adicionar mais Produtos" CssClass="btn btn-fw" />
+                                    <asp:Button runat="server" ID="btnAdicionar" Text="Adicionar mais Produtos" CssClass="btn btn-inverse-primary btn-fw" />
                                 </div>
 
                                 <div class="col-md-6">
-                                    <asp:Button runat="server" ID="FinalizarVenda" Text="Finalizar Venda" CssClass="btn btn-gradient-danger btn-fw" />
+                                    <asp:Button runat="server" ID="btnFinalizarVenda" Text="Finalizar Venda" CssClass="btn btn-gradient-danger btn-fw" />
                                 </div>
                             </div>
                         </div>

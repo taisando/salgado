@@ -65,8 +65,17 @@ namespace SoftwareSalgado.Paginas
             VendaBD vendaBD = new VendaBD();
             vendaBD.UpdateTotal(venda, subtotal);
 
+            Session["CategoriaID"] = 0;
+            Session["ProdutoID"] = 0;
+            Response.Redirect("SelecionarCategoria.aspx");
+        }
 
-            Response.Redirect("ProdutoAdicionado.aspx");
+        protected void btnFinalizarVenda_Click(object sender, EventArgs e)
+        {
+            Session["VendaID"] = 0;
+            Session["CategoriaID"] = 0;
+            Session["ProdutoID"] = 0;
+            Response.Redirect("NovaVenda.aspx");
         }
 
         protected void btnDois_Click(object sender, EventArgs e)
