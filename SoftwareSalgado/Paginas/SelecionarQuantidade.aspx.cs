@@ -66,15 +66,32 @@ namespace SoftwareSalgado.Paginas
             vendaBD.UpdateTotal(venda, subtotal);
 
             Session["CategoriaID"] = 0;
-            Session["ProdutoID"] = 0;           
+            Session["ProdutoID"] = 0;
             Response.Redirect("SelecionarCategoria.aspx");
         }
 
         protected void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
+            int venda = Convert.ToInt32(Session["VendaID"]);
+            int produto = Convert.ToInt32(Session["ProdutoID"]);
+            int quantidade = Convert.ToInt32(lblQuantidade.Text);
+            decimal subtotal = Convert.ToDecimal(lblSubtotal.Text);
+
+            VendaItemBD vendaItemBD = new VendaItemBD();
+            VendaItem vendaItem = new VendaItem();
+            vendaItem.Produto = produto;
+            vendaItem.Venda = venda;
+            vendaItem.Quantidade = quantidade;
+            vendaItem.Subtotal = subtotal;
+            vendaItemBD.Insert(vendaItem);
+
+            VendaBD vendaBD = new VendaBD();
+            vendaBD.UpdateTotal(venda, subtotal);
+
             Session["VendaID"] = 0;
             Session["CategoriaID"] = 0;
             Session["ProdutoID"] = 0;
+            
             Response.Redirect("NovaVenda.aspx");
         }
 
@@ -132,9 +149,9 @@ namespace SoftwareSalgado.Paginas
         {
             AtualizaValor(20);
         }
-        protected void btnCinquenta_Click (object sender, EventArgs e)
+        protected void btnCinquenta_Click(object sender, EventArgs e)
         {
             AtualizaValor(50);
-        }       
+        }
     }
 }

@@ -118,9 +118,12 @@
     <Content Include="Content\vendors\iconfonts\mdi\css\materialdesignicons.min.css" />
     <Content Include="Content\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Content\vendors\iconfonts\mdi\preview.html" />
+    <Content Include="Paginas\CadastrarMP.aspx" />
+    <Content Include="Paginas\EntradaMP.aspx" />
     <Content Include="Paginas\Erro\Erro.aspx" />
     <Content Include="Paginas\Erro\Erro404.aspx" />
     <Content Include="Paginas\ListarVenda.aspx" />
+    <Content Include="Paginas\Relatorio.aspx" />
     <Content Include="Paginas\SelecionarProduto.aspx" />
     <Content Include="Paginas\SelecionarCategoria.aspx" />
     <Content Include="Paginas\SelecionarQuantidade.aspx" />
@@ -355,6 +358,8 @@
   <ItemGroup>
     <Compile Include="App_Code\Classes\Endereco.cs" />
     <Compile Include="App_Code\Classes\Categoria.cs" />
+    <Compile Include="App_Code\Classes\EstoqueMP.cs" />
+    <Compile Include="App_Code\Classes\MateriaPrima.cs" />
     <Compile Include="App_Code\Classes\Pessoa.cs" />
     <Compile Include="App_Code\Classes\Produto.cs" />
     <Compile Include="App_Code\Classes\Fornecedor.cs" />
@@ -365,6 +370,8 @@
     <Compile Include="App_Code\Persistencia\CategoriaBD.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
     <Content Include="App_Code\Persistencia\EnderecoBD.cs" />
+    <Compile Include="App_Code\Persistencia\EstoqueMPBD.cs" />
+    <Compile Include="App_Code\Persistencia\MateriaPrimaBD.cs" />
     <Compile Include="App_Code\Persistencia\PessoaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\FornecedorBD.cs" />
@@ -405,6 +412,13 @@
     <Compile Include="Paginas\CadastrarCliente.aspx.designer.cs">
       <DependentUpon>CadastrarCliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\CadastrarMP.aspx.cs">
+      <DependentUpon>CadastrarMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\CadastrarMP.aspx.designer.cs">
+      <DependentUpon>CadastrarMP.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\CadastroFornecedor.aspx.cs">
       <DependentUpon>CadastroFornecedor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -418,6 +432,13 @@
     </Compile>
     <Compile Include="Paginas\CadastroProduto.aspx.designer.cs">
       <DependentUpon>CadastroProduto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\EntradaMP.aspx.cs">
+      <DependentUpon>EntradaMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\EntradaMP.aspx.designer.cs">
+      <DependentUpon>EntradaMP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Erro\Erro.aspx.cs">
       <DependentUpon>Erro.aspx</DependentUpon>
@@ -474,6 +495,13 @@
     </Compile>
     <Compile Include="Paginas\NovaVenda.aspx.designer.cs">
       <DependentUpon>NovaVenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Relatorio.aspx.cs">
+      <DependentUpon>Relatorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Relatorio.aspx.designer.cs">
+      <DependentUpon>Relatorio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\SelecionarProduto.aspx.cs">
       <DependentUpon>SelecionarProduto.aspx</DependentUpon>
