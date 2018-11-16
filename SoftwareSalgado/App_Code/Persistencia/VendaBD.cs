@@ -51,7 +51,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objConexao.Dispose();
 
             return true;
-        }       
+        }
 
         public int GetID(int cliente, DateTime data)
         {
@@ -110,9 +110,28 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT pes_nome AS Cliente, SUM(ven_valortotal)" +
-                "FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo" +
+            objCommand = Mapped.Command("SELECT pes_nome AS Cliente, SUM(ven_valortotal) AS Total " +
+                "FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo " +
                 "GROUP BY pes_nome ORDER BY Total DESC", objConexao);
+
+            objDataAdapter = Mapped.Adapter(objCommand);
+
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return ds;
+        }
+        public DataSet GetVendasMes()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT pes_nome AS Cliente, ven_valortotal AS Total, ven_data AS Data FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo where month(ven_data)=MONTH(NOW()) AND year(ven_data)=year(now()) order by Cliente; ", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 

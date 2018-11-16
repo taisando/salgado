@@ -23,49 +23,49 @@
 
             <div class="navbar fixed-top col-lg-12 col-12 p-2 d-flex flex-row">
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                   <asp:Label runat="server" Text="Bem Vindo!" CssClass="text-info align-items-center text-center"></asp:Label>                    
+                    <asp:Label runat="server" Text="Bem Vindo!" CssClass="text-info align-items-center text-center"></asp:Label>
                 </div>
 
                 <div class="navbar-menu-wrapper d-flex align-items-stretch">
-                     
+
                     <ul class="navbar-nav navbar-nav-right">
-                        
+
                         <li class="nav-item d-none d-lg-block full-screen-link">
                             <a class="nav-link">
                                 <i class="mdi mdi-fullscreen menu-icon 25px" id="fullscreen-button"></i>&nbsp;&nbsp;
                             </a>
                         </li>
-                        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link count-indicator" href="../../Paginas/CadastrarCliente.aspx" >&nbsp;&nbsp;
-                                <i class="mdi mdi-account-card-details 25px"></i>                                
-                            </a>
-                       
-                        <li class="nav-item dropdown">
-                            <a class="nav-link count-indicator dropdown-toggle" href="../../Paginas/NovaVenda.aspx"> &nbsp;&nbsp;
-                                <i class="mdi mdi-square-inc-cash 25px"></i>                               
-                            </a>                            
-                        </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link count-indicator dropdown-toggle" href="../../Paginas/NovaVenda.aspx"> &nbsp;&nbsp;
-                                <i class="mdi mdi-contrast-circle menu-icon 25px"></i>                               
-                            </a>                            
+                            <a class="nav-link count-indicator" href="../../Paginas/CadastrarCliente.aspx">&nbsp;&nbsp;
+                                <i class="mdi mdi-account-card-details 25px"></i>
+                            </a>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link count-indicator dropdown-toggle" href="../../Paginas/NovaVenda.aspx">&nbsp;&nbsp;
+                                <i class="mdi mdi-square-inc-cash 25px"></i>
+                                </a>
+                            </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link count-indicator dropdown-toggle" href="../../Paginas/NovaVenda.aspx">&nbsp;&nbsp;
+                                <i class="mdi mdi-contrast-circle menu-icon 25px"></i>
+                            </a>
                         </li>
-                       
+
                         <li class="nav-item nav-logout">
                             <a class="nav-link" href="../../Paginas/Login.aspx">&nbsp;&nbsp;
                                 <i class="mdi mdi-power 25px"></i>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item nav-settings d-none d-lg-block">
                             <a class="nav-link" href="#">
                                 <i class="mdi mdi-format-line-spacing 25px"></i>&nbsp;&nbsp;
                             </a>
                         </li>
                     </ul>
-                    
+
                     <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                         <span class="mdi mdi-menu 25px"></span>
                     </button>
@@ -127,17 +127,27 @@
                                 <i class="mdi mdi-contrast-circle menu-icon"></i>
                             </a>
                         </li>
-                       <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="../../Paginas/EntradaMP.aspx">
                                 <span class="menu-title">Controle de Matéria-Pima</span>
                                 <i class="mdi mdi-bowl menu-icon"></i>
                             </a>
-                        </li> 
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../Paginas/Relatorio.aspx">
+                            <a class="nav-link" data-toggle="collapse" href="#relat" aria-expanded="false" aria-controls="relat">
                                 <span class="menu-title">Relatório</span>
+                                <i class="menu-arrow"></i>
                                 <i class="mdi mdi-clipboard-text menu-icon"></i>
                             </a>
+                            <div class="collapse" id="relat">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/Relatorio.aspx">Ranking de Vendas</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/CadastroProduto.aspx">Produtos Mais Vendidos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioMes.aspx">Vendas no Mês</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/CadastrarMP.aspx">Cadastrar Matéria-Prima</a></li>
+                                </ul>
+                            </div>
+
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
@@ -149,7 +159,7 @@
                                 <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"><a class="nav-link" href="../../Paginas/ListarCliente.aspx">Listar Clientes</a></li>
                                     <li class="nav-item"><a class="nav-link" href="../../Paginas/ListarProduto.aspx">Listar Produto</a></li>
-                                <!--    <li class="nav-item"><a class="nav-link" href="">Listar Fornecedor</a></li> -->
+                                    <!--    <li class="nav-item"><a class="nav-link" href="">Listar Fornecedor</a></li> -->
                                 </ul>
                             </div>
                         </li>

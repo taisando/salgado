@@ -8811,6 +8811,7 @@ svg:not(:root) {
 
 table {
   border-collapse: collapse;
+    margin-right: 0px;
 }
 
 caption {

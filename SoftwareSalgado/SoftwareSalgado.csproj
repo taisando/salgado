@@ -123,7 +123,9 @@
     <Content Include="Paginas\Erro\Erro.aspx" />
     <Content Include="Paginas\Erro\Erro404.aspx" />
     <Content Include="Paginas\ListarVenda.aspx" />
+    <Content Include="Paginas\MenuTeste.aspx" />
     <Content Include="Paginas\Relatorio.aspx" />
+    <Content Include="Paginas\RelatorioMes.aspx" />
     <Content Include="Paginas\SelecionarProduto.aspx" />
     <Content Include="Paginas\SelecionarCategoria.aspx" />
     <Content Include="Paginas\SelecionarQuantidade.aspx" />
@@ -489,6 +491,13 @@
     <Compile Include="Paginas\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\MenuTeste.aspx.cs">
+      <DependentUpon>MenuTeste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\MenuTeste.aspx.designer.cs">
+      <DependentUpon>MenuTeste.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\NovaVenda.aspx.cs">
       <DependentUpon>NovaVenda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -502,6 +511,13 @@
     </Compile>
     <Compile Include="Paginas\Relatorio.aspx.designer.cs">
       <DependentUpon>Relatorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\RelatorioMes.aspx.cs">
+      <DependentUpon>RelatorioMes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\RelatorioMes.aspx.designer.cs">
+      <DependentUpon>RelatorioMes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\SelecionarProduto.aspx.cs">
       <DependentUpon>SelecionarProduto.aspx</DependentUpon>
