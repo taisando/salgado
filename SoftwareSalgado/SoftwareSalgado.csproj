@@ -126,6 +126,8 @@
     <Content Include="Paginas\MenuTeste.aspx" />
     <Content Include="Paginas\Relatorio.aspx" />
     <Content Include="Paginas\RelatorioMes.aspx" />
+    <Content Include="Paginas\RelatorioVendaAno.aspx" />
+    <Content Include="Paginas\RelatorioVendaProdutos.aspx" />
     <Content Include="Paginas\SelecionarProduto.aspx" />
     <Content Include="Paginas\SelecionarCategoria.aspx" />
     <Content Include="Paginas\SelecionarQuantidade.aspx" />
@@ -518,6 +520,20 @@
     </Compile>
     <Compile Include="Paginas\RelatorioMes.aspx.designer.cs">
       <DependentUpon>RelatorioMes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\RelatorioVendaAno.aspx.cs">
+      <DependentUpon>RelatorioVendaAno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\RelatorioVendaAno.aspx.designer.cs">
+      <DependentUpon>RelatorioVendaAno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\RelatorioVendaProdutos.aspx.cs">
+      <DependentUpon>RelatorioVendaProdutos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\RelatorioVendaProdutos.aspx.designer.cs">
+      <DependentUpon>RelatorioVendaProdutos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\SelecionarProduto.aspx.cs">
       <DependentUpon>SelecionarProduto.aspx</DependentUpon>

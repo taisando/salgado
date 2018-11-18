@@ -142,5 +142,24 @@ namespace SoftwareSalgado.App_Code.Persistencia
 
             return ds;
         }
+        public DataSet GetVendasAno()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT pes_nome AS Cliente, ven_valortotal AS Total, ven_data AS Data FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo ORDER BY Data DESC;", objConexao);
+
+            objDataAdapter = Mapped.Adapter(objCommand);
+
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return ds;
+        }
     }
 }

@@ -142,9 +142,10 @@
                             <div class="collapse" id="relat">
                                 <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"><a class="nav-link" href="../../Paginas/Relatorio.aspx">Ranking de Vendas</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/CadastroProduto.aspx">Produtos Mais Vendidos</a></li>
                                     <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioMes.aspx">Vendas no Mês</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/CadastrarMP.aspx">Cadastrar Matéria-Prima</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioVendaAno.aspx">Vendas no Ano</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/CadastroProduto.aspx">Produtos Mais Vendidos</a></li>
+
                                 </ul>
                             </div>
 

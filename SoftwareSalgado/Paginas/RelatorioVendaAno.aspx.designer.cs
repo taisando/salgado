@@ -10,7 +10,7 @@
 namespace SoftwareSalgado.Paginas {
     
     
-    public partial class RelatorioMes {
+    public partial class RelatorioVendaAno {
         
         /// <summary>
         /// Controle GridView1.
