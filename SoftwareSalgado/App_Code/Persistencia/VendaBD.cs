@@ -161,5 +161,24 @@ namespace SoftwareSalgado.App_Code.Persistencia
 
             return ds;
         }
+        public DataSet GetVendasProduto()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT pro_nome AS Produto, SUM(vit_quantidade) AS Quantidade FROM tbl_produto INNER JOIN tbl_vendaitem ON tbl_produto.pro_codigo = tbl_vendaitem.pro_codigo GROUP BY Produto ORDER BY Quantidade DESC;", objConexao);
+
+            objDataAdapter = Mapped.Adapter(objCommand);
+
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return ds;
+        }
     }
 }
