@@ -76,5 +76,45 @@ namespace SoftwareSalgado.App_Code.Persistencia
 
             return ds;
         }
+        public DataSet GetEstoque()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT mat_nome AS 'Materia Prima', SUM(est_quantidade) AS Quantidade FROM tbl_materiaprima INNER JOIN tbl_estoquemp ON tbl_estoquemp.mat_codigo = tbl_materiaprima.mat_codigo GROUP BY mat_nome; ", objConexao);
+
+            objDataAdapter = Mapped.Adapter(objCommand);
+
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return ds;
+        }
+        public bool InsertEstoque( int codigo, double total)
+        {
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            string sql = "INSERT INTO tbl_estoquemp (est_quantidade, est_data, mat_codigo) VALUES (?total, ?data, ?codigo) ";
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConexao);
+
+            objCommand.Parameters.Add(Mapped.Parameter("?total", -total));
+            objCommand.Parameters.Add(Mapped.Parameter("?data", DateTime.Now));
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", codigo));
+
+
+            objCommand.ExecuteNonQuery();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return true;
+        }
     }
 }

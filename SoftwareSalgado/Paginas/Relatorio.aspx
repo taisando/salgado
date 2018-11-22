@@ -10,14 +10,14 @@
     <div class="col-12 grid-margin">
         <div class="card">
             <div class="card-body">
-                <asp:Label runat="server" CssClass="card-body h4" Text="Relatórios de Venda - Ranking"></asp:Label>
+                <asp:Label runat="server" CssClass="card-body h4" Text="Relatório de Venda - Ranking"></asp:Label>
                 <br />
                 <br />
-                <asp:GridView ID="GridView1" runat="server" DataSourceID="ObjectDataSource2" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" Width="514px">
+                <asp:GridView ID="GridView1" runat="server" DataSourceID="ObjectDataSource2" AllowSorting="True" CssClass="table table-bordered">
                     <AlternatingRowStyle BackColor="White" />
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle CssClass="table-info" />
                     <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
                     <RowStyle BackColor="#EFF3FB" />
                     <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
@@ -29,14 +29,6 @@
                 <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="GetClientesMaisCompram" TypeName="SoftwareSalgado.App_Code.Persistencia.VendaBD"></asp:ObjectDataSource>
             
                 <br />
-                <asp:Chart ID="Chart1" runat="server">
-                    <Series>
-                        <asp:Series Name="Series1"></asp:Series>
-                    </Series>
-                    <ChartAreas>
-                        <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-                    </ChartAreas>
-                </asp:Chart>
             </div>
         </div>
     </div>

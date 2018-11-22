@@ -125,10 +125,12 @@
     <Content Include="Paginas\Erro\Erro404.aspx" />
     <Content Include="Paginas\ListarVenda.aspx" />
     <Content Include="Paginas\MenuTeste.aspx" />
+    <Content Include="Paginas\NovaDespesa.aspx" />
     <Content Include="Paginas\Relatorio.aspx" />
     <Content Include="Paginas\RelatorioMes.aspx" />
     <Content Include="Paginas\RelatorioVendaAno.aspx" />
     <Content Include="Paginas\RelatorioVendaProdutos.aspx" />
+    <Content Include="Paginas\RelatorioVendaSemana.aspx" />
     <Content Include="Paginas\SelecionarProduto.aspx" />
     <Content Include="Paginas\SelecionarCategoria.aspx" />
     <Content Include="Paginas\SelecionarQuantidade.aspx" />
@@ -361,6 +363,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Classes\Despesa.cs" />
     <Compile Include="App_Code\Classes\Endereco.cs" />
     <Compile Include="App_Code\Classes\Categoria.cs" />
     <Compile Include="App_Code\Classes\EstoqueMP.cs" />
@@ -368,6 +371,7 @@
     <Compile Include="App_Code\Classes\Pessoa.cs" />
     <Compile Include="App_Code\Classes\Produto.cs" />
     <Compile Include="App_Code\Classes\Fornecedor.cs" />
+    <Compile Include="App_Code\Classes\ProdutoMP.cs" />
     <Compile Include="App_Code\Classes\Venda.cs" />
     <Compile Include="App_Code\Classes\VendaItem.cs" />
     <Compile Include="App_Code\Mapped.cs" />
@@ -375,11 +379,13 @@
     <Compile Include="App_Code\Persistencia\CategoriaBD.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
     <Content Include="App_Code\Persistencia\EnderecoBD.cs" />
+    <Compile Include="App_Code\Persistencia\DespesaBD.cs" />
     <Compile Include="App_Code\Persistencia\EstoqueMPBD.cs" />
     <Compile Include="App_Code\Persistencia\MateriaPrimaBD.cs" />
     <Compile Include="App_Code\Persistencia\PessoaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\FornecedorBD.cs" />
+    <Compile Include="App_Code\Persistencia\ProdutoMPBD.cs" />
     <Compile Include="App_Code\Persistencia\VendaBD.cs" />
     <Compile Include="App_Code\Persistencia\VendaItemBD.cs" />
     <Compile Include="Content\Master\Principal.Master.cs">
@@ -501,6 +507,13 @@
     <Compile Include="Paginas\MenuTeste.aspx.designer.cs">
       <DependentUpon>MenuTeste.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\NovaDespesa.aspx.cs">
+      <DependentUpon>NovaDespesa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\NovaDespesa.aspx.designer.cs">
+      <DependentUpon>NovaDespesa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\NovaVenda.aspx.cs">
       <DependentUpon>NovaVenda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -535,6 +548,13 @@
     </Compile>
     <Compile Include="Paginas\RelatorioVendaProdutos.aspx.designer.cs">
       <DependentUpon>RelatorioVendaProdutos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\RelatorioVendaSemana.aspx.cs">
+      <DependentUpon>RelatorioVendaSemana.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\RelatorioVendaSemana.aspx.designer.cs">
+      <DependentUpon>RelatorioVendaSemana.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\SelecionarProduto.aspx.cs">
       <DependentUpon>SelecionarProduto.aspx</DependentUpon>

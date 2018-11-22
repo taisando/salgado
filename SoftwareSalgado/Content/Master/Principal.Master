@@ -23,12 +23,18 @@
 
             <div class="navbar fixed-top col-lg-12 col-12 p-2 d-flex flex-row">
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                    <asp:Label runat="server" Text="Bem Vindo!" CssClass="text-info align-items-center text-center"></asp:Label>
+                    <asp:Label runat="server" Text="" CssClass="text-info align-items-center text-center"></asp:Label>
                 </div>
 
-                <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                <div class="navbar-menu-wrapper d-flex align-items">
 
                     <ul class="navbar-nav navbar-nav-right">
+
+                       <!-- <li class="nav-item d-none d-lg-block full-screen-link">
+                            <a class="nav-link">
+                                <i class="mdi mdi-home">Bem Vindo!</i>&nbsp;&nbsp;
+                            </a>
+                        </li> -->
 
                         <li class="nav-item d-none d-lg-block full-screen-link">
                             <a class="nav-link">
@@ -142,6 +148,8 @@
                             <div class="collapse" id="relat">
                                 <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"><a class="nav-link" href="../../Paginas/Relatorio.aspx">Ranking de Vendas</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioVendaSemana.aspx">Vendas na Semana</a></li>
+
                                     <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioMes.aspx">Vendas no Mês</a></li>
                                     <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioVendaAno.aspx">Vendas no Ano</a></li>
                                     <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioVendaProdutos.aspx">Produtos Mais Vendidos</a></li>

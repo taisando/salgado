@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using SoftwareSalgado.App_Code.Persistencia;
 using SoftwareSalgado.App_Code.Classes;
 using System.Configuration;
+using System.Data;
 
 namespace SoftwareSalgado.Paginas.ADM
 {
@@ -36,7 +37,24 @@ namespace SoftwareSalgado.Paginas.ADM
         {
             int codigo = Convert.ToInt32(Session["ID"]);
             PessoaBD bd = new PessoaBD();
-            Pessoa pessoa = bd.Select(codigo);            
+            Pessoa pessoa = bd.Select(codigo);
+
+            string[] meses = new string[] { "jane", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez" };
+            int mesatual = DateTime.Now.Month;
+            lblMes.Text = meses[mesatual - 1];
+
+            MateriaPrimaBD materiaPrimaBD = new MateriaPrimaBD();
+            DataSet ds = materiaPrimaBD.GetEstoqueMinimo();
+            string produtos = "";
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                DataRow dr = ds.Tables[0].Rows[i];
+                string nome = Convert.ToString(dr["mat_nome"]);
+                produtos = produtos + nome + ",";
+            }
+
+            lblMes.Text = "Produtos abaixo do estoque mínimo: " + produtos;
+
 
         }
 
