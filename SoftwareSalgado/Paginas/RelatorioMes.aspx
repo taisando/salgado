@@ -7,7 +7,8 @@
     <div class="col-12 grid-margin">
         <div class="card">
             <div class="card-body">
-                <asp:Label runat="server" CssClass="card-body h4" Text="Relatórios de Venda do Mês"></asp:Label>
+                <asp:Label runat="server" CssClass="card-body h4" Text="Relatório de Venda do Mês"></asp:Label>
+                <asp:Label runat="server" ID="lblMes" CssClass="h4 text-info"></asp:Label>
                 <br />
                 <br />
                 <asp:GridView ID="GridView1" runat="server" AllowSorting="True" CssClass="table table-bordered" AutoGenerateColumns="False">

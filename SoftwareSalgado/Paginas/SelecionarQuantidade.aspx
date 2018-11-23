@@ -41,9 +41,9 @@
                         <asp:Button runat="server" ID="btnDez" Text="10" CssClass="btn btn-outline-info btn-icon " OnClick="btnDez_Click" />
                         <p>
                             <br />
-                            <asp:Button runat="server" ID="btnQuinze" Text="15" CssClass="btn btn-outline-success btn-icon btn-fw" OnClick="btnQuinze_Click" />
-                            <asp:Button runat="server" ID="btnVinte" Text="20" CssClass="btn btn-outline-success btn-icon btn-fw" OnClick="btnVinte_Click" />
-                            <asp:Button runat="server" ID="btnCinquenta" Text="50" CssClass="btn btn-outline-success btn-icon btn-fw" OnClick="btnCinquenta_Click" />
+                            <asp:Button runat="server" ID="btnQuinze" Text="15" CssClass="btn btn-outline-info btn-icon " OnClick="btnQuinze_Click" />
+                            <asp:Button runat="server" ID="btnVinte" Text="20" CssClass="btn btn-outline-info btn-icon " OnClick="btnVinte_Click" />
+                            <asp:Button runat="server" ID="btnCinquenta" Text="50" CssClass="btn btn-outline-info btn-icon " OnClick="btnCinquenta_Click" />
                         </p>
                         <div class="card-body">
                             <div class="row">

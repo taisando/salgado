@@ -110,7 +110,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT pes_nome, SUM(ven_valortotal) FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo GROUP BY pes_nome ORDER BY ven_valortotal DESC", objConexao);
+            objCommand = Mapped.Command("SELECT pes_nome, SUM(ven_valortotal) FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo GROUP BY pes_nome ORDER BY SUM(ven_valortotal) DESC", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 
@@ -167,7 +167,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT pro_nome, SUM(vit_quantidade) FROM tbl_produto INNER JOIN tbl_vendaitem ON tbl_produto.pro_codigo = tbl_vendaitem.pro_codigo GROUP BY pro_nome ORDER BY vit_quantidade DESC;", objConexao);
+            objCommand = Mapped.Command("SELECT pro_nome, SUM(vit_quantidade) FROM tbl_produto INNER JOIN tbl_vendaitem ON tbl_produto.pro_codigo = tbl_vendaitem.pro_codigo GROUP BY pro_nome ORDER BY SUM(vit_quantidade) DESC;", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 

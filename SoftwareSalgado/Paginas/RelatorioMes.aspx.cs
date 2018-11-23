@@ -23,6 +23,10 @@ namespace SoftwareSalgado.Paginas
         protected void Page_Load(object sender, EventArgs e)
         {
             Carrega();
+
+            string[] meses = new string[] { "Janeiro", "Feveiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" };
+            int mesatual = DateTime.Now.Month;
+            lblMes.Text = meses[mesatual - 1];
         }
     }
 }
