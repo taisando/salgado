@@ -123,6 +123,7 @@
     <Content Include="Paginas\EntradaMP.aspx" />
     <Content Include="Paginas\Erro\Erro.aspx" />
     <Content Include="Paginas\Erro\Erro404.aspx" />
+    <Content Include="Paginas\ListarDespesas.aspx" />
     <Content Include="Paginas\ListarVenda.aspx" />
     <Content Include="Paginas\MenuTeste.aspx" />
     <Content Include="Paginas\NovaDespesa.aspx" />
@@ -471,6 +472,13 @@
     </Compile>
     <Compile Include="Paginas\ListarCliente.aspx.designer.cs">
       <DependentUpon>ListarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\ListarDespesas.aspx.cs">
+      <DependentUpon>ListarDespesas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ListarDespesas.aspx.designer.cs">
+      <DependentUpon>ListarDespesas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\ListarFornecedor.aspx.cs">
       <DependentUpon>ListarFornecedor.aspx</DependentUpon>

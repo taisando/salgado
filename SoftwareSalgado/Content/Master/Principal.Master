@@ -128,7 +128,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../pages/forms/basic_elements.html">
+                            <a class="nav-link" href="../../Paginas/NovaDespesa.aspx">
                                 <span class="menu-title">Despesas</span>
                                 <i class="mdi mdi-contrast-circle menu-icon"></i>
                             </a>

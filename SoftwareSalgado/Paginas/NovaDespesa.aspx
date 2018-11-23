@@ -10,20 +10,36 @@
         <br />
         <div class="card">
             <div class="card-body">
-                <asp:Label runat="server" Text="Escolha uma Categoria"></asp:Label>
-                <p></p>
+
+
 
                 <div class="template-demo form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <asp:Label runat="server" Text="Escolha uma Categoria" CssClass="col-sm-6 col-form-label"></asp:Label>
+                                <asp:DropDownList ID="ddlCategoria" runat="server" CssClass="form-control col-sm-6">
+                                </asp:DropDownList>
+                            </div>
+                        </div>
+                    </div>
 
-                    <asp:DropDownList ID="ddlCategoria" runat="server" CssClass="form-control col-md-5">
-                    </asp:DropDownList>
-
-
-                    <asp:Label runat="server" ID="lblValor" Text="Valor da Despesa"></asp:Label>
-                    <asp:TextBox runat="server" ID="txtValor"></asp:TextBox>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <asp:Label runat="server" ID="lblValor" Text="Valor da Despesa" CssClass="col-sm-6 col-form-label"></asp:Label>
+                                <asp:TextBox runat="server" ID="txtValor" placeholder="R$" CssClass="col-sm-6 col-form-label form-control form-control-sm"></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
                     <p>
-                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" CssClass="btn btn-outline-info" />
+                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" CssClass="btn btn-info btn-rounded" />
                     </p>
+
+                    <div class="col-md-6">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ListarDespesas.aspx">Listar Despesas</asp:HyperLink>
+                        <asp:Label runat="server" ID="lblMensagem"></asp:Label>
+                    </div>
                 </div>
             </div>
         </div>

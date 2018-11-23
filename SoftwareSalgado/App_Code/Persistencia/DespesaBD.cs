@@ -10,11 +10,11 @@ namespace SoftwareSalgado.App_Code.Persistencia
 {
     public class DespesaBD
     {
-        /*public int Insert(Despesa despesa)
+        public bool Insert(Despesa despesa)
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_despesa(des_codigo, des_data, des_valor, csd_codigo) VALUES (?codigo, ?data, ?valor, ?categoria)";
+            string sql = "INSERT INTO tbl_despesa(des_codigo, des_data, des_valor, sud_codigo) VALUES (?codigo, ?data, ?valor, ?categoria)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -31,7 +31,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objConexao.Dispose();
 
             return true;
-        }*/
+        }
 
         public DataSet SelectAll()
         {
@@ -41,7 +41,26 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_subdespesa ORDER BY sud_nome;", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_subdespesa ORDER BY sud_nome; ", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return ds;
+        }
+        public DataSet SelectDespesa()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT sud_nome, des_valor, des_data FROM tbl_despesa INNER JOIN tbl_subdespesa ON tbl_despesa.sud_codigo = tbl_subdespesa.sud_codigo ORDER BY des_data DESC; ", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
 
             objDataAdapter.Fill(ds);
@@ -53,4 +72,5 @@ namespace SoftwareSalgado.App_Code.Persistencia
             return ds;
         }
     }
+
 }
