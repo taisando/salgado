@@ -7,14 +7,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
     <div>
-        <asp:Label ID="lblTitulo" runat="server" Text="Tela Principal do Administrador" CssClass="h4"></asp:Label>
+        <asp:Label ID="lblTitulo" runat="server" Text="" CssClass="h4"></asp:Label>
+        <asp:Label runat="server" ID="lblAlertaEstoqueMinimo" CssClass="h4 text-danger"></asp:Label>
         <br />
         <br />
         <div class="card">
-            <div class="card-body">
-                <asp:Label runat="server" Text="Mês: "></asp:Label>
-
-                <asp:Label runat="server" ID="lblMes"></asp:Label>
+            <div class="card-body">                
+                
+                <asp:Label runat="server" Text="Mês " CssClass="h5"></asp:Label>
+                <asp:Label runat="server" ID="lblMes" CssClass="h5"></asp:Label>
 
                 <br />
                 <br />
@@ -28,7 +29,7 @@
                                 </h4>
                                 <h2 class="mb-5">R$ 4.000,00</h2>
                                 <h6 class="card-text">Adicionar Nova Venda </h6>
-                                <asp:Button runat="server" OnClick="Unnamed3_Click" Text="+" CssClass="btn btn-gradient-primary btn-sm font-weight-bold" />
+                                <asp:Button runat="server" OnClick="Unnamed3_Click" Text="+" CssClass="btn btn-gradient-primary btn-icon btn-rounded font-weight-bold h6" />
                             </div>
                         </div>
                     </div>
@@ -42,7 +43,7 @@
                                 </h4>
                                 <h2 class="mb-5">R$ 1.000,00</h2>
                                 <h6 class="card-text">Nova Despesa</h6>
-                                <asp:Button runat="server"  Text="+" CssClass="btn btn-gradient-primary btn-sm font-weight-bold" />
+                                <asp:Button runat="server"  Text="+" CssClass="btn btn-gradient-primary btn-icon btn-rounded font-weight-bold h6" />
                             </div>
                         </div>
                     </div>

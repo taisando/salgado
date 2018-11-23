@@ -39,9 +39,10 @@ namespace SoftwareSalgado.Paginas.ADM
             PessoaBD bd = new PessoaBD();
             Pessoa pessoa = bd.Select(codigo);
 
-            string[] meses = new string[] { "jane", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez" };
+            string[] meses = new string[] { "Janeiro", "Feveiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" };
             int mesatual = DateTime.Now.Month;
             lblMes.Text = meses[mesatual - 1];
+
 
             MateriaPrimaBD materiaPrimaBD = new MateriaPrimaBD();
             DataSet ds = materiaPrimaBD.GetEstoqueMinimo();
@@ -50,10 +51,10 @@ namespace SoftwareSalgado.Paginas.ADM
             {
                 DataRow dr = ds.Tables[0].Rows[i];
                 string nome = Convert.ToString(dr["mat_nome"]);
-                produtos = produtos + nome + ",";
+                produtos = produtos + nome + ", ";
             }
 
-            lblMes.Text = "Produtos abaixo do estoque mínimo: " + produtos;
+            lblAlertaEstoqueMinimo.Text = "Produtos abaixo do estoque mínimo: " + produtos;
 
 
         }

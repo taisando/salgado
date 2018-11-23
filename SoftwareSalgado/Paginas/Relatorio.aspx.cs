@@ -11,9 +11,17 @@ using System.Web.UI.DataVisualization.Charting;
 namespace SoftwareSalgado.Paginas
 {
     public partial class Relatorio : System.Web.UI.Page
-    {       
+    {
+        private void Carrega()
+        {
+            VendaBD bd = new VendaBD();
+            DataSet ds = bd.GetClientesMaisCompram();
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
+        }
         protected void Page_Load(object sender, EventArgs e)
-        {            
-        }        
+        {
+            Carrega();
+        }              
     }
 }

@@ -13,8 +13,12 @@
                 <asp:Label runat="server" CssClass="card-body h4" Text="Relatório de Venda - Ranking"></asp:Label>
                 <br />
                 <br />
-                <asp:GridView ID="GridView1" runat="server" DataSourceID="ObjectDataSource2" AllowSorting="True" CssClass="table table-bordered">
+                <asp:GridView ID="GridView1" runat="server" AllowSorting="True" CssClass="table table-bordered" AutoGenerateColumns="False">
                     <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:BoundField DataField="pes_nome" HeaderText="Cliente" />
+                        <asp:BoundField DataField="SUM(ven_valortotal)" HeaderText="Total" />
+                    </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <HeaderStyle CssClass="table-info" />
@@ -26,7 +30,6 @@
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
-                <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="GetClientesMaisCompram" TypeName="SoftwareSalgado.App_Code.Persistencia.VendaBD"></asp:ObjectDataSource>
             
                 <br />
             </div>

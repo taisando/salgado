@@ -10,8 +10,13 @@
                 <asp:Label runat="server" CssClass="card-body h4" Text="Relatórios de Venda do Mês"></asp:Label>
                 <br />
                 <br />
-                <asp:GridView ID="GridView1" runat="server" AllowSorting="True" CellPadding="4" DataSourceID="ObjectDataSource1" CssClass="table table-bordered">
+                <asp:GridView ID="GridView1" runat="server" AllowSorting="True" CssClass="table table-bordered" AutoGenerateColumns="False">
                     <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:BoundField DataField="pes_nome" HeaderText="Cliente" />
+                        <asp:BoundField DataField="ven_data" HeaderText="Data" />
+                        <asp:BoundField DataField="ven_valortotal" HeaderText="Total" />
+                    </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <HeaderStyle CssClass="table-info" />
@@ -23,7 +28,6 @@
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
-                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetVendasMes" TypeName="SoftwareSalgado.App_Code.Persistencia.VendaBD"></asp:ObjectDataSource>
             </div>
         </div>
     </div>

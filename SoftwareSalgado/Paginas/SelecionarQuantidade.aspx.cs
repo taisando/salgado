@@ -111,7 +111,24 @@ namespace SoftwareSalgado.Paginas
             Session["VendaID"] = 0;
             Session["CategoriaID"] = 0;
             Session["ProdutoID"] = 0;
-            
+
+
+
+            ProdutoMPBD bd = new ProdutoMPBD();
+            DataSet ds = bd.SelectProdutoMP(produto);
+
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                DataRow dr = ds.Tables[0].Rows[i];
+                int MP = Convert.ToInt32(dr["mat_codigo"]);
+                double quantidademp = Convert.ToDouble(dr["pmp_quantidade"]);
+
+                double total = quantidade * quantidademp;
+
+                EstoqueMPBD estoque = new EstoqueMPBD();
+                estoque.InsertEstoque(MP, total);
+            }
+           
             Response.Redirect("NovaVenda.aspx");
         }
 

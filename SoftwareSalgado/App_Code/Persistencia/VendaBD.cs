@@ -110,9 +110,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT pes_nome AS Cliente, SUM(ven_valortotal) AS Total " +
-                "FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo " +
-                "GROUP BY pes_nome ORDER BY Total DESC", objConexao);
+            objCommand = Mapped.Command("SELECT pes_nome, SUM(ven_valortotal) FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo GROUP BY pes_nome ORDER BY ven_valortotal DESC", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 
@@ -131,7 +129,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT pes_nome AS Cliente, ven_valortotal AS Total, ven_data AS Data FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo where month(ven_data)=MONTH(NOW()) AND year(ven_data)=year(now()) order by Cliente; ", objConexao);
+            objCommand = Mapped.Command("SELECT pes_nome, ven_valortotal, ven_data FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo where month(ven_data)=MONTH(NOW()) AND year(ven_data)=year(now()) order by pes_nome; ", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 
@@ -150,7 +148,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT pes_nome AS Cliente, ven_valortotal AS Total, ven_data AS Data FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo ORDER BY Data DESC;", objConexao);
+            objCommand = Mapped.Command("SELECT pes_nome, ven_valortotal, ven_data FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo ORDER BY ven_data DESC;", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 
@@ -169,7 +167,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT pro_nome AS Produto, SUM(vit_quantidade) AS Quantidade FROM tbl_produto INNER JOIN tbl_vendaitem ON tbl_produto.pro_codigo = tbl_vendaitem.pro_codigo GROUP BY Produto ORDER BY Quantidade DESC;", objConexao);
+            objCommand = Mapped.Command("SELECT pro_nome, SUM(vit_quantidade) FROM tbl_produto INNER JOIN tbl_vendaitem ON tbl_produto.pro_codigo = tbl_vendaitem.pro_codigo GROUP BY pro_nome ORDER BY vit_quantidade DESC;", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 
@@ -188,7 +186,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT pes_nome AS Cliente, ven_valortotal AS Total, ven_data AS 'Data' FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo WHERE ven_data BETWEEN DATE_ADD(CURRENT_DATE(), INTERVAL -7 DAY) AND CURRENT_DATE() order by Cliente ; ", objConexao);
+            objCommand = Mapped.Command("SELECT pes_nome, ven_valortotal, ven_data FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo WHERE ven_data BETWEEN DATE_ADD(CURRENT_DATE(), INTERVAL -7 DAY) AND CURRENT_DATE() order by pes_nome; ", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 
