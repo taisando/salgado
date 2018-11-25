@@ -35,6 +35,9 @@ namespace SoftwareSalgado.Paginas.ADM
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Carrega();
+            CarregaDespesa();
+
             int codigo = Convert.ToInt32(Session["ID"]);
             PessoaBD bd = new PessoaBD();
             Pessoa pessoa = bd.Select(codigo);
@@ -47,6 +50,7 @@ namespace SoftwareSalgado.Paginas.ADM
             MateriaPrimaBD materiaPrimaBD = new MateriaPrimaBD();
             DataSet ds = materiaPrimaBD.GetEstoqueMinimo();
             string produtos = "";
+
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 DataRow dr = ds.Tables[0].Rows[i];
@@ -55,14 +59,26 @@ namespace SoftwareSalgado.Paginas.ADM
             }
 
             lblAlertaEstoqueMinimo.Text = "Produtos abaixo do estoque mínimo: " + produtos;
-
-
         }
 
         protected void Unnamed3_Click(object sender, EventArgs e)
         {
-            Response.Redirect(ConfigurationManager.AppSettings["URL"] +  "Paginas/NovaVenda.aspx");
+            Response.Redirect(ConfigurationManager.AppSettings["URL"] + "Paginas/NovaVenda.aspx");
+        }
+
+        private void Carrega()
+        {
+            VendaBD bd = new VendaBD();
+            DataSet ds = bd.GetVendasMesTotal();
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
+        }
+        private void CarregaDespesa()
+        {
+            DespesaBD bd = new DespesaBD();
+            DataSet ds = bd.GetDespesasMesTotal();
+            GridView2.DataSource = ds.Tables[0].DefaultView;
+            GridView2.DataBind();
         }
     }
-
 }

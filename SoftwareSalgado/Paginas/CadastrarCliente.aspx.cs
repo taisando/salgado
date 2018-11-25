@@ -26,17 +26,18 @@ namespace SoftwareSalgado.Paginas
             cliente.Telefone = txtTelefone.Text;
             cliente.Email = txtEmail.Text;
             cliente.CPF = txtCPF.Text;
+            cliente.Tipo = 1;
 
             Endereco endereco = new Endereco();
             endereco.Logradouro = txtLogradouro.Text;
-            endereco.Numero = Convert.ToInt32(txtNumero.Text);
+            //endereco.Numero = Convert.ToInt32(txtNumero.Text);
             endereco.Complemento = txtComplemento.Text;
             endereco.Cidade = txtCidade.Text;
-            endereco.Cliente = cliente.Codigo;
 
+           
 
             ClienteBD bd = new ClienteBD();
-            bd.Insert(cliente);
+            bd.Insert(cliente, endereco);
             Response.Write("<script>alert('Cliente cadastrado com sucesso!')</script>");
 
 

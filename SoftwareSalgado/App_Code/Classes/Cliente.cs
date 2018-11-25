@@ -11,11 +11,9 @@ namespace SoftwareSalgado.App_Code.Classes
         public string Nome { get; set; }
         public string Telefone { get; set; }        
         public string Email { get; set; }
-        public string CPF { get; set; }
-        public int Endereco { get; set; }
+        public string CPF { get; set; }        
         public int Tipo { get; set; }
-
-
+        
         //construtor
         public Cliente()
         {

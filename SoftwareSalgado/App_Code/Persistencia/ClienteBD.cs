@@ -10,22 +10,26 @@ namespace SoftwareSalgado.App_Code.Persistencia
     {
         //métodos
         //insert
-        public bool Insert(Cliente cliente)
+        public bool Insert(Cliente cliente, Endereco endereco)
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_pessoa(pes_codigo, pes_nome, pes_telefone, pes_email, pes_cpf, pes_tipo) " +                
-                         "VALUES (?codigo, ?nome, ?telefone, ?email, ?cpf, ?tipo)";            
+            string sql = @"INSERT INTO tbl_pessoa(pes_nome, pes_telefone, pes_email, pes_cpf, pes_tipo) VALUES (?nome, ?telefone, ?email, ?cpf, ?tipo)" +
+                            @"INSERT INTO tbl_endereco(end_logradouro, end_numero, end_complemento, end_cidade) VALUES (?logradouro, ?numero, ?complemento, ?cidade,last_insert_id())";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
 
-            objCommand.Parameters.Add(Mapped.Parameter("?codigo", cliente.Codigo));
             objCommand.Parameters.Add(Mapped.Parameter("?nome", cliente.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
             objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.CPF));
             objCommand.Parameters.Add(Mapped.Parameter("?tipo", cliente.Tipo));
+
+            objCommand.Parameters.Add(Mapped.Parameter("?logradouro", endereco.Logradouro));
+            objCommand.Parameters.Add(Mapped.Parameter("?numero", endereco.Numero));
+            objCommand.Parameters.Add(Mapped.Parameter("?complemento", endereco.Complemento));
+            objCommand.Parameters.Add(Mapped.Parameter("?cidade", endereco.Cidade));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();

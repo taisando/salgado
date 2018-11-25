@@ -71,6 +71,25 @@ namespace SoftwareSalgado.App_Code.Persistencia
 
             return ds;
         }
-    }
 
+        public DataSet GetDespesasMesTotal()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT concat('R$ ', ROUND (SUM(des_valor),2)) from tbl_despesa where month(des_data)=MONTH(NOW()) AND year(des_data)=year(now()); ", objConexao);
+
+            objDataAdapter = Mapped.Adapter(objCommand);
+
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return ds;
+        }
+    }
 }
