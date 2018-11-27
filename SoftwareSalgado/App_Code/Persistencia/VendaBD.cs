@@ -205,7 +205,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT replace(concat('R$ ', ROUND (SUM(ven_valortotal),2)), '.', ',') as valor from tbl_venda where month(ven_data)=MONTH(NOW()) AND year(ven_data)=year(now()); ", objConexao);
+            objCommand = Mapped.Command("SELECT SUM(ven_valortotal) AS valor from tbl_venda where month(ven_data)=MONTH(NOW()) AND year(ven_data)=year(now()); ", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 
@@ -215,6 +215,6 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objConexao.Dispose();
 
             return ds;
-        }
+        }        
     }
 }

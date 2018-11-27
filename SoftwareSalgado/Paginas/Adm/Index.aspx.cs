@@ -35,8 +35,7 @@ namespace SoftwareSalgado.Paginas.ADM
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Carrega();
-            CarregaDespesa();
+            CarregaTotal();
 
             int codigo = Convert.ToInt32(Session["ID"]);
             PessoaBD bd = new PessoaBD();
@@ -66,19 +65,30 @@ namespace SoftwareSalgado.Paginas.ADM
             Response.Redirect(ConfigurationManager.AppSettings["URL"] + "Paginas/NovaVenda.aspx");
         }
 
-        private void Carrega()
+        private void CarregaTotal()
         {
-            VendaBD bd = new VendaBD();
-            DataSet ds = bd.GetVendasMesTotal();
-            GridView1.DataSource = ds.Tables[0].DefaultView;
-            GridView1.DataBind();
+
+            VendaBD bdVenda = new VendaBD();
+            DataSet ds = bdVenda.GetVendasMesTotal();
+            DataRow dr = ds.Tables[0].Rows[0];
+            double venda = Convert.ToDouble(dr["valor"]);
+            lblVenda.Text = venda.ToString();
+
+            DespesaBD bdDespesa = new DespesaBD();
+            DataSet dsTotal = bdDespesa.GetDespesasMesTotal();
+            DataRow dre = dsTotal.Tables[0].Rows[0];
+            double despesa = Convert.ToDouble(dre["Valor"]);
+            lblDespesa.Text = despesa.ToString();
+
+            double total = venda - despesa;
+
+            lblTotal.Text = Convert.ToString(total);
+
         }
-        private void CarregaDespesa()
+
+        protected void Plus_Click(object sender, EventArgs e)
         {
-            DespesaBD bd = new DespesaBD();
-            DataSet ds = bd.GetDespesasMesTotal();
-            GridView2.DataSource = ds.Tables[0].DefaultView;
-            GridView2.DataBind();
+            Response.Redirect(ConfigurationManager.AppSettings["URL"] + "Paginas/NovaDespesa.aspx");
         }
     }
 }

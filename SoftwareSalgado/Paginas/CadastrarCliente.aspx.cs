@@ -30,7 +30,7 @@ namespace SoftwareSalgado.Paginas
 
             Endereco endereco = new Endereco();
             endereco.Logradouro = txtLogradouro.Text;
-            //endereco.Numero = Convert.ToInt32(txtNumero.Text);
+            endereco.Numero = Convert.ToInt32(txtNumero.Text);
             endereco.Complemento = txtComplemento.Text;
             endereco.Cidade = txtCidade.Text;
 

@@ -14,9 +14,9 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = @"INSERT INTO tbl_pessoa(pes_nome, pes_telefone, pes_email, pes_cpf, pes_tipo) VALUES (?nome, ?telefone, ?email, ?cpf, ?tipo)" +
-                            @"INSERT INTO tbl_endereco(end_logradouro, end_numero, end_complemento, end_cidade) VALUES (?logradouro, ?numero, ?complemento, ?cidade,last_insert_id())";
-
+            string sql = @"INSERT INTO tbl_pessoa(pes_nome, pes_telefone, pes_email, pes_cpf, pes_tipo) VALUES (?nome, ?telefone, ?email, ?cpf, ?tipo);" +
+                            @"INSERT INTO tbl_endereco(end_logradouro, end_numero, end_complemento, end_cidade,end_codigo) VALUES (?logradouro, ?numero, ?complemento, ?cidade,last_insert_id())";
+           
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
 
