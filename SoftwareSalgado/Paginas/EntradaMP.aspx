@@ -47,8 +47,12 @@
                 <asp:Label runat="server" CssClass="card-body h4" Text="Estoque"></asp:Label>
                 <br />
                 <br />
-                <asp:GridView ID="GridView1" runat="server" DataSourceID="ObjectDataSource1" CssClass="table table-bordered">
+                <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered" AutoGenerateColumns="False">
                     <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:BoundField DataField="mat_nome" HeaderText="Nome da Matéria-Prima" />
+                        <asp:BoundField DataField="quantidade" HeaderText="Quantidade em Kilos" />
+                    </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <HeaderStyle CssClass="table-success" />
@@ -60,7 +64,6 @@
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
-                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetEstoque" TypeName="SoftwareSalgado.App_Code.Persistencia.EstoqueMPBD"></asp:ObjectDataSource>
             </div>
         </div>
     </div>

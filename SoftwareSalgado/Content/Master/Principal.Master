@@ -54,7 +54,7 @@
                             </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link count-indicator dropdown-toggle" href="../../Paginas/NovaVenda.aspx">&nbsp;&nbsp;
+                            <a class="nav-link count-indicator dropdown-toggle" href="../../Paginas/NovaDespesa.aspx">&nbsp;&nbsp;
                                 <i class="mdi mdi-contrast-circle menu-icon 25px"></i>
                             </a>
                         </li>
@@ -105,10 +105,55 @@
                                 <i class="mdi mdi-home menu-icon"></i>
                             </a>
                         </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Paginas/NovaVenda.aspx">
+                                <span class="menu-title">Venda</span>
+                                <i class="mdi mdi-square-inc-cash menu-icon"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Paginas/NovaDespesa.aspx">
+                                <span class="menu-title">Despesas</span>
+                                <i class="mdi mdi-contrast-circle menu-icon"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Paginas/EntradaMP.aspx">
+                                <span class="menu-title">Controle de Matéria-Pima</span>
+                                <i class="mdi mdi-bowl menu-icon"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#relat" aria-expanded="false" aria-controls="relat">
+                                <span class="menu-title">Relatórios</span>
+                                <i class="menu-arrow"></i>
+                                <i class="mdi mdi-clipboard-text menu-icon"></i>
+                            </a>
+                            <div class="collapse" id="relat">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/Relatorio.aspx">Ranking de Vendas</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioVendaSemana.aspx">Vendas na Semana</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioMes.aspx">Vendas no Mês</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioVendaAno.aspx">Vendas no Ano</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioVendaProdutos.aspx">Produtos Mais Vendidos</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Paginas/Graficos.aspx">
+                                <span class="menu-title">Gráficos</span>
+                                <i class="mdi mdi-chart-bar menu-icon"></i>
+                            </a>
+                        </li>
 
                         <li class="nav-item">
                             <a data-toggle="collapse" class="nav-link" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                                <span class="menu-title">Cadastro</span>
+                                <span class="menu-title">Cadastros</span>
                                 <i class="menu-arrow"></i>
                                 <i class="mdi mdi-account-card-details menu-icon"></i>
                             </a>
@@ -120,49 +165,6 @@
                                     <li class="nav-item"><a class="nav-link" href="../../Paginas/CadastrarMP.aspx">Cadastrar Matéria-Prima</a></li>
                                 </ul>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../Paginas/NovaVenda.aspx">
-                                <span class="menu-title">Venda</span>
-                                <i class="mdi mdi-square-inc-cash menu-icon"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../Paginas/NovaDespesa.aspx">
-                                <span class="menu-title">Despesas</span>
-                                <i class="mdi mdi-contrast-circle menu-icon"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../Paginas/EntradaMP.aspx">
-                                <span class="menu-title">Controle de Matéria-Pima</span>
-                                <i class="mdi mdi-bowl menu-icon"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="collapse" href="#relat" aria-expanded="false" aria-controls="relat">
-                                <span class="menu-title">Relatórios</span>
-                                <i class="menu-arrow"></i>
-                                <i class="mdi mdi-clipboard-text menu-icon"></i>
-                            </a>
-                            <div class="collapse" id="relat">
-                                <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/Relatorio.aspx">Ranking de Vendas</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioVendaSemana.aspx">Vendas na Semana</a></li>
-
-                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioMes.aspx">Vendas no Mês</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioVendaAno.aspx">Vendas no Ano</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../../Paginas/RelatorioVendaProdutos.aspx">Produtos Mais Vendidos</a></li>
-
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../Paginas/Graficos.aspx">
-                                <span class="menu-title">Gráficos</span>
-                                <i class="mdi mdi-chart-bar menu-icon"></i>
-                            </a>
                         </li>
 
                         <li class="nav-item">
@@ -183,7 +185,7 @@
                             <span class="nav-link">
                                 <span class="border-bottom"></span>
 
-                                <button class="btn btn-block btn-rounded btn-inverse-warning mt-4"><a href="../../Paginas/Login.aspx">Sair</a></button>
+                                <button class="btn btn-block btn-rounded btn-inverse-light mt-4"><a href="../../Paginas/Obrigada.aspx">Sair</a></button>
                                 <span class="border-bottom"></span>
                             </span>
                         </li>

@@ -91,7 +91,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_venda ORDER BY ven_data", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_venda ORDER BY ven_data DESC", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
 
             objDataAdapter.Fill(ds);

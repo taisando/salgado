@@ -17,11 +17,12 @@
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="pes_nome" HeaderText="Cliente" />
-                        <asp:BoundField DataField="SUM(ven_valortotal)" HeaderText="Total" />
+                        <asp:BoundField DataField="SUM(ven_valortotal)" HeaderText="Total"  />
+                        
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle CssClass="table-info" />
+                    <HeaderStyle CssClass="table-success" />
                     <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
                     <RowStyle BackColor="#EFF3FB" />
                     <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />

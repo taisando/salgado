@@ -35,7 +35,7 @@ namespace SoftwareSalgado.Paginas.ADM
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            CarregaTotal();
+           CarregaTotal();
 
             int codigo = Convert.ToInt32(Session["ID"]);
             PessoaBD bd = new PessoaBD();

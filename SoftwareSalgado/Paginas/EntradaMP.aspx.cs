@@ -17,6 +17,7 @@ namespace SoftwareSalgado.Paginas
             if (!Page.IsPostBack)
             {
                 Carrega();
+                CarregaEstoque();
             }
         }
         private void Carrega()
@@ -27,6 +28,14 @@ namespace SoftwareSalgado.Paginas
             ddlMP.DataTextField = "mat_nome";
             ddlMP.DataValueField = "mat_codigo";
             ddlMP.DataBind();
+        }
+
+        private void CarregaEstoque()
+        {
+            EstoqueMPBD bd = new EstoqueMPBD();
+            DataSet ds = bd.GetEstoque();
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
         }
         
         protected void btnSalvar_Click(object sender, EventArgs e)

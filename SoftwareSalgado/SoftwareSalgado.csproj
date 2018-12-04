@@ -128,6 +128,7 @@
     <Content Include="Paginas\ListarVenda.aspx" />
     <Content Include="Paginas\MenuTeste.aspx" />
     <Content Include="Paginas\NovaDespesa.aspx" />
+    <Content Include="Paginas\Obrigada.aspx" />
     <Content Include="Paginas\Relatorio.aspx" />
     <Content Include="Paginas\RelatorioMes.aspx" />
     <Content Include="Paginas\RelatorioVendaAno.aspx" />
@@ -536,6 +537,13 @@
     </Compile>
     <Compile Include="Paginas\NovaVenda.aspx.designer.cs">
       <DependentUpon>NovaVenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Obrigada.aspx.cs">
+      <DependentUpon>Obrigada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Obrigada.aspx.designer.cs">
+      <DependentUpon>Obrigada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Relatorio.aspx.cs">
       <DependentUpon>Relatorio.aspx</DependentUpon>

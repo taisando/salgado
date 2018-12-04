@@ -84,7 +84,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT mat_nome AS 'Materia Prima', SUM(est_quantidade) AS Quantidade FROM tbl_materiaprima INNER JOIN tbl_estoquemp ON tbl_estoquemp.mat_codigo = tbl_materiaprima.mat_codigo GROUP BY mat_nome; ", objConexao);
+            objCommand = Mapped.Command("SELECT mat_nome, SUM(est_quantidade) AS quantidade FROM tbl_materiaprima INNER JOIN tbl_estoquemp ON tbl_estoquemp.mat_codigo = tbl_materiaprima.mat_codigo GROUP BY mat_nome; ", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 
