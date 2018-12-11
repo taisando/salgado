@@ -12,7 +12,6 @@
             <div class="card-body">
 
 
-
                 <div class="template-demo form-group">
                     <div class="row">
                         <div class="col-md-6">

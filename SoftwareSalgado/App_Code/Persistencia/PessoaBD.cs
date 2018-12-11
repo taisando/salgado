@@ -18,7 +18,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataReader objDataReader;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa WHERE pes_nome = ?nome and pes_senha = ?senha", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa WHERE pes_nomeusuario = ?nome and pes_senha = ?senha", objConexao);
 
             objCommand.Parameters.Add(Mapped.Parameter("?nome", nome));
             objCommand.Parameters.Add(Mapped.Parameter("?senha", senha));

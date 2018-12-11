@@ -60,7 +60,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT sud_nome, des_valor, des_data FROM tbl_despesa INNER JOIN tbl_subdespesa ON tbl_despesa.sud_codigo = tbl_subdespesa.sud_codigo ORDER BY des_data DESC; ", objConexao);
+            objCommand = Mapped.Command("SELECT sud_nome, des_valor, des_data FROM tbl_despesa INNER JOIN tbl_subdespesa ON tbl_despesa.sud_codigo = tbl_subdespesa.sud_codigo where month(des_data)=MONTH(NOW()) AND year(des_data)=year(now()) ORDER BY des_data DESC; ", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
 
             objDataAdapter.Fill(ds);
