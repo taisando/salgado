@@ -215,6 +215,25 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objConexao.Dispose();
 
             return ds;
-        }        
+        }
+        public DataSet GetUltimaVenda()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT ven_valortotal AS valor, pes_nome as cliente, vit_quantidade, pro_nome AS produto from tbl_venda INNER JOIN tbl_vendaitem USING (ven_codigo) INNER JOIN tbl_pessoa using (pes_codigo) INNER JOIN tbl_produto using (pro_codigo) group by ven_codigo; ", objConexao);
+
+            objDataAdapter = Mapped.Adapter(objCommand);
+
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return ds;
+        }
     }
 }

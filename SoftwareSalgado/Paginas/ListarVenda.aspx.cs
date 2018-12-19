@@ -19,7 +19,7 @@ namespace SoftwareSalgado.Paginas
         private void Carrega()
         {
             VendaBD bd = new VendaBD();
-            DataSet ds = bd.SelectAll();
+            DataSet ds = bd.GetUltimaVenda();
             GridView1.DataSource = ds.Tables[0].DefaultView;
             GridView1.DataBind();
         }

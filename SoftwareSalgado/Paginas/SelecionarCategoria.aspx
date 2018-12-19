@@ -17,7 +17,7 @@
                         <ItemTemplate>
                             <div>
                                 <p>
-                                    <asp:Button ID="btnCategoria" runat="server" CssClass="form-control col-md-3 btn btn-outline-success"
+                                    <asp:Button ID="btnCategoria" runat="server" CssClass="form-control col-md-3 btn btn-gradient-success"
                                         Text='<%# DataBinder.Eval(Container.DataItem, "cat_nome") %>'
                                         CommandArgument='<%# DataBinder.Eval(Container.DataItem, "cat_codigo") %>'
                                         CommandName="categoria" CausesValidation="false" />

@@ -12,16 +12,17 @@
                 <asp:Label runat="server" Text="Selecione um Produto"></asp:Label>
                 <div class="template-demo">
                     <br />
+
                     <asp:Repeater ID="rptProdutos" runat="server" OnItemCommand="rptProdutos_ItemCommand">
                         <ItemTemplate>
-                            <div>
-                                <p>
-                                    <asp:Button ID="btnProduto" runat="server" CssClass="form-control col-md-3 btn btn-outline-success"
-                                        Text='<%# DataBinder.Eval(Container.DataItem, "pro_nome") %>'
-                                        CommandArgument='<%# DataBinder.Eval(Container.DataItem, "pro_codigo") %>'
-                                        CommandName="produto" CausesValidation="false" />
-                                </p>
-                            </div>
+                                                            
+                                    <div class="form-group">
+                                        <asp:Button ID="btnProduto" runat="server" CssClass="mr-3 form-control col-md-3 btn btn-gradient-success"
+                                            Text='<%# DataBinder.Eval(Container.DataItem, "pro_nome") %>'
+                                            CommandArgument='<%# DataBinder.Eval(Container.DataItem, "pro_codigo") %>'
+                                            CommandName="produto" CausesValidation="false" />
+                                    </div>                               
+                            
                         </ItemTemplate>
                     </asp:Repeater>
 

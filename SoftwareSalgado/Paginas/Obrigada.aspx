@@ -22,23 +22,23 @@
                     <div class="content-wrapper d-flex align-items-center text-center error-page bg-primary">
                         <div class="row flex-grow">
                             <div class="col-lg-7 mx-auto text-white">
-                                <div class="row align-items-center d-flex flex-row">
-                                    <div class="col-lg-6 text-lg-right pr-lg-4">
-                                        <h1 class="display-1 mb-0">GTI</h1>
-                                    </div>
-                                    <div class="col-lg-6 error-page-divider text-lg-left pl-lg-4">
+
+                                <div class="row mt-5">
+                                   
+                                    <div class="col-12 text-center mt-xl-2">
                                         <h2>Obrigada!</h2>
-                                        <h3 class="font-weight-light">Estaremos off agora :)</h3>
+                                        <h2>Ana Salgados</h2>
                                     </div>
                                 </div>
+
                                 <div class="row mt-5">
                                     <div class="col-12 text-center mt-xl-2">
-                                        <a class="text-white font-weight-medium" href="../Adm/Index.aspx">Programadores não morrem, vão para a nuvem!</a>
+                                        <a class="text-white font-weight-medium" href="../Adm/Index.aspx">Fatec 2018</a>
                                     </div>
                                 </div>
                                 <div class="row mt-5">
                                     <div class="col-12 mt-xl-2">
-                                        <p class="text-white font-weight-medium text-center">FATEC 2018</p>
+                                        <p class="text-white font-weight-medium text-center"></p>
                                     </div>
                                 </div>
                             </div>
