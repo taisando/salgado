@@ -22,7 +22,6 @@ namespace SoftwareSalgado.Paginas.ADM
             Response.Redirect("../Login.aspx");
         }
 
-
         private bool IsAdministrador(int tipo)
         {
             bool retorno = false;
@@ -35,7 +34,11 @@ namespace SoftwareSalgado.Paginas.ADM
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           CarregaTotal();
+           if (!Page.IsPostBack)
+            {
+                CarregaTotal();
+            }           
+
 
             int codigo = Convert.ToInt32(Session["ID"]);
             PessoaBD bd = new PessoaBD();
@@ -64,6 +67,11 @@ namespace SoftwareSalgado.Paginas.ADM
         {
             Response.Redirect(ConfigurationManager.AppSettings["URL"] + "Paginas/NovaVenda.aspx");
         }
+        protected void Plus_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(ConfigurationManager.AppSettings["URL"] + "Paginas/NovaDespesa.aspx");
+        }
+
 
         private void CarregaTotal()
         {
@@ -84,11 +92,7 @@ namespace SoftwareSalgado.Paginas.ADM
 
             lblTotal.Text = Convert.ToString(total);
 
-        }
-
-        protected void Plus_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(ConfigurationManager.AppSettings["URL"] + "Paginas/NovaDespesa.aspx");
-        }
+        }        
     }
 }
+

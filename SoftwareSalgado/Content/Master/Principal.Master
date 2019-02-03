@@ -185,7 +185,7 @@
                             <span class="nav-link">
                                 <span class="border-bottom"></span>
 
-                                <button class="btn btn-block btn-rounded btn-inverse-light mt-4"><a href="../../Paginas/Obrigada.aspx">Sair</a></button>
+                                <button class="btn btn-block btn-rounded btn-inverse-light mt-4"><a href="../../Paginas/Login.aspx">Sair</a></button>
                                 <span class="border-bottom"></span>
                             </span>
                         </li>

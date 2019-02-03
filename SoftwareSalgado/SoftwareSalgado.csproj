@@ -126,7 +126,6 @@
     <Content Include="Paginas\Graficos.aspx" />
     <Content Include="Paginas\ListarDespesas.aspx" />
     <Content Include="Paginas\ListarVenda.aspx" />
-    <Content Include="Paginas\MenuTeste.aspx" />
     <Content Include="Paginas\NovaDespesa.aspx" />
     <Content Include="Paginas\Obrigada.aspx" />
     <Content Include="Paginas\Relatorio.aspx" />
@@ -516,13 +515,6 @@
     </Compile>
     <Compile Include="Paginas\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Paginas\MenuTeste.aspx.cs">
-      <DependentUpon>MenuTeste.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Paginas\MenuTeste.aspx.designer.cs">
-      <DependentUpon>MenuTeste.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\NovaDespesa.aspx.cs">
       <DependentUpon>NovaDespesa.aspx</DependentUpon>

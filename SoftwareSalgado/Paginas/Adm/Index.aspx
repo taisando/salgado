@@ -30,7 +30,7 @@
                                 </h4>
                                 <h2 class="mb-5">
                                     <asp:Label runat="server" ID="lblRe" Text="R$"></asp:Label>
-                                    <asp:Label runat="server" ID="lblVenda"></asp:Label>
+                                    <asp:Label runat="server" ID="lblVenda">0</asp:Label>
                                 </h2>
                                 <h6 class="card-text">Adicionar Nova Venda </h6>
                                 <asp:Button runat="server" OnClick="Unnamed3_Click" Text="+" CssClass="btn btn-gradient-primary btn-icon btn-rounded font-weight-bold h6" />
@@ -47,7 +47,7 @@
                                 </h4>
                                 <h2 class="mb-5">
                                     <asp:Label runat="server" ID="lblR" Text="R$"></asp:Label>
-                                    <asp:Label runat="server" ID="lblDespesa"></asp:Label>
+                                    <asp:Label runat="server" ID="lblDespesa">0</asp:Label>
                                 </h2>
                                 <h6 class="card-text">Nova Despesa</h6>
                                 <asp:Button runat="server" Text="+" OnClick="Plus_Click" CssClass="btn btn-gradient-primary btn-icon btn-rounded font-weight-bold h6" />
