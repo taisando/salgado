@@ -34,11 +34,10 @@ namespace SoftwareSalgado.Paginas.ADM
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           if (!Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
                 CarregaTotal();
-            }           
-
+            }
 
             int codigo = Convert.ToInt32(Session["ID"]);
             PessoaBD bd = new PessoaBD();
@@ -79,20 +78,36 @@ namespace SoftwareSalgado.Paginas.ADM
             VendaBD bdVenda = new VendaBD();
             DataSet ds = bdVenda.GetVendasMesTotal();
             DataRow dr = ds.Tables[0].Rows[0];
-            double venda = Convert.ToDouble(dr["valor"]);
-            lblVenda.Text = venda.ToString();
+
+            double venda = 0;
+            
+            if (dr["valor"] != DBNull.Value)
+            {
+                venda = Convert.ToDouble(dr["valor"]);
+            }
+            
+           
+            //double venda = Convert.ToDouble(dr["valor"]);
+            //lblVenda.Text = venda.ToString();
 
             DespesaBD bdDespesa = new DespesaBD();
             DataSet dsTotal = bdDespesa.GetDespesasMesTotal();
             DataRow dre = dsTotal.Tables[0].Rows[0];
-            double despesa = Convert.ToDouble(dre["Valor"]);
-            lblDespesa.Text = despesa.ToString();
+
+            double despesa = 0;
+            if(dre["Valor"] != DBNull.Value)
+            {
+                despesa = Convert.ToDouble(dre["Valor"]);
+            }
+
+            //double despesa = Convert.ToDouble(dre["Valor"]);
+            //lblDespesa.Text = despesa.ToString();
 
             double total = venda - despesa;
 
             lblTotal.Text = Convert.ToString(total);
-
-        }        
+        }
     }
 }
+
 

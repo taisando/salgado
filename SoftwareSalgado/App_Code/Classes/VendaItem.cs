@@ -12,5 +12,6 @@ namespace SoftwareSalgado.App_Code.Classes
         public int Produto { get; set; }
         public int Quantidade { get; set; }
         public decimal Subtotal { get; set; }
+        public decimal PrecoUnitario { get; set; }
     }
 }
