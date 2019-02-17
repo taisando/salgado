@@ -17,8 +17,8 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_estoquemp(est_codigo, est_quantidade, est_data, mat_codigo) " +
-                         "VALUES (?codigo, ?quantidade, ?data, ?materiaprima)";
+            string sql = "INSERT INTO tbl_estoquemp(est_codigo, est_quantidade, est_data, mat_codigo, est_entradasaida) " +
+                         "VALUES (?codigo, ?quantidade, ?data, ?materiaprima, ?entrada)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -27,6 +27,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", estoqueMP.Quantidade));
             objCommand.Parameters.Add(Mapped.Parameter("?data", estoqueMP.Data));
             objCommand.Parameters.Add(Mapped.Parameter("?materiaprima", estoqueMP.MateriaPrima));
+            objCommand.Parameters.Add(Mapped.Parameter("entrada", estoqueMP.Entrada));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -95,11 +96,11 @@ namespace SoftwareSalgado.App_Code.Persistencia
 
             return ds;
         }
-        public bool InsertEstoque( int codigo, double total)
+        public bool InsertEstoque( int codigo, double total, int saida)
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_estoquemp (est_quantidade, est_data, mat_codigo) VALUES (?total, ?data, ?codigo) ";
+            string sql = "INSERT INTO tbl_estoquemp (est_quantidade, est_data, mat_codigo, est_entradasaida) VALUES (?total, ?data, ?codigo, ?saida) ";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -107,7 +108,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?total", -total));
             objCommand.Parameters.Add(Mapped.Parameter("?data", DateTime.Now));
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", codigo));
-
+            objCommand.Parameters.Add(Mapped.Parameter("?saida", saida));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();

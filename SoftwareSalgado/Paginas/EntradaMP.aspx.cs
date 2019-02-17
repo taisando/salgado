@@ -44,6 +44,7 @@ namespace SoftwareSalgado.Paginas
             estoqueMP.MateriaPrima = Convert.ToInt32(ddlMP.Text);
             estoqueMP.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             estoqueMP.Data = DateTime.Now;
+            estoqueMP.Entrada = 0;
 
             EstoqueMPBD bd = new EstoqueMPBD();
             if (bd.Insert(estoqueMP))

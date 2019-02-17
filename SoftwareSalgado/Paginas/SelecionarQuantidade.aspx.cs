@@ -53,6 +53,7 @@ namespace SoftwareSalgado.Paginas
             int produto = Convert.ToInt32(Session["ProdutoID"]);
             int quantidade = Convert.ToInt32(lblQuantidade.Text);
             decimal subtotal = Convert.ToDecimal(lblSubtotal.Text);
+            decimal preco = Convert.ToDecimal(lblPreco.Text);
 
             VendaItemBD vendaItemBD = new VendaItemBD();
             VendaItem vendaItem = new VendaItem();
@@ -60,17 +61,15 @@ namespace SoftwareSalgado.Paginas
             vendaItem.Venda = venda;
             vendaItem.Quantidade = quantidade;
             vendaItem.Subtotal = subtotal;
+            vendaItem.PrecoUnitario = preco;
             vendaItemBD.Insert(vendaItem);
 
             VendaBD vendaBD = new VendaBD();
             vendaBD.UpdateTotal(venda, subtotal);
 
             Session["CategoriaID"] = 0;
-            Session["ProdutoID"] = 0;
-          
-
-
-
+            Session["ProdutoID"] = 0;          
+            
            ProdutoMPBD bd = new ProdutoMPBD();
            DataSet ds = bd.SelectProdutoMP(produto);
            
@@ -79,11 +78,12 @@ namespace SoftwareSalgado.Paginas
                 DataRow dr = ds.Tables[0].Rows[i];
                 int MP = Convert.ToInt32(dr["mat_codigo"]);
                 double quantidademp = Convert.ToDouble(dr["pmp_quantidade"]);
+                int saida = 1;
 
                double  total = quantidade * quantidademp;
 
                 EstoqueMPBD estoque = new EstoqueMPBD();
-                estoque.InsertEstoque(MP, total);
+                estoque.InsertEstoque(MP, total, saida);               
             }
 
             Response.Redirect("SelecionarCategoria.aspx");
@@ -96,6 +96,7 @@ namespace SoftwareSalgado.Paginas
             int produto = Convert.ToInt32(Session["ProdutoID"]);
             int quantidade = Convert.ToInt32(lblQuantidade.Text);
             decimal subtotal = Convert.ToDecimal(lblSubtotal.Text);
+            decimal preco = Convert.ToDecimal(lblPreco.Text);
 
             VendaItemBD vendaItemBD = new VendaItemBD();
             VendaItem vendaItem = new VendaItem();
@@ -103,6 +104,7 @@ namespace SoftwareSalgado.Paginas
             vendaItem.Venda = venda;
             vendaItem.Quantidade = quantidade;
             vendaItem.Subtotal = subtotal;
+            vendaItem.PrecoUnitario = preco;
             vendaItemBD.Insert(vendaItem);
 
             VendaBD vendaBD = new VendaBD();
@@ -122,11 +124,12 @@ namespace SoftwareSalgado.Paginas
                 DataRow dr = ds.Tables[0].Rows[i];
                 int MP = Convert.ToInt32(dr["mat_codigo"]);
                 double quantidademp = Convert.ToDouble(dr["pmp_quantidade"]);
+                int saida = 1;
 
                 double total = quantidade * quantidademp;
 
                 EstoqueMPBD estoque = new EstoqueMPBD();
-                estoque.InsertEstoque(MP, total);
+                estoque.InsertEstoque(MP, total, saida);
             }
            
             Response.Redirect("NovaVenda.aspx");

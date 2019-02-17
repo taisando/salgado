@@ -13,7 +13,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_vendaitem(pro_codigo, ven_codigo, vit_quantidade, vit_subtotal) VALUES (?produto, ?venda, ?quantidade, ?subtotal)";
+            string sql = "INSERT INTO tbl_vendaitem(pro_codigo, ven_codigo, vit_quantidade, vit_subtotal, vit_precounitario) VALUES (?produto, ?venda, ?quantidade, ?subtotal, ?precounitario)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -22,6 +22,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?venda", item.Venda));
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", item.Quantidade));
             objCommand.Parameters.Add(Mapped.Parameter("?subtotal", item.Subtotal));
+            objCommand.Parameters.Add(Mapped.Parameter("?precounitario", item.PrecoUnitario));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();

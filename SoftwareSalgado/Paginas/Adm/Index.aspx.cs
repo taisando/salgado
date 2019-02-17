@@ -84,6 +84,7 @@ namespace SoftwareSalgado.Paginas.ADM
             if (dr["valor"] != DBNull.Value)
             {
                 venda = Convert.ToDouble(dr["valor"]);
+                lblVenda.Text = venda.ToString();
             }
             
            
@@ -95,9 +96,11 @@ namespace SoftwareSalgado.Paginas.ADM
             DataRow dre = dsTotal.Tables[0].Rows[0];
 
             double despesa = 0;
+
             if(dre["Valor"] != DBNull.Value)
             {
                 despesa = Convert.ToDouble(dre["Valor"]);
+                lblDespesa.Text = despesa.ToString();
             }
 
             //double despesa = Convert.ToDouble(dre["Valor"]);

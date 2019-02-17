@@ -11,5 +11,6 @@ namespace SoftwareSalgado.App_Code.Classes
         public DateTime Data { get; set; }
         public int Quantidade { get; set; }
         public int MateriaPrima { get; set; }
+        public int Entrada { get; set; }
     }
 }
