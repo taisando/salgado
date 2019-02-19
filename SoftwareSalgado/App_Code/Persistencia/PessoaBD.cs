@@ -18,7 +18,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataReader objDataReader;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_pessoa WHERE pes_nomeusuario = ?nome and pes_senha = ?senha", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_usuario WHERE usu_nomeusuario = ?nome and usu_senha = ?senha", objConexao);
 
             objCommand.Parameters.Add(Mapped.Parameter("?nome", nome));
             objCommand.Parameters.Add(Mapped.Parameter("?senha", senha));
@@ -28,9 +28,9 @@ namespace SoftwareSalgado.App_Code.Persistencia
             while (objDataReader.Read())
             {
                 obj = new Pessoa();
-                obj.Codigo = Convert.ToInt32(objDataReader["pes_codigo"]);
-                obj.Nome = Convert.ToString(objDataReader["pes_nome"]);                
-                obj.Tipo = Convert.ToInt32(objDataReader["pes_tipo"]);
+                obj.Codigo = Convert.ToInt32(objDataReader["usu_codigo"]);
+                obj.Nome = Convert.ToString(objDataReader["usu_nomeusuario"]);                
+                obj.Tipo = Convert.ToInt32(objDataReader["usu_tipo"]);
             }
 
             objDataReader.Close();

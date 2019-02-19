@@ -33,15 +33,13 @@ namespace SoftwareSalgado.Paginas
             endereco.Numero = Convert.ToInt32(txtNumero.Text);
             endereco.Complemento = txtComplemento.Text;
             endereco.Cidade = txtCidade.Text;
-
-           
+            
 
             ClienteBD bd = new ClienteBD();
             bd.Insert(cliente, endereco);
+            //MessageBox.Show("Sucesso!");            
             Response.Write("<script>alert('Cliente cadastrado com sucesso!')</script>");
-
-
-
+            
             // bd.SelectByNome(txtNome.Text);
         }
     }

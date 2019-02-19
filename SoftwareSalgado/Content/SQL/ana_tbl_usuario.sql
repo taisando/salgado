@@ -16,32 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_endereco`
+-- Table structure for table `tbl_usuario`
 --
 
-DROP TABLE IF EXISTS `tbl_endereco`;
+DROP TABLE IF EXISTS `tbl_usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_endereco` (
-  `end_codigo` int(5) NOT NULL AUTO_INCREMENT,
-  `end_logradouro` varchar(255) DEFAULT NULL,
-  `end_numero` int(10) DEFAULT NULL,
-  `end_complemento` varchar(45) DEFAULT NULL,
-  `end_cidade` varchar(45) DEFAULT NULL,
-  `pes_codigo` int(5) DEFAULT NULL,
-  PRIMARY KEY (`end_codigo`),
-  KEY `pes_codigo_idx` (`pes_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+CREATE TABLE `tbl_usuario` (
+  `usu_codigo` int(3) NOT NULL,
+  `usu_nomeusuario` varchar(255) DEFAULT NULL,
+  `usu_senha` int(11) DEFAULT NULL,
+  `usu_tipo` int(5) DEFAULT NULL,
+  PRIMARY KEY (`usu_codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_endereco`
+-- Dumping data for table `tbl_usuario`
 --
 
-LOCK TABLES `tbl_endereco` WRITE;
-/*!40000 ALTER TABLE `tbl_endereco` DISABLE KEYS */;
-INSERT INTO `tbl_endereco` VALUES (1,'Rua Margarida',120,'Vila ','Aparecida',NULL),(16,'rua da Desiree',0,'','Roseira',NULL);
-/*!40000 ALTER TABLE `tbl_endereco` ENABLE KEYS */;
+LOCK TABLES `tbl_usuario` WRITE;
+/*!40000 ALTER TABLE `tbl_usuario` DISABLE KEYS */;
+INSERT INTO `tbl_usuario` VALUES (1,'ana',1234,0),(2,'tais',8714,0),(3,'dito',9876,0);
+/*!40000 ALTER TABLE `tbl_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-19  7:58:07
+-- Dump completed on 2019-02-19  7:58:13

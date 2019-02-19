@@ -49,6 +49,7 @@ namespace SoftwareSalgado.Paginas
             EstoqueMPBD bd = new EstoqueMPBD();
             if (bd.Insert(estoqueMP))
             {
+                CarregaEstoque();
                 Response.Write("<script>alert('Matéria-Prima cadastrada com sucesso!')</script>");                
             }
             else

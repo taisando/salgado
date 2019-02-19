@@ -16,32 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_endereco`
+-- Table structure for table `tbl_produtomp`
 --
 
-DROP TABLE IF EXISTS `tbl_endereco`;
+DROP TABLE IF EXISTS `tbl_produtomp`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_endereco` (
-  `end_codigo` int(5) NOT NULL AUTO_INCREMENT,
-  `end_logradouro` varchar(255) DEFAULT NULL,
-  `end_numero` int(10) DEFAULT NULL,
-  `end_complemento` varchar(45) DEFAULT NULL,
-  `end_cidade` varchar(45) DEFAULT NULL,
-  `pes_codigo` int(5) DEFAULT NULL,
-  PRIMARY KEY (`end_codigo`),
-  KEY `pes_codigo_idx` (`pes_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+CREATE TABLE `tbl_produtomp` (
+  `pmp_codigo` int(5) NOT NULL AUTO_INCREMENT,
+  `pmp_quantidade` float DEFAULT NULL,
+  `pro_codigo` int(11) DEFAULT NULL,
+  `mat_codigo` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pmp_codigo`),
+  KEY `pro_codigo_idx` (`pro_codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_endereco`
+-- Dumping data for table `tbl_produtomp`
 --
 
-LOCK TABLES `tbl_endereco` WRITE;
-/*!40000 ALTER TABLE `tbl_endereco` DISABLE KEYS */;
-INSERT INTO `tbl_endereco` VALUES (1,'Rua Margarida',120,'Vila ','Aparecida',NULL),(16,'rua da Desiree',0,'','Roseira',NULL);
-/*!40000 ALTER TABLE `tbl_endereco` ENABLE KEYS */;
+LOCK TABLES `tbl_produtomp` WRITE;
+/*!40000 ALTER TABLE `tbl_produtomp` DISABLE KEYS */;
+INSERT INTO `tbl_produtomp` VALUES (1,0.1,1,1),(2,0.035,1,5),(3,0.03,5,1),(4,0.06,5,4),(5,0.1,6,1),(6,0.05,6,5),(7,0.15,7,1),(8,0.05,12,1),(9,0.7,12,4);
+/*!40000 ALTER TABLE `tbl_produtomp` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-19  7:58:07
+-- Dump completed on 2019-02-19  7:58:11

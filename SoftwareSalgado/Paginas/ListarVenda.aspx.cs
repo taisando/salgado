@@ -14,14 +14,7 @@ namespace SoftwareSalgado.Paginas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Carrega();
-        }
-        private void Carrega()
-        {
-            VendaBD bd = new VendaBD();
-            DataSet ds = bd.GetUltimaVenda();
-            GridView1.DataSource = ds.Tables[0].DefaultView;
-            GridView1.DataBind();
+           
         }
 
         //protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)

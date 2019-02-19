@@ -25,10 +25,11 @@ DROP TABLE IF EXISTS `tbl_produto`;
 CREATE TABLE `tbl_produto` (
   `pro_codigo` int(5) NOT NULL AUTO_INCREMENT,
   `pro_nome` varchar(45) NOT NULL,
-  `pro_valor` decimal(3,2) NOT NULL,
-  `cat_codigo` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`pro_codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pro_preco` decimal(5,2) NOT NULL,
+  `cat_codigo` int(5) DEFAULT NULL,
+  PRIMARY KEY (`pro_codigo`),
+  KEY `cat_codigo_idx` (`cat_codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +38,7 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
+INSERT INTO `tbl_produto` VALUES (1,'Coxinha',2.00,1),(5,'Kibe',2.00,1),(6,'Pastel Frango',2.00,1),(7,'Tortinha de Morango',3.50,2),(8,'Pastel Carne',2.00,1),(9,'Coxinha Cento',50.00,3),(10,'Bala de Coco',2.50,2),(11,'Espetinho',2.50,1),(12,'Bolinho Caipira',2.00,1),(13,'Tortinha de Limão',3.50,2),(14,'Kibe Cento',50.00,3),(15,'Espetinho de Frango Cento',50.00,3),(16,'Bolo de Pinhão',16.00,2);
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-06 21:33:21
+-- Dump completed on 2019-02-19  7:58:14

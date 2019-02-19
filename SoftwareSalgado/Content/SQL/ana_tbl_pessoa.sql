@@ -24,13 +24,14 @@ DROP TABLE IF EXISTS `tbl_pessoa`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_pessoa` (
   `pes_codigo` int(5) NOT NULL AUTO_INCREMENT,
-  `pes_nome` varchar(45) NOT NULL,
-  `pes_nomeusuario` varchar(45) DEFAULT NULL,
-  `pes_senha` varchar(45) DEFAULT NULL,
+  `pes_nome` varchar(45) DEFAULT NULL,
   `pes_cnpj` varchar(45) DEFAULT NULL,
   `pes_tipo` varchar(45) DEFAULT NULL,
+  `pes_telefone` varchar(45) DEFAULT NULL,
+  `pes_email` varchar(45) DEFAULT NULL,
+  `pes_cpf` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`pes_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +40,7 @@ CREATE TABLE `tbl_pessoa` (
 
 LOCK TABLES `tbl_pessoa` WRITE;
 /*!40000 ALTER TABLE `tbl_pessoa` DISABLE KEYS */;
-INSERT INTO `tbl_pessoa` VALUES (1,'Tais','tais','123',NULL,'0');
+INSERT INTO `tbl_pessoa` VALUES (1,'Marcos e Marcio',NULL,'0',NULL,NULL,NULL),(3,'Colegio Millenium',NULL,'1','31053593','',''),(4,'Roberta Shopping',NULL,'1','31053593','',''),(5,'Marge Café',NULL,'1',NULL,NULL,NULL),(6,'Chico Bar',NULL,'1',NULL,NULL,NULL),(7,'Pedro Mercearia',NULL,'1',NULL,NULL,NULL),(8,'Liliane Cantina',NULL,'0','','',''),(9,'Borna Bar',NULL,'0','31051040','',''),(10,'Marco Cantina',NULL,'0','31054069','clarice@gmail.com','36602419897'),(11,'Mercadinho Sales',NULL,'2','31053593','',''),(12,'Colégio Tableau JD Rony','','2','1226389140','',NULL),(14,'Colégio Tableau Centro',NULL,'1','31053593','',''),(15,'Fênix',NULL,'0',NULL,NULL,NULL),(16,'DIP Auto Posto',NULL,'0',NULL,NULL,NULL),(17,'Bar Nacional',NULL,'1',NULL,NULL,NULL),(18,'Portal Auto Posto',NULL,'1',NULL,NULL,NULL),(19,'Caféteria da Estrada',NULL,'1',NULL,NULL,NULL),(20,'Outros',NULL,'1',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `tbl_pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-06 21:33:21
+-- Dump completed on 2019-02-19  7:58:08

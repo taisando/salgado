@@ -25,10 +25,12 @@ DROP TABLE IF EXISTS `tbl_despesa`;
 CREATE TABLE `tbl_despesa` (
   `des_codigo` int(5) NOT NULL AUTO_INCREMENT,
   `des_data` datetime NOT NULL,
-  `des_tipo` varchar(45) NOT NULL,
-  `des_valor` decimal(5,2) NOT NULL,
-  PRIMARY KEY (`des_codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `des_valor` decimal(10,2) NOT NULL,
+  `sud_codigo` int(5) DEFAULT NULL,
+  PRIMARY KEY (`des_codigo`),
+  KEY `csd_codigo_idx` (`sud_codigo`),
+  CONSTRAINT `csd_codigo` FOREIGN KEY (`sud_codigo`) REFERENCES `tbl_subdespesa` (`sud_codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +39,7 @@ CREATE TABLE `tbl_despesa` (
 
 LOCK TABLES `tbl_despesa` WRITE;
 /*!40000 ALTER TABLE `tbl_despesa` DISABLE KEYS */;
+INSERT INTO `tbl_despesa` VALUES (1,'2018-11-23 09:32:38',100.00,3),(2,'2018-11-23 09:56:17',250.00,5),(5,'2018-11-23 10:11:20',7.00,3),(6,'2018-11-23 23:48:22',150.00,5),(7,'2018-11-26 20:20:51',100.00,3),(8,'2018-11-27 21:41:42',150.00,5),(9,'2018-11-28 21:02:39',50.00,4),(10,'2018-11-29 19:29:55',50.00,2),(11,'2018-11-29 19:40:18',150.00,5),(12,'2018-12-01 09:36:03',150.00,5),(13,'2018-12-11 09:19:22',140.00,3),(14,'2018-12-11 19:59:00',1000.00,2),(15,'2018-12-20 19:43:04',10.00,3),(16,'2019-01-25 22:27:19',5.00,3);
 /*!40000 ALTER TABLE `tbl_despesa` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-06 21:33:21
+-- Dump completed on 2019-02-19  7:58:12

@@ -16,32 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_endereco`
+-- Table structure for table `tbl_materiaprima`
 --
 
-DROP TABLE IF EXISTS `tbl_endereco`;
+DROP TABLE IF EXISTS `tbl_materiaprima`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_endereco` (
-  `end_codigo` int(5) NOT NULL AUTO_INCREMENT,
-  `end_logradouro` varchar(255) DEFAULT NULL,
-  `end_numero` int(10) DEFAULT NULL,
-  `end_complemento` varchar(45) DEFAULT NULL,
-  `end_cidade` varchar(45) DEFAULT NULL,
-  `pes_codigo` int(5) DEFAULT NULL,
-  PRIMARY KEY (`end_codigo`),
-  KEY `pes_codigo_idx` (`pes_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+CREATE TABLE `tbl_materiaprima` (
+  `mat_codigo` int(5) NOT NULL AUTO_INCREMENT,
+  `mat_nome` varchar(60) DEFAULT NULL,
+  `mat_estoqueminimo` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`mat_codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_endereco`
+-- Dumping data for table `tbl_materiaprima`
 --
 
-LOCK TABLES `tbl_endereco` WRITE;
-/*!40000 ALTER TABLE `tbl_endereco` DISABLE KEYS */;
-INSERT INTO `tbl_endereco` VALUES (1,'Rua Margarida',120,'Vila ','Aparecida',NULL),(16,'rua da Desiree',0,'','Roseira',NULL);
-/*!40000 ALTER TABLE `tbl_endereco` ENABLE KEYS */;
+LOCK TABLES `tbl_materiaprima` WRITE;
+/*!40000 ALTER TABLE `tbl_materiaprima` DISABLE KEYS */;
+INSERT INTO `tbl_materiaprima` VALUES (1,'Trigo',3.00),(3,'Queijo',4.00),(4,'Carne',5.00),(5,'Frango',2.00),(6,'Presunto',1.00);
+/*!40000 ALTER TABLE `tbl_materiaprima` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-19  7:58:07
+-- Dump completed on 2019-02-19  7:58:08
