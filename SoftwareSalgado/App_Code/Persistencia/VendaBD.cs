@@ -148,7 +148,7 @@ namespace SoftwareSalgado.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT pes_nome, ven_valortotal, ven_data FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo ORDER BY ven_data DESC;", objConexao);
+            objCommand = Mapped.Command("SELECT pes_nome, ven_valortotal, ven_data FROM tbl_venda INNER JOIN tbl_pessoa ON tbl_pessoa.pes_codigo = tbl_venda.pes_codigo where year (ven_data)= year(now()) ORDER BY ven_data DESC;", objConexao);
 
             objDataAdapter = Mapped.Adapter(objCommand);
 

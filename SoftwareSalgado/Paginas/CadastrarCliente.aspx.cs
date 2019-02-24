@@ -37,8 +37,8 @@ namespace SoftwareSalgado.Paginas
 
             ClienteBD bd = new ClienteBD();
             bd.Insert(cliente, endereco);
-            //MessageBox.Show("Sucesso!");            
-            Response.Write("<script>alert('Cliente cadastrado com sucesso!')</script>");
+            //MessageBox.Show("Sucesso!");             
+           Response.Write("<script>alert('Cliente cadastrado com sucesso!')</script>");
             
             // bd.SelectByNome(txtNome.Text);
         }

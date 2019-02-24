@@ -19,26 +19,31 @@
 <body>
     <form runat="server" id="master">
         <div class="container-scroller">
-            <!-- partial:../../partials/_navbar.html -->
+            <!-- partial:../../partials/_navbar.html 
+                fixed-top col-lg-12 col-12 p-2 d-flex flex-row
+                text-center navbar-brand-wrapper d-flex align-items-center justify-content-center
+                align-items
+                -->
 
-            <div class="navbar fixed-top col-lg-12 col-12 p-2 d-flex flex-row">
-                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <div class="navbar fixed-top flex-row">
+                <div class="navbar-nav">
                     <asp:Label runat="server" Text="" CssClass="text-info align-items-center text-center"></asp:Label>
                 </div>
 
-                <div class="navbar-menu-wrapper d-flex align-items">
+                <div class="navbar-menu-wrapper d-flex">
 
                     <ul class="navbar-nav navbar-nav-right">
 
-                       <!-- <li class="nav-item d-none d-lg-block full-screen-link">
+                        <!-- <li class="nav-item d-none d-lg-block full-screen-link">
                             <a class="nav-link">
                                 <i class="mdi mdi-home">Bem Vindo!</i>&nbsp;&nbsp;
                             </a>
-                        </li> -->
+                        </li> 
+                                                     -->
 
                         <li class="nav-item d-none d-lg-block full-screen-link">
                             <a class="nav-link">
-                                <i class="mdi mdi-fullscreen menu-icon 25px" id="fullscreen-button"></i>&nbsp;&nbsp;
+                                <i class="mdi mdi-fullscreen menu-icon" id="fullscreen-button"></i>&nbsp;&nbsp;
                             </a>
                         </li>
 
@@ -64,10 +69,10 @@
                                 <i class="mdi mdi-power 25px"></i>
                             </a>
                         </li>
-
+                        &nbsp;
                         <li class="nav-item nav-settings d-none d-lg-block">
                             <a class="nav-link" href="#">
-                                <i class="mdi mdi-format-line-spacing 25px"></i>&nbsp;&nbsp;
+                                <i class="mdi mdi-format-line-spacing 25px"></i>&nbsp;&nbsp;&nbsp;
                             </a>
                         </li>
                     </ul>
@@ -105,7 +110,7 @@
                                 <i class="mdi mdi-home menu-icon"></i>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="../../Paginas/NovaVenda.aspx">
                                 <span class="menu-title">Venda</span>

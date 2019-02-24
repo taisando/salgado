@@ -50,7 +50,13 @@ namespace SoftwareSalgado.Paginas
             if (bd.Insert(estoqueMP))
             {
                 CarregaEstoque();
-                Response.Write("<script>alert('Matéria-Prima cadastrada com sucesso!')</script>");                
+                //Response.Write("<script>alert ('funcao1()')</script>");
+                Response.Write("<script>alert('Matéria-Prima cadastrada com sucesso!')</script>");
+                // RegisterStartupScript("Cliente cadastrado com sucesso!", "<script>alert");
+
+                txtQuantidade.Text = "";
+                ddlMP.Text = "";
+                txtQuantidade.Focus();
             }
             else
             {

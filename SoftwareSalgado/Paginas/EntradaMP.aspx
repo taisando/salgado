@@ -4,12 +4,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+   <%-- <script>
+        function funcao1() {
+            alert("Eu sou um alert!");
+        }
+    </script>--%>
 
-    <asp:Label runat="server" CssClass="card-body h4" Text="Controle de Matéria-Prima"></asp:Label>
-    <p></p>
+    <asp:Label runat="server" CssClass="card-body h4 row" Text="Controle de Matéria-Prima"></asp:Label>
+
     <div class="col-12 grid-margin">
         <div class="card">
-            <div class="card-body">                
+            <div class="card-body">
 
                 <div class="row">
                     <div class="col-md-6">
@@ -39,7 +44,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="col-12 grid-margin">
         <div class="card">

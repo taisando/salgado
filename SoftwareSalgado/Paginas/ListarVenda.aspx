@@ -8,7 +8,8 @@
     <div class="card">
         <div class="card-body">
             <asp:Label runat="server" CssClass="card-body h4" Text="Últimas Vendas Realizadas"></asp:Label>
-            <p></p>
+
+             
                   
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Paginas/NovaVenda.aspx">Cadastar Nova Venda</asp:HyperLink>
         </div>
