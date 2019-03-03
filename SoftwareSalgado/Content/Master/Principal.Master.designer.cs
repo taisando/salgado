@@ -13,15 +13,6 @@ namespace SoftwareSalgado.Content.Master {
     public partial class Principal {
         
         /// <summary>
-        /// Controle head.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-        
-        /// <summary>
         /// Controle master.
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace SoftwareSalgado.Content.Master {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm master;
+        
+        /// <summary>
+        /// Controle head.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
         /// Controle ContentPlaceHolder1.

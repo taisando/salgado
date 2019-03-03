@@ -1,9 +1,14 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="SoftwareSalgado.Content.Master.Principal" %>
+﻿<!--<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="SoftwareSalgado.Content.Master.Principal" %>-->
 
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-br">
 <head runat="server">
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link href="../vendors/iconfonts/mdi/css/materialdesignicons.min.css" rel="stylesheet" />
     <link href="../vendors/css/vendor.bundle.base.css" rel="stylesheet" />
@@ -11,68 +16,61 @@
 
     <title>Master Page</title>
 
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
 </head>
-
-
 <body>
     <form runat="server" id="master">
-        <div class="container-scroller">
-            <!-- partial:../../partials/_navbar.html 
-                fixed-top col-lg-12 col-12 p-2 d-flex flex-row
-                text-center navbar-brand-wrapper d-flex align-items-center justify-content-center
-                align-items
-                -->
+        <asp:ContentPlaceHolder ID="head" runat="server">
+           
+        </asp:ContentPlaceHolder>
 
-            <div class="navbar fixed-top flex-row">
-                <div class="navbar-nav">
-                    <asp:Label runat="server" Text="" CssClass="text-info align-items-center text-center"></asp:Label>
+        <!-- Container scroller -->
+        <div class="container-scroller">
+
+            <!-- Navbar -->
+            <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo" href="index.html">
+                        <asp:Label runat="server"></asp:Label>
+                    </a>
                 </div>
 
-                <div class="navbar-menu-wrapper d-flex">
+                <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                    <asp:Label runat="server" Text="" CssClass="text-info align-items-center text-center"></asp:Label>
 
                     <ul class="navbar-nav navbar-nav-right">
 
-                        <!-- <li class="nav-item d-none d-lg-block full-screen-link">
-                            <a class="nav-link">
-                                <i class="mdi mdi-home">Bem Vindo!</i>&nbsp;&nbsp;
-                            </a>
-                        </li> 
-                                                     -->
-
                         <li class="nav-item d-none d-lg-block full-screen-link">
                             <a class="nav-link">
-                                <i class="mdi mdi-fullscreen menu-icon" id="fullscreen-button"></i>&nbsp;&nbsp;
+                                <i class="mdi mdi-fullscreen 25px" id="fullscreen-button"></i>
                             </a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link count-indicator" href="../../Paginas/CadastrarCliente.aspx">&nbsp;&nbsp;
+                            <a class="nav-link count-indicator" href="../../Paginas/CadastrarCliente.aspx">
                                 <i class="mdi mdi-account-card-details 25px"></i>
                             </a>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link count-indicator dropdown-toggle" href="../../Paginas/NovaVenda.aspx">&nbsp;&nbsp;
-                                <i class="mdi mdi-square-inc-cash 25px"></i>
+                                <a class="nav-link count-indicator dropdown-toggle" href="../../Paginas/NovaVenda.aspx">
+                                    <i class="mdi mdi-square-inc-cash 25px"></i>
                                 </a>
                             </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link count-indicator dropdown-toggle" href="../../Paginas/NovaDespesa.aspx">&nbsp;&nbsp;
+                            <a class="nav-link count-indicator dropdown-toggle" href="../../Paginas/NovaDespesa.aspx">
                                 <i class="mdi mdi-contrast-circle menu-icon 25px"></i>
                             </a>
                         </li>
 
                         <li class="nav-item nav-logout">
-                            <a class="nav-link" href="../../Paginas/Login.aspx">&nbsp;&nbsp;
+                            <a class="nav-link" href="../../Paginas/Login.aspx">
                                 <i class="mdi mdi-power 25px"></i>
                             </a>
                         </li>
-                        &nbsp;
+
                         <li class="nav-item nav-settings d-none d-lg-block">
                             <a class="nav-link" href="#">
-                                <i class="mdi mdi-format-line-spacing 25px"></i>&nbsp;&nbsp;&nbsp;
+                                <i class="mdi mdi-format-line-spacing 25px"></i>
                             </a>
                         </li>
                     </ul>
@@ -81,11 +79,12 @@
                         <span class="mdi mdi-menu 25px"></span>
                     </button>
                 </div>
-            </div>
+            </nav>
 
             <!-- partial -->
             <div class="container-fluid page-body-wrapper">
-                <!-- partial:../../partials/_sidebar.html -->
+
+                <!-- Sidebar -->
                 <nav class="sidebar sidebar-offcanvas" id="sidebar">
                     <ul class="nav">
                         <li class="nav-item nav-profile">
@@ -189,38 +188,38 @@
                         <li class="nav-item sidebar-actions">
                             <span class="nav-link">
                                 <span class="border-bottom"></span>
-
                                 <button class="btn btn-block btn-rounded btn-inverse-light mt-4"><a href="../../Paginas/Login.aspx">Sair</a></button>
                                 <span class="border-bottom"></span>
                             </span>
                         </li>
                     </ul>
                 </nav>
-                <!-- partial -->
-                <div class="main-panel">
-                    <div class="content-wrapper">
 
+                <!-- Main panel -->
+                <div class="main-panel">
+
+                    <div class="content-wrapper">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                             <div id="container">
                             </div>
                         </asp:ContentPlaceHolder>
-
                     </div>
                     <!-- content-wrapper ends -->
-                    <!-- partial:../../partials/_footer.html -->
+
+                    <!-- Footer -->
                     <footer class="footer">
                         <div class="d-sm-flex justify-content-center justify-content-sm-between">
                             <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Projeto Interdisciplinar <a href="http://fatecguaratingueta.edu.br/" target="_blank">Fatec Guaratinguetá</a>.</span>
                             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Segundo Semestre 2018<i class="mdi mdi-heart text-danger"></i><i class="mdi mdi mdi-bible"></i></span>
                         </div>
                     </footer>
-                    <!-- partial -->
+
                 </div>
                 <!-- main-panel ends -->
             </div>
             <!-- page-body-wrapper ends -->
         </div>
-
+        <!-- Container scroller ends -->
     </form>
 
     <script src="../../../Scripts/jquery-3.2.1.min.js"></script>
